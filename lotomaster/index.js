@@ -1576,7 +1576,7 @@ p.nominalBounds = new cjs.Rectangle(-218,-50,229.9,36.9);
 		this.btp.addEventListener("click", fl_ClickToGoToWebPage);
 		
 		function fl_ClickToGoToWebPage() {
-			window.open("https://wa.link/me7q3p", "_blank");
+			window.open("https://wa.link/o3nro1", "_blank");
 		}
 	}
 	this.frame_1 = function() {
@@ -1766,7 +1766,7 @@ lib.properties = {
 	color: "#FFB200",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_.png?1661627708672", id:"index_atlas_"}
+		{src:"images/index_atlas_.png?1661628181220", id:"index_atlas_"}
 	],
 	preloads: []
 };
