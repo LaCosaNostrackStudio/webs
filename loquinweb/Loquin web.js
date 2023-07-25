@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"Loquin web_atlas_1", frames: [[0,0,1005,692],[0,694,927,692],[929,694,927,692],[1007,0,284,396]]}
+		{name:"Loquin web_atlas_1", frames: [[0,0,1005,692],[0,694,927,692],[929,694,284,396]]}
 ];
 
 
@@ -41,18 +41,50 @@ lib.ssMetadata = [
 
 
 
-(lib.Mapadebits3 = function() {
+(lib.Mapadebits4 = function() {
 	this.initialize(ss["Loquin web_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
+// helper functions:
+
+function mc_symbol_clone() {
+	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop, this.reversed));
+	clone.gotoAndStop(this.currentFrame);
+	clone.paused = this.paused;
+	clone.framerate = this.framerate;
+	return clone;
+}
+
+function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
+	var prototype = cjs.extend(symbol, cjs.MovieClip);
+	prototype.clone = mc_symbol_clone;
+	prototype.nominalBounds = nominalBounds;
+	prototype.frameBounds = frameBounds;
+	return prototype;
+	}
 
 
+(lib.Símbolo1 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
 
-(lib.Mapadebits4 = function() {
-	this.initialize(ss["Loquin web_atlas_1"]);
-	this.gotoAndStop(3);
-}).prototype = p = new cjs.Sprite();
+	// Capa_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#6666FF").s().p("EhGsADDIAAmFMCNZAAAIAAGFg");
+	this.shape.setTransform(452.475,19.525);
 
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo1, new cjs.Rectangle(0,0,905,39.1), null);
 
 
 // stage content:
@@ -68,34 +100,34 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.Mapadebits4();
-	this.instance.setTransform(612,1999);
+	this.instance = new lib.Símbolo1();
+	this.instance.setTransform(474.4,1672.5,1,1,0,0,0,452.4,19.5);
 
-	this.instance_1 = new lib.Mapadebits3();
-	this.instance_1.setTransform(10,943,1.009,1);
+	this.instance_1 = new lib.Mapadebits4();
+	this.instance_1.setTransform(532,1181);
 
 	this.instance_2 = new lib.Mapadebits2();
-	this.instance_2.setTransform(26,1926,0.9761,0.7876);
+	this.instance_2.setTransform(22,1108,0.9761,0.7876);
 
 	this.instance_3 = new lib.Mapadebits1();
-	this.instance_3.setTransform(11,24,0.9242,1);
+	this.instance_3.setTransform(15,20,0.9242,1);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(485,1274,460.4,1197);
+p.nominalBounds = new cjs.Rectangle(490,870,453.79999999999995,822.0999999999999);
 // library properties:
 lib.properties = {
 	id: '57BC794344EC5F4BBB2C365C4674F266',
 	width: 950,
-	height: 2500,
+	height: 1700,
 	fps: 30,
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Loquin web_atlas_1.png?1690298652464", id:"Loquin web_atlas_1"}
+		{src:"images/Loquin web_atlas_1.png?1690298904121", id:"Loquin web_atlas_1"}
 	],
 	preloads: []
 };
