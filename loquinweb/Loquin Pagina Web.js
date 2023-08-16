@@ -5029,7 +5029,7 @@ if (reversed == null) { reversed = false; }
 		this.baner1.addEventListener("click", fl_ClickToGoToWebPage1);
 		
 		function fl_ClickToGoToWebPage1() {
-			window.open("/video1.mp4", "_blank");
+			window.open("./video1.mp4", "_blank");
 		}
 	}
 	this.frame_1 = function() {
@@ -5065,7 +5065,7 @@ if (reversed == null) { reversed = false; }
 		this.baner2.addEventListener("click", fl_ClickToGoToWebPage2);
 		
 		function fl_ClickToGoToWebPage2() {
-			window.open("/video2.mp4", "_blank");
+			window.open("./video2.mp4", "_blank");
 		}
 	}
 
@@ -14708,7 +14708,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Loquin Pagina Web_atlas_1.png?1692201452847", id:"Loquin Pagina Web_atlas_1"}
+		{src:"images/Loquin Pagina Web_atlas_1.png?1692201956382", id:"Loquin Pagina Web_atlas_1"}
 	],
 	preloads: []
 };
