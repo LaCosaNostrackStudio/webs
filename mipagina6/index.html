@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Documento sin título</title>
+    <style>
+        /* Estilos para el contenedor de iframes */
+        .iframe-container {
+            display: flex;
+            flex-direction: column; /* Apila los iframes verticalmente */
+            align-items: center; /* Centra horizontalmente los iframes */
+        }
+        
+        /* Estilos para los iframes */
+        .iframe-container iframe {
+            border: none;
+            margin: 0;
+            margin-bottom: 0px; /* Agrega margen inferior de 50px entre los iframes */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iframe-container">
+        <iframe src="test.html" width="950" height="500"></iframe>
+        <iframe src="test.html" width="950" height="500"></iframe>
+        <iframe src="test.html" width="950" height="500"></iframe>
+        <iframe src="test.html" width="950" height="500"></iframe>
+    </div>
+
+    <script>
+        // Función para verificar si un elemento está en la pantalla
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        // Función para pausar y reanudar animaciones en los canvas
+        function controlarAnimaciones() {
+            var iframes = document.querySelectorAll('.iframe-container iframe');
+
+            iframes.forEach(function (iframe) {
+                var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+                var canvas = iframeDocument.querySelector('canvas');
+
+                if (isElementInViewport(iframe)) {
+                    // Si el iframe está en pantalla, reanuda la animación del canvas
+                    canvas.play();
+                } else {
+                    // Si el iframe no está en pantalla, pausa la animación del canvas
+                    canvas.pause();
+                }
+            });
+        }
+
+        // Agrega un evento de desplazamiento para verificar cuándo los iframes están en pantalla
+        window.addEventListener('scroll', controlarAnimaciones);
+        // Controla las animaciones al cargar la página
+        window.addEventListener('load', controlarAnimaciones);
+    </script>
+</body>
+
+</html>
