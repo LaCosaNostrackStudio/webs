@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Documento sin título</title>
+    <style>
+        /* Estilos para el contenedor de iframes */
+        .iframe-container {
+            display: flex;
+            flex-direction: column; /* Apila los iframes verticalmente */
+            align-items: center; /* Centra horizontalmente los iframes */
+        }
+        
+        /* Estilos para los iframes */
+        .iframe-container iframe {
+            border: none;
+            margin: 0;
+            margin-bottom: 0px; /* Agrega margen inferior de 50px entre los iframes */
+            opacity: 0; /* Inicialmente, oculta los iframes */
+            transition: opacity 0.5s ease; /* Agrega una transición suave para mostrar/ocultar los iframes */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iframe-container">
+        <iframe src="test.html" width="950" height="500"></iframe>
+        <iframe src="test.html" width="950" height="500"></iframe>
+        <iframe src="test.html" width="950" height="500"></iframe>
+        <iframe src="test.html" width="950" height="500"></iframe>
+    </div>
+
+    <script>
+        // Función para verificar si un elemento está en la pantalla
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        // Función para activar animaciones cuando los iframes estén en pantalla
+        function activateAnimations() {
+            var iframes = document.querySelectorAll('.iframe-container iframe');
+
+            iframes.forEach(function (iframe) {
+                if (isElementInViewport(iframe)) {
+                    iframe.style.opacity = 1; // Muestra el iframe cuando está en pantalla
+                } else {
+                    iframe.style.opacity = 0; // Oculta el iframe cuando no está en pantalla
+                }
+            });
+        }
+
+        // Agrega un evento de desplazamiento para verificar cuándo los iframes están en pantalla
+        window.addEventListener('scroll', activateAnimations);
+        // Activa las animaciones al cargar la página
+        window.addEventListener('load', activateAnimations);
+    </script>
+</body>
+
+</html>
