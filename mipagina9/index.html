@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+    /* Estilos para el contenedor de iframes */
+    .iframe-container {
+        display: flex;
+        flex-direction: column; /* Apila los iframes verticalmente */
+        align-items: center; /* Centra horizontalmente los iframes */
+    }
+    
+    /* Estilos para los iframes */
+    .iframe-container iframe {
+        border: none;
+        margin: 0;
+        margin-bottom: 0px; /* Agrega margen inferior de 50px entre los iframes */
+    }
+</style>
+</head>
+
+<body>
+<div class="iframe-container">
+	
+    <iframe data-src="test.html" width="950" height="500"></iframe>
+	<iframe data-src="test.html" width="950" height="500"></iframe>
+	<iframe data-src="test.html" width="950" height="500"></iframe>
+	<iframe data-src="test.html" width="950" height="500"></iframe>
+    
+</div>
+
+<script>
+var iframes = document.querySelectorAll('.iframe-container iframe');
+
+function loadVisibleIframes() {
+    iframes.forEach(function(iframe) {
+        var rect = iframe.getBoundingClientRect();
+
+        if (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            !iframe.hasAttribute('data-loaded') // Verifica si no se ha cargado antes
+        ) {
+            iframe.src = iframe.getAttribute('data-src'); // Carga la src del iframe
+            iframe.setAttribute('data-loaded', 'true'); // Marca el iframe como cargado
+        }
+    });
+}
+
+// Agrega un event listener para cargar los iframes cuando son visibles
+window.addEventListener('scroll', loadVisibleIframes);
+window.addEventListener('resize', loadVisibleIframes);
+window.addEventListener('DOMContentLoaded', loadVisibleIframes);
+
+// Carga los iframes al cargar la página inicialmente
+window.addEventListener('load', loadVisibleIframes);
+</script>
+
+</body>
+</html>
