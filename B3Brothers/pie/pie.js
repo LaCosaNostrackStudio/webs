@@ -470,7 +470,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_2.setTransform(89.8,952.55,0.5,0.5);
 
 	this.instance_3 = new lib.CachedBmp_4();
-	this.instance_3.setTransform(219.5,1298.35,0.5,0.5);
+	this.instance_3.setTransform(232,1298.35,0.5,0.5);
 
 	this.instance_4 = new lib.Símbolo2();
 	this.instance_4.setTransform(475,912.05,1,0.7242,0,0,0,475,0);
@@ -563,7 +563,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/pie_atlas_1.png?1700702098887", id:"pie_atlas_1"}
+		{src:"images/pie_atlas_1.png?1700702319722", id:"pie_atlas_1"}
 	],
 	preloads: []
 };
