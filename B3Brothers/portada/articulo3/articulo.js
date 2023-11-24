@@ -309,7 +309,7 @@ if (reversed == null) { reversed = false; }
 
 	// Capa_4
 	this.instance = new lib.Símbolo2();
-	this.instance.setTransform(734.65,982.05,0.734,0.734,0,0,0,186.2,46.1);
+	this.instance.setTransform(734.65,966.45,0.734,0.734,0,0,0,186.2,46.1);
 
 	this.instance_1 = new lib.Símbolo1();
 	this.instance_1.setTransform(95.5,64.3,0.1255,0.1255,0,0,0,730.2,412.8);
@@ -319,14 +319,14 @@ if (reversed == null) { reversed = false; }
 	this.descripcion.lineHeight = 13;
 	this.descripcion.lineWidth = 243;
 	this.descripcion.parent = this;
-	this.descripcion.setTransform(86.0705,1063.8865,3.2075,3.2075);
+	this.descripcion.setTransform(86.0705,1099.3289,3.2075,3.2075);
 
-	this.titulo1 = new cjs.Text("", "12px 'Arial'");
+	this.titulo1 = new cjs.Text("", "10px 'Arial'");
 	this.titulo1.name = "titulo1";
-	this.titulo1.lineHeight = 15;
-	this.titulo1.lineWidth = 137;
+	this.titulo1.lineHeight = 13;
+	this.titulo1.lineWidth = 154;
 	this.titulo1.parent = this;
-	this.titulo1.setTransform(86.0705,954.6,3.2075,3.2075);
+	this.titulo1.setTransform(86.0705,939,3.2075,3.2075);
 
 	this.btnBack = new lib.Símbolo6();
 	this.btnBack.name = "btnBack";
@@ -365,8 +365,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_1.png?1700702964331", id:"CachedBmp_1"},
-		{src:"images/articulo_atlas_1.png?1700702964307", id:"articulo_atlas_1"}
+		{src:"images/CachedBmp_1.png?1700797187767", id:"CachedBmp_1"},
+		{src:"images/articulo_atlas_1.png?1700797187742", id:"articulo_atlas_1"}
 	],
 	preloads: []
 };
