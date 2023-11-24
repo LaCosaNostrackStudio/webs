@@ -311,44 +311,44 @@ if (reversed == null) { reversed = false; }
 	this.fm1.name = "fm1";
 	this.fm1.setTransform(240.55,331.05,1,1,0,0,0,215.4,215.4);
 
-	this.titulo6 = new cjs.Text("", "10px 'Arial'");
+	this.titulo6 = new cjs.Text("", "8px 'Arial'");
 	this.titulo6.name = "titulo6";
-	this.titulo6.lineHeight = 13;
+	this.titulo6.lineHeight = 11;
 	this.titulo6.lineWidth = 131;
 	this.titulo6.parent = this;
 	this.titulo6.setTransform(502.8205,1596.95,3.2075,3.2075);
 
-	this.titulo5 = new cjs.Text("", "10px 'Arial'");
+	this.titulo5 = new cjs.Text("", "8px 'Arial'");
 	this.titulo5.name = "titulo5";
-	this.titulo5.lineHeight = 13;
+	this.titulo5.lineHeight = 11;
 	this.titulo5.lineWidth = 131;
 	this.titulo5.parent = this;
 	this.titulo5.setTransform(31.0705,1596.95,3.2075,3.2075);
 
-	this.titulo4 = new cjs.Text("", "10px 'Arial'");
+	this.titulo4 = new cjs.Text("", "8px 'Arial'");
 	this.titulo4.name = "titulo4";
-	this.titulo4.lineHeight = 13;
+	this.titulo4.lineHeight = 11;
 	this.titulo4.lineWidth = 131;
 	this.titulo4.parent = this;
 	this.titulo4.setTransform(502.8205,1072.55,3.2075,3.2075);
 
-	this.titulo3 = new cjs.Text("", "10px 'Arial'");
+	this.titulo3 = new cjs.Text("", "8px 'Arial'");
 	this.titulo3.name = "titulo3";
-	this.titulo3.lineHeight = 13;
+	this.titulo3.lineHeight = 11;
 	this.titulo3.lineWidth = 131;
 	this.titulo3.parent = this;
 	this.titulo3.setTransform(31.0705,1072.55,3.2075,3.2075);
 
-	this.titulo2 = new cjs.Text("", "10px 'Arial'");
+	this.titulo2 = new cjs.Text("", "8px 'Arial'");
 	this.titulo2.name = "titulo2";
-	this.titulo2.lineHeight = 13;
+	this.titulo2.lineHeight = 11;
 	this.titulo2.lineWidth = 131;
 	this.titulo2.parent = this;
 	this.titulo2.setTransform(502.8205,550.75,3.2075,3.2075);
 
-	this.titulo1 = new cjs.Text("", "10px 'Arial'");
+	this.titulo1 = new cjs.Text("", "8px 'Arial'");
 	this.titulo1.name = "titulo1";
-	this.titulo1.lineHeight = 13;
+	this.titulo1.lineHeight = 11;
 	this.titulo1.lineWidth = 131;
 	this.titulo1.parent = this;
 	this.titulo1.setTransform(31.0705,550.75,3.2075,3.2075);
