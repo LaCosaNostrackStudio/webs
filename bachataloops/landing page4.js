@@ -27,21 +27,21 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_3 = function() {
+(lib.CachedBmp_4 = function() {
 	this.initialize(ss["landing page4_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_2 = function() {
+(lib.CachedBmp_3 = function() {
 	this.initialize(ss["landing page4_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_1 = function() {
+(lib.CachedBmp_2 = function() {
 	this.initialize(ss["landing page4_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
@@ -140,7 +140,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_3();
+	this.instance = new lib.CachedBmp_4();
 	this.instance.setTransform(0,0,0.4222,0.4222);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -323,12 +323,32 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	// Capa_1
-	this.instance = new lib.Símbolo12();
-	this.instance.setTransform(206.4,46.9,1,1,0,0,0,206.4,46.9);
-	this.instance.cache(-2,-2,417,98);
+	this.isSingleFrame = false;
+	// timeline functions:
+	this.frame_0 = function() {
+		if(this.isSingleFrame) {
+			return;
+		}
+		if(this.totalFrames == 1) {
+			this.isSingleFrame = true;
+		}
+		this.bt.addEventListener("click", fl_ClickToGoToWebPage);
+		
+		function fl_ClickToGoToWebPage() {
+			window.open("https://pay.hotmart.com/K88861977N", "_blank");
+		}
+	}
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
+
+	// Capa_1
+	this.bt = new lib.Símbolo12();
+	this.bt.name = "bt";
+	this.bt.setTransform(206.4,46.9,1,1,0,0,0,206.4,46.9);
+	this.bt.cache(-2,-2,417,98);
+
+	this.timeline.addTween(cjs.Tween.get(this.bt).wait(1));
 
 	this._renderFirstFrame();
 
@@ -412,7 +432,7 @@ if (reversed == null) { reversed = false; }
 	this.instance = new lib.Símbolo4();
 	this.instance.setTransform(1.35,26.25,1.3685,1);
 
-	this.instance_1 = new lib.CachedBmp_2();
+	this.instance_1 = new lib.CachedBmp_3();
 	this.instance_1.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
@@ -468,7 +488,7 @@ if (reversed == null) { reversed = false; }
 	this.instance.setTransform(573,35.25,1,1,0,0,0,104.8,25.2);
 	this.instance.cache(-2,-2,234,55);
 
-	this.instance_1 = new lib.CachedBmp_1();
+	this.instance_1 = new lib.CachedBmp_2();
 	this.instance_1.setTransform(636.55,10.05,0.5,0.5);
 
 	this.instance_2 = new lib.Símbolo6();
@@ -504,8 +524,8 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Mapadebits15.png?1700163851268", id:"Mapadebits15"},
-		{src:"images/landing page4_atlas_1.png?1700163851224", id:"landing page4_atlas_1"}
+		{src:"images/Mapadebits15.png?1701364311314", id:"Mapadebits15"},
+		{src:"images/landing page4_atlas_1.png?1701364311253", id:"landing page4_atlas_1"}
 	],
 	preloads: []
 };

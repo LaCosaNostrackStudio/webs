@@ -27,7 +27,7 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_14 = function() {
+(lib.CachedBmp_1 = function() {
 	this.initialize(ss["landing page2_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
@@ -113,7 +113,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_14();
+	this.instance = new lib.CachedBmp_1();
 	this.instance.setTransform(0,0,0.4222,0.4222);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -222,12 +222,32 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	// Capa_1
-	this.instance = new lib.Símbolo12();
-	this.instance.setTransform(206.4,46.9,1,1,0,0,0,206.4,46.9);
-	this.instance.cache(-2,-2,417,98);
+	this.isSingleFrame = false;
+	// timeline functions:
+	this.frame_0 = function() {
+		if(this.isSingleFrame) {
+			return;
+		}
+		if(this.totalFrames == 1) {
+			this.isSingleFrame = true;
+		}
+		this.bt.addEventListener("click", fl_ClickToGoToWebPage);
+		
+		function fl_ClickToGoToWebPage() {
+			window.open("https://pay.hotmart.com/K88861977N", "_blank");
+		}
+	}
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
+
+	// Capa_1
+	this.bt = new lib.Símbolo12();
+	this.bt.name = "bt";
+	this.bt.setTransform(206.4,46.9,1,1,0,0,0,206.4,46.9);
+	this.bt.cache(-2,-2,417,98);
+
+	this.timeline.addTween(cjs.Tween.get(this.bt).wait(1));
 
 	this._renderFirstFrame();
 
@@ -362,7 +382,7 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/landing page2_atlas_1.png?1700149073555", id:"landing page2_atlas_1"}
+		{src:"images/landing page2_atlas_1.png?1701364239953", id:"landing page2_atlas_1"}
 	],
 	preloads: []
 };
