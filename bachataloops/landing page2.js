@@ -234,7 +234,7 @@ if (reversed == null) { reversed = false; }
 		this.bt.addEventListener("click", fl_ClickToGoToWebPage);
 		
 		function fl_ClickToGoToWebPage() {
-			window.open("https://pay.hotmart.com/K88861977N", "_blank");
+			window.open("https://pay.hotmart.com/B88868944H", "_blank");
 		}
 	}
 
@@ -382,7 +382,7 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/landing page2_atlas_1.png?1701364239953", id:"landing page2_atlas_1"}
+		{src:"images/landing page2_atlas_1.png?1701377254561", id:"landing page2_atlas_1"}
 	],
 	preloads: []
 };
