@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40 Aniversario</title>
+    <style>
+        /* Estilos para el contenedor de iframes */
+        .iframe-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilo base para los iframes con animación de desvanecimiento */
+        .iframe-container iframe {
+            border: none;
+            margin: 0;
+            margin-bottom: 0px;
+            opacity: 0;
+            transition: opacity 3s ease-in-out;
+        }
+
+        /* Agrega la clase 'fade-in' a los iframes cuando son cargados */
+        .iframe-container iframe[data-loaded="true"] {
+            opacity: 1;
+        }
+
+        /* Estilo para el color de fondo del cuerpo */
+        body {
+            background-color: #000000;
+        }
+    </style>
+
+    <!-- Metaetiquetas Open Graph para la vista previa de enlace -->
+    <meta property="og:title" content="40 Aniversario Bonny cepeda">
+    <meta property="og:description" content="Pasamanos">
+    <meta property="og:image" content="https://lacosanostrackstudio.github.io/webs/BonnyCepeda/flayer.jpg">
+</head>
+<body>
+    <div class="iframe-container">
+        <iframe data-src="bonny.jpg" width="950" height="1700"></iframe>
+        <iframe data-src="richie.jpg" width="950" height="1700"></iframe>
+        <iframe data-src="villalonayorlando.jpg" width="950" height="1700"></iframe>
+        <iframe data-src="wilfridoykrisspy.jpg" width="950" height="1700"></iframe>
+        <iframe data-src="zafiroyhenry.jpg" width="950" height="1700"></iframe>
+        <iframe data-src="loskentonyrikarena.jpg" width="950" height="1700"></iframe>
+        <iframe data-src="felizmanuelycarlosdavid.jpg" width="950" height="1700"></iframe>
+        <iframe data-src="omaryyovaldo.jpg" width="950" height="1700"></iframe>
+    </div>
+
+    <script>
+        var iframes = document.querySelectorAll('.iframe-container iframe');
+
+        function loadVisibleIframes() {
+            iframes.forEach(function(iframe) {
+                var rect = iframe.getBoundingClientRect();
+
+                if (
+                    rect.bottom >= 0 &&
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    !iframe.hasAttribute('data-loaded')
+                ) {
+                    iframe.src = iframe.getAttribute('data-src');
+                    iframe.setAttribute('data-loaded', 'true');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', loadVisibleIframes);
+        window.addEventListener('resize', loadVisibleIframes);
+        window.addEventListener('DOMContentLoaded', loadVisibleIframes);
+        window.addEventListener('load', loadVisibleIframes);
+    </script>
+</body>
+</html>
