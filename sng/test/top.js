@@ -172,7 +172,7 @@ if (reversed == null) { reversed = false; }
 
 	// Capa_1
 	this.instance = new lib.Mapadebits12();
-	this.instance.setTransform(441,1100);
+	this.instance.setTransform(919,1219);
 
 	this.tops = new lib.Símbolo21();
 	this.tops.name = "tops";
@@ -183,17 +183,17 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-220.9,599.1,742.9,581.9);
+p.nominalBounds = new cjs.Rectangle(-220.9,649.1,1220.9,650.9);
 // library properties:
 lib.properties = {
 	id: '007C07B9106FCC43B531BF4146B0BD81',
 	width: 1000,
-	height: 1200,
+	height: 1300,
 	fps: 60,
 	color: "#0A001D",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/top_atlas_1.png?1706810871731", id:"top_atlas_1"}
+		{src:"images/top_atlas_1.png?1706810988296", id:"top_atlas_1"}
 	],
 	preloads: []
 };
