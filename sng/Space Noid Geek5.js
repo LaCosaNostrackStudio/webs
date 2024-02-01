@@ -877,6 +877,10 @@ if (reversed == null) { reversed = false; }
 		
 		this.top1.addEventListener("mouseover", pausarIntervalo.bind(this));
 		this.top1.addEventListener("mouseout", reanudarIntervalo.bind(this));
+		
+		// Agrega eventos táctiles al MovieClip "miboton"
+		this.top1.addEventListener("stagemousedown", pausarIntervalo.bind(this));
+		this.top1.addEventListener("stagemouseup", reanudarIntervalo.bind(this));
 	}
 	this.frame_1 = function() {
 		this.stop();
@@ -987,7 +991,7 @@ if (reversed == null) { reversed = false; }
 	// Capa_1
 	this.test = new lib.Símbolo53();
 	this.test.name = "test";
-	this.test.setTransform(600.5,157.05,1,1,0,0,0,93.8,58.6);
+	this.test.setTransform(637.95,367.7,1,1,0,0,0,93.8,58.6);
 
 	this.top1 = new lib.Símbolo51();
 	this.top1.name = "top1";
@@ -1500,9 +1504,9 @@ lib.properties = {
 	color: "#0A001D",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_5.png?1706818012534", id:"CachedBmp_5"},
-		{src:"images/Space Noid Geek5_atlas_1.png?1706818012459", id:"Space Noid Geek5_atlas_1"},
-		{src:"images/Space Noid Geek5_atlas_2.png?1706818012460", id:"Space Noid Geek5_atlas_2"}
+		{src:"images/CachedBmp_5.png?1706818753098", id:"CachedBmp_5"},
+		{src:"images/Space Noid Geek5_atlas_1.png?1706818753019", id:"Space Noid Geek5_atlas_1"},
+		{src:"images/Space Noid Geek5_atlas_2.png?1706818753020", id:"Space Noid Geek5_atlas_2"}
 	],
 	preloads: []
 };
