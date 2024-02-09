@@ -449,7 +449,7 @@ if (reversed == null) { reversed = false; }
 		
 		
 		///// el real contador ///////
-		var intervalId = setInterval(actualizarContador.bind(this), 700);
+		var intervalId = setInterval(actualizarContador.bind(this), 500);
 		function actualizarContador() {
 			
 		this.contador.text = Math.floor(this.contador.text - 1);
@@ -1390,8 +1390,8 @@ lib.properties = {
 	color: "#0A001D",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/cuerpo_atlas_1.png?1707504053858", id:"cuerpo_atlas_1"},
-		{src:"images/cuerpo_atlas_2.png?1707504053858", id:"cuerpo_atlas_2"}
+		{src:"images/cuerpo_atlas_1.png?1707507181545", id:"cuerpo_atlas_1"},
+		{src:"images/cuerpo_atlas_2.png?1707507181545", id:"cuerpo_atlas_2"}
 	],
 	preloads: []
 };
