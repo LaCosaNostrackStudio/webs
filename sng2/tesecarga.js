@@ -89,26 +89,19 @@ if (reversed == null) { reversed = false; }
 		// Reemplaza "miMovieClip" con el nombre de tu MovieClip
 		var mc = this.miMovieClip;
 		
-		// URL del HTML externo que deseas cargar
-		var url = "https://lacosanostrackstudio.github.io/webs/sng/top.html";
+		// Crea un elemento iframe
+		var iframe = document.createElement("iframe");
+		iframe.setAttribute("id", "inlineFrameExample");
+		//iframe.setAttribute("title", "Inline Frame Example");
+		iframe.setAttribute("width", "300");
+		iframe.setAttribute("height", "200");
+		iframe.setAttribute("src", "https://lacosanostrackstudio.github.io/webs/sng2/");
 		
-		// Crea un objeto XMLHttpRequest para cargar el HTML
-		var xhr = new XMLHttpRequest();
-		xhr.onreadystatechange = function() {
-		  if (xhr.readyState === 4) {
-		    if (xhr.status === 200) {
-		      // Si la solicitud es exitosa, coloca el HTML dentro del MovieClip
-		      mc.htmlElement.innerHTML = xhr.responseText;
-		    } else {
-		      // Manejar el error si la solicitud falla
-		      console.error('Error al cargar el HTML:', xhr.statusText);
-		    }
-		  }
-		};
+		// Obtén el elemento HTML del MovieClip
+		var mcHTML = mc.htmlElement;
 		
-		// Realiza la solicitud para cargar el HTML
-		xhr.open('GET', url, true);
-		xhr.send();
+		// Agrega el iframe al elemento HTML del MovieClip
+		mcHTML.appendChild(iframe);
 	}
 
 	// actions tween:
@@ -119,12 +112,16 @@ if (reversed == null) { reversed = false; }
 	this.miMovieClip.name = "miMovieClip";
 	this.miMovieClip.setTransform(490.7,547.25,1,1,0,0,0,331.7,434.1);
 
-	this.timeline.addTween(cjs.Tween.get(this.miMovieClip).wait(1));
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#FF0000").ss(1,1,1).p("Eg//AAAMB//AAA");
+	this.shape.setTransform(528.85,1494.75);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.miMovieClip}]}).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(659,863.2,163.29999999999995,118.09999999999991);
+p.nominalBounds = new cjs.Rectangle(618.3,863.2,321.20000000000005,632.5999999999999);
 // library properties:
 lib.properties = {
 	id: '4BD252CC61B4CB40B4796DD87B957BF5',
