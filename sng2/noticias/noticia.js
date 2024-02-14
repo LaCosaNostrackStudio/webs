@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"noticia_atlas_1", frames: [[0,0,991,1779]]}
+		{name:"noticia_atlas_1", frames: [[0,1781,297,66],[0,0,991,1779]]}
 ];
 
 
@@ -27,9 +27,16 @@ lib.ssMetadata = [
 
 
 
-(lib.Mapadebits1 = function() {
+(lib.CachedBmp_4 = function() {
 	this.initialize(ss["noticia_atlas_1"]);
 	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.Mapadebits1 = function() {
+	this.initialize(ss["noticia_atlas_1"]);
+	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -120,42 +127,37 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	this.actionFrames = [0];
-	this.isSingleFrame = false;
+	this.actionFrames = [0,4];
 	// timeline functions:
 	this.frame_0 = function() {
-		if(this.isSingleFrame) {
-			return;
-		}
-		if(this.totalFrames == 1) {
-			this.isSingleFrame = true;
-		}
+		// Cargar dato desde el almacenamiento local del navegador
+		this.mirutax.text = localStorage.getItem('clave');
+	}
+	this.frame_4 = function() {
+		this.stop();
+		////carga de index//////
 		var miruta = this.mirutax.text;
+			
+			/////carga de textos///////
+			var cargar1 = new createjs.LoadQueue(true);
+			var cargar2 = new createjs.LoadQueue(true);
 		
-		var cargar1 = new createjs.LoadQueue(true);
-		var cargar2 = new createjs.LoadQueue(true);
+			cargar1.on('complete', completeF, this);
+			cargar2.on('complete', completeF, this);
 		
-		cargar1.on('complete', completeF, this);
-		cargar2.on('complete', completeF, this);
+			var ruta1 = "publicaciones/"+miruta+"/titulo.txt";
+			var ruta2 = "publicaciones/"+miruta+"/texto.txt";
 		
-		var ruta1 = "publicaciones/" + miruta + "/titulo.txt";
-		var ruta2 = "publicaciones/" + miruta + "/texto.txt";
+			cargar1.loadFile(ruta1);
+			cargar2.loadFile(ruta2);
 		
-		cargar1.loadFile(ruta1);
-		cargar2.loadFile(ruta2);
-		
-		function completeF(e) {
-		    this.titulo.text = cargar1.getResult(ruta1);
-		    var textoHTML = cargar2.getResult(ruta2);
-		    
-		    // Asigna el texto enriquecido con HTML al campo de texto
-		    this.texto.htmlText = textoHTML;
-		
-		    // Habilita la selección del texto en el campo de texto
-		    this.texto.selectable = true;
-		}
-		
-		
+				function completeF(e) {
+			
+					this.titulo.text = cargar1.getResult(ruta1);
+					this.texto.text = cargar2.getResult(ruta2);
+			
+			}
+			
 		/////carga de imagen///////
 		var foto = new createjs.Bitmap("publicaciones/"+miruta+"/imagen.jpg");
 		
@@ -163,20 +165,9 @@ if (reversed == null) { reversed = false; }
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(4).call(this.frame_4).wait(1));
 
 	// Capa_1
-	this.mirutax = new cjs.Text("1", "25px 'Arial'", "#FFFFFF");
-	this.mirutax.name = "mirutax";
-	this.mirutax.lineHeight = 30;
-	this.mirutax.lineWidth = 81;
-	this.mirutax.parent = this;
-	this.mirutax.setTransform(1139.85,58.7);
-
-	this.foto = new lib.Símbolo3();
-	this.foto.name = "foto";
-	this.foto.setTransform(352.25,427.9,1,1,0,0,0,322,181.1);
-
 	this.titulo = new cjs.Text("", "bold 30px 'Arial Black'", "#0CE4FF");
 	this.titulo.name = "titulo";
 	this.titulo.lineHeight = 44;
@@ -191,18 +182,32 @@ if (reversed == null) { reversed = false; }
 	this.texto.parent = this;
 	this.texto.setTransform(32.8,634.6,0.8354,0.8354);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.texto},{t:this.titulo},{t:this.foto},{t:this.mirutax}]}).wait(1));
+	this.instance = new lib.CachedBmp_4();
+	this.instance.setTransform(27.9,31.35,0.5,0.5);
+
+	this.mirutax = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
+	this.mirutax.name = "mirutax";
+	this.mirutax.lineHeight = 38;
+	this.mirutax.lineWidth = 164;
+	this.mirutax.parent = this;
+	this.mirutax.setTransform(818.85,-57.5);
+
+	this.foto = new lib.Símbolo3();
+	this.foto.name = "foto";
+	this.foto.setTransform(352.25,427.9,1,1,0,0,0,322,181.1);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.foto},{t:this.mirutax},{t:this.instance},{t:this.texto},{t:this.titulo}]}).wait(5));
 
 	// Capa_2
-	this.instance = new lib.Mapadebits1();
-	this.instance.setTransform(4,7,1,0.9491);
+	this.instance_1 = new lib.Mapadebits1();
+	this.instance_1.setTransform(4,7,1,0.9491);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(5));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(504,857,719.3,838.5);
+p.nominalBounds = new cjs.Rectangle(504,790.5,491,905);
 // library properties:
 lib.properties = {
 	id: 'E42EECE00DF5554C85AAC680B1F9BF69',
@@ -212,7 +217,7 @@ lib.properties = {
 	color: "#0A001D",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/noticia_atlas_1.png?1707929788209", id:"noticia_atlas_1"}
+		{src:"images/noticia_atlas_1.png?1707944275409", id:"noticia_atlas_1"}
 	],
 	preloads: []
 };
