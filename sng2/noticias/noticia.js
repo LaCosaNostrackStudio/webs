@@ -161,7 +161,7 @@ if (reversed == null) { reversed = false; }
 		/////carga de imagen///////
 		var foto = new createjs.Bitmap("publicaciones/"+miruta+"/imagen.jpg");
 		
-		this.foto.addChild(foto);
+		this.foto.foto.addChild(foto);
 	}
 
 	// actions tween:
@@ -217,7 +217,7 @@ lib.properties = {
 	color: "#0A001D",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/noticia_atlas_1.png?1707944275409", id:"noticia_atlas_1"}
+		{src:"images/noticia_atlas_1.png?1707964877834", id:"noticia_atlas_1"}
 	],
 	preloads: []
 };
