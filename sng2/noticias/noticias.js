@@ -1536,7 +1536,7 @@ if (reversed == null) { reversed = false; }
 						
 			}
 	}
-	this.frame_9 = function() {
+	this.frame_24 = function() {
 		this.stop();
 		
 		
@@ -1545,12 +1545,12 @@ if (reversed == null) { reversed = false; }
 		    this.play(); // Reproducir la película si el campo de texto está vacío
 		}
 	}
-	this.frame_27 = function() {
+	this.frame_42 = function() {
 		this.stop();
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(9).call(this.frame_9).wait(18).call(this.frame_27).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(24).call(this.frame_24).wait(18).call(this.frame_42).wait(1));
 
 	// Capa_1
 	this.bt = new lib.Símbolo8();
@@ -1583,14 +1583,14 @@ if (reversed == null) { reversed = false; }
 	this.foto.name = "foto";
 	this.foto.setTransform(0,0,0.304,0.304);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.foto},{t:this.titulo},{t:this.miindexx},{t:this.titulonulo},{t:this.bt}]}).to({state:[]},10).wait(18));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.foto},{t:this.titulo},{t:this.miindexx},{t:this.titulonulo},{t:this.bt}]}).to({state:[]},25).wait(18));
 
 	// Capa_2
 	this.instance = new lib.Símbolo7();
 	this.instance.setTransform(245.55,55.25,1,1,0,0,0,248.8,58.1);
 	this.instance.alpha = 0.5313;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({alpha:0},0).to({alpha:0.5313},8).to({alpha:0.0898},18).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({alpha:0},10).to({alpha:0.5313},13).to({alpha:0.0898},18).wait(1));
 
 	this._renderFirstFrame();
 
@@ -1774,7 +1774,7 @@ if (reversed == null) { reversed = false; }
 	this.sumador.lineHeight = 38;
 	this.sumador.lineWidth = 75;
 	this.sumador.parent = this;
-	this.sumador.setTransform(565.75,25.15);
+	this.sumador.setTransform(639.15,-136.25);
 
 	this.n11 = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
 	this.n11.name = "n11";
@@ -1869,7 +1869,7 @@ if (reversed == null) { reversed = false; }
 	this.miindexx.lineHeight = 38;
 	this.miindexx.lineWidth = 164;
 	this.miindexx.parent = this;
-	this.miindexx.setTransform(241,33.5);
+	this.miindexx.setTransform(314.4,-127.9);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.miindexx},{t:this.instance},{t:this.n2},{t:this.n3},{t:this.n4},{t:this.n5},{t:this.n6},{t:this.n7},{t:this.n8},{t:this.n9},{t:this.n10},{t:this.n1},{t:this.noticianumero},{t:this.n11},{t:this.sumador},{t:this.banner1},{t:this.banner2}]}).wait(6));
 
@@ -1946,7 +1946,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-236.1,782.3,1721.1,1029);
+p.nominalBounds = new cjs.Rectangle(-236.1,711.8,1721.1,1099.5);
 // library properties:
 lib.properties = {
 	id: 'E42EECE00DF5554C85AAC680B1F9BF69',
@@ -1956,7 +1956,7 @@ lib.properties = {
 	color: "#999999",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/noticias_atlas_1.png?1707967893146", id:"noticias_atlas_1"}
+		{src:"images/noticias_atlas_1.png?1707969729256", id:"noticias_atlas_1"}
 	],
 	preloads: []
 };
