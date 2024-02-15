@@ -1362,7 +1362,7 @@ if (reversed == null) { reversed = false; }
 	// Capa_1
 	this.btback = new lib.Símbolo5();
 	this.btback.name = "btback";
-	this.btback.setTransform(841.8,1550.1,1,1,0,0,0,59.6,59.1);
+	this.btback.setTransform(1416,1550.1,1,1,0,0,0,59.6,59.1);
 
 	this.banner2 = new lib.Símbolo60();
 	this.banner2.name = "banner2";
@@ -1421,7 +1421,7 @@ lib.properties = {
 	color: "#0A001D",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/noticia_atlas_1.png?1707969195943", id:"noticia_atlas_1"}
+		{src:"images/noticia_atlas_1.png?1707970416327", id:"noticia_atlas_1"}
 	],
 	preloads: []
 };

@@ -1530,7 +1530,8 @@ if (reversed == null) { reversed = false; }
 			// Guardar dato en el almacenamiento local del navegador
 				localStorage.setItem('clave', this.miindexx.text);
 				
-				window.location.href = "noticia.html";
+				//window.location.href = "noticia.html";
+				window.open("noticia.html", "_blank");
 				
 				
 						
@@ -1956,7 +1957,7 @@ lib.properties = {
 	color: "#999999",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/noticias_atlas_1.png?1707969729256", id:"noticias_atlas_1"}
+		{src:"images/noticias_atlas_1.png?1707970357362", id:"noticias_atlas_1"}
 	],
 	preloads: []
 };
