@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"noticias_atlas_1", frames: [[0,0,644,362],[0,364,644,362],[0,728,498,116],[646,0,148,33],[500,728,45,90],[646,35,45,90],[0,846,491,108]]}
+		{name:"noticias_atlas_1", frames: [[0,0,644,362],[0,364,644,362],[0,728,498,116],[646,0,148,33],[500,728,45,90],[646,35,45,90],[0,956,67,27],[0,846,491,108]]}
 ];
 
 
@@ -69,9 +69,16 @@ lib.ssMetadata = [
 
 
 
-(lib.Mapadebits7 = function() {
+(lib.Mapadebits24 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
 	this.gotoAndStop(6);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.Mapadebits7 = function() {
+	this.initialize(ss["noticias_atlas_1"]);
+	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -90,6 +97,27 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	prototype.frameBounds = frameBounds;
 	return prototype;
 	}
+
+
+(lib.Símbolo14 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Capa_1
+	this.instance = new lib.Mapadebits24();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo14, new cjs.Rectangle(0,0,67,27), null);
 
 
 (lib.Símbolo11 = function(mode,startPosition,loop,reversed) {
@@ -132,27 +160,6 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = getMCSymbolPrototype(lib.Símbolo10, new cjs.Rectangle(0,0,45,90), null);
-
-
-(lib.Símbolo8 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Capa_1
-	this.instance = new lib.Mapadebits7();
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = getMCSymbolPrototype(lib.Símbolo8, new cjs.Rectangle(0,0,491,108), null);
 
 
 (lib.Símbolo7 = function(mode,startPosition,loop,reversed) {
@@ -343,10 +350,9 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(9).call(this.frame_9).wait(7).call(this.frame_16).wait(1));
 
 	// Capa_1
-	this.bt = new lib.Símbolo8();
+	this.bt = new lib.Símbolo14();
 	this.bt.name = "bt";
-	this.bt.setTransform(245.5,54.95,1,1,0,0,0,245.5,53.9);
-	this.bt.alpha = 0.0117;
+	this.bt.setTransform(97.85,52.4,1,1,0,0,0,33.6,13.7);
 
 	this.titulonulo = new cjs.Text("", "15px 'Arial'", "#0CE4FF");
 	this.titulonulo.name = "titulonulo";
@@ -462,12 +468,11 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(24).call(this.frame_24).wait(18).call(this.frame_42).wait(1));
 
 	// Capa_5
-	this.bt = new lib.Símbolo8();
+	this.bt = new lib.Símbolo14();
 	this.bt.name = "bt";
-	this.bt.setTransform(245.5,54.95,1,1,0,0,0,245.5,53.9);
-	this.bt.alpha = 0.0117;
+	this.bt.setTransform(97.85,52.4,1,1,0,0,0,33.6,13.7);
 
-	this.timeline.addTween(cjs.Tween.get(this.bt).to({_off:true},24).wait(19));
+	this.timeline.addTween(cjs.Tween.get(this.bt).to({_off:true},25).wait(18));
 
 	// Capa_1
 	this.titulonulo = new cjs.Text("", "15px 'Arial'");
@@ -497,12 +502,11 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.foto},{t:this.titulo},{t:this.miindexx},{t:this.titulonulo}]}).to({state:[]},25).wait(18));
 
-	// Capa_2
+	// Capa_6
 	this.instance = new lib.Símbolo7();
 	this.instance.setTransform(245.55,55.25,1,1,0,0,0,248.8,58.1);
-	this.instance.alpha = 0.5313;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({alpha:0},10).to({alpha:0.5313},13).to({alpha:0.0898},18).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(43));
 
 	this._renderFirstFrame();
 
@@ -803,10 +807,10 @@ lib.properties = {
 	width: 1000,
 	height: 1700,
 	fps: 30,
-	color: "#FFFFFF",
+	color: "#6600FF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/noticias_atlas_1.png?1708455770157", id:"noticias_atlas_1"}
+		{src:"images/noticias_atlas_1.png?1708456427677", id:"noticias_atlas_1"}
 	],
 	preloads: []
 };
