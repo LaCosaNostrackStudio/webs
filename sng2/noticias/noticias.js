@@ -650,7 +650,7 @@ if (reversed == null) { reversed = false; }
 	this.n11.lineHeight = 19;
 	this.n11.lineWidth = 58;
 	this.n11.parent = this;
-	this.n11.setTransform(821.65,1764.15);
+	this.n11.setTransform(167.3,-127.9);
 
 	this.noticianumero = new cjs.Text("0", "32px 'Arial'", "#FFFFFF");
 	this.noticianumero.name = "noticianumero";
@@ -658,77 +658,77 @@ if (reversed == null) { reversed = false; }
 	this.noticianumero.lineHeight = 38;
 	this.noticianumero.lineWidth = 75;
 	this.noticianumero.parent = this;
-	this.noticianumero.setTransform(522.95,1519.9);
+	this.noticianumero.setTransform(522.95,1329.9);
 
 	this.n1 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n1.name = "n1";
 	this.n1.lineHeight = 19;
 	this.n1.lineWidth = 62;
 	this.n1.parent = this;
-	this.n1.setTransform(1093.1,181.6);
+	this.n1.setTransform(1093.1,119.6);
 
 	this.n10 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n10.name = "n10";
 	this.n10.lineHeight = 19;
 	this.n10.lineWidth = 51;
 	this.n10.parent = this;
-	this.n10.setTransform(1094.25,1381.2);
+	this.n10.setTransform(1094.25,1235.5);
 
 	this.n9 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n9.name = "n9";
 	this.n9.lineHeight = 19;
 	this.n9.lineWidth = 42;
 	this.n9.parent = this;
-	this.n9.setTransform(1093.1,1261.85);
+	this.n9.setTransform(1093.1,1116.15);
 
 	this.n8 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n8.name = "n8";
 	this.n8.lineHeight = 19;
 	this.n8.lineWidth = 47;
 	this.n8.parent = this;
-	this.n8.setTransform(1093.1,1132.7);
+	this.n8.setTransform(1093.1,987);
 
 	this.n7 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n7.name = "n7";
 	this.n7.lineHeight = 19;
 	this.n7.lineWidth = 52;
 	this.n7.parent = this;
-	this.n7.setTransform(1093.1,1005.55);
+	this.n7.setTransform(1093.1,859.85);
 
 	this.n6 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n6.name = "n6";
 	this.n6.lineHeight = 19;
 	this.n6.lineWidth = 57;
 	this.n6.parent = this;
-	this.n6.setTransform(1093.1,878.4);
+	this.n6.setTransform(1093.1,732.7);
 
 	this.n5 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n5.name = "n5";
 	this.n5.lineHeight = 19;
 	this.n5.lineWidth = 49;
 	this.n5.parent = this;
-	this.n5.setTransform(1093.1,751.25);
+	this.n5.setTransform(1093.1,605.55);
 
 	this.n4 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n4.name = "n4";
 	this.n4.lineHeight = 19;
 	this.n4.lineWidth = 52;
 	this.n4.parent = this;
-	this.n4.setTransform(1093.1,630);
+	this.n4.setTransform(1093.1,484.3);
 
 	this.n3 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n3.name = "n3";
 	this.n3.lineHeight = 19;
 	this.n3.lineWidth = 64;
 	this.n3.parent = this;
-	this.n3.setTransform(1093.1,495.05);
+	this.n3.setTransform(1093.1,349.35);
 
 	this.n2 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n2.name = "n2";
 	this.n2.lineHeight = 19;
 	this.n2.lineWidth = 58;
 	this.n2.parent = this;
-	this.n2.setTransform(1094.25,383.5);
+	this.n2.setTransform(1094.25,237.8);
 
 	this.miindexx = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.miindexx.name = "miindexx";
@@ -742,75 +742,75 @@ if (reversed == null) { reversed = false; }
 	// Capa_5
 	this.btback = new lib.Símbolo9();
 	this.btback.name = "btback";
-	this.btback.setTransform(438.8,1537.8,1.562,1,0,0,180,22.7,45.2);
+	this.btback.setTransform(438.8,1347.8,1.562,1,0,0,180,22.7,45.2);
 
 	this.btnext = new lib.Símbolo9();
 	this.btnext.name = "btnext";
-	this.btnext.setTransform(608.5,1537.8,1.562,1,0,0,0,22.7,45.2);
+	this.btnext.setTransform(608.5,1347.8,1.562,1,0,0,0,22.7,45.2);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.btnext},{t:this.btback}]},1).wait(5));
 
 	// Capa_1
+	this.noti1 = new lib.Símbolo5();
+	this.noti1.name = "noti1";
+	this.noti1.setTransform(353.8,261.4,1,1,0,0,0,322,181.1);
+
 	this.noti11 = new lib.Símbolo5copia();
 	this.noti11.name = "noti11";
-	this.noti11.setTransform(225.35,1837.8,0.4951,0.4951,0,0,0,322.1,181.1);
+	this.noti11.setTransform(33.9,-38.85,0.4951,0.4951,0,0,0,322.1,181.1);
 
 	this.noti10 = new lib.Símbolo5();
 	this.noti10.name = "noti10";
-	this.noti10.setTransform(353.8,1526.4,1,1,0,0,0,322,181.1);
+	this.noti10.setTransform(353.8,1380.7,1,1,0,0,0,322,181.1);
 
 	this.noti9 = new lib.Símbolo5();
 	this.noti9.name = "noti9";
-	this.noti9.setTransform(353.8,1404.4,1,1,0,0,0,322,181.1);
+	this.noti9.setTransform(353.8,1258.7,1,1,0,0,0,322,181.1);
 
 	this.noti8 = new lib.Símbolo5();
 	this.noti8.name = "noti8";
-	this.noti8.setTransform(353.8,1280.4,1,1,0,0,0,322,181.1);
+	this.noti8.setTransform(353.8,1134.7,1,1,0,0,0,322,181.1);
 
 	this.noti7 = new lib.Símbolo5();
 	this.noti7.name = "noti7";
-	this.noti7.setTransform(353.8,1156.4,1,1,0,0,0,322,181.1);
+	this.noti7.setTransform(353.8,1010.7,1,1,0,0,0,322,181.1);
 
 	this.noti6 = new lib.Símbolo5();
 	this.noti6.name = "noti6";
-	this.noti6.setTransform(353.8,1032.4,1,1,0,0,0,322,181.1);
+	this.noti6.setTransform(353.8,886.7,1,1,0,0,0,322,181.1);
 
 	this.noti5 = new lib.Símbolo5();
 	this.noti5.name = "noti5";
-	this.noti5.setTransform(353.8,908.4,1,1,0,0,0,322,181.1);
+	this.noti5.setTransform(353.8,762.7,1,1,0,0,0,322,181.1);
 
 	this.noti4 = new lib.Símbolo5();
 	this.noti4.name = "noti4";
-	this.noti4.setTransform(353.8,784.4,1,1,0,0,0,322,181.1);
+	this.noti4.setTransform(353.8,638.7,1,1,0,0,0,322,181.1);
 
 	this.noti3 = new lib.Símbolo5();
 	this.noti3.name = "noti3";
-	this.noti3.setTransform(353.8,660.4,1,1,0,0,0,322,181.1);
-
-	this.noti1 = new lib.Símbolo5();
-	this.noti1.name = "noti1";
-	this.noti1.setTransform(32.05,105.45,1.9117,1.9117,0,0,0,0.1,0);
+	this.noti3.setTransform(353.8,514.7,1,1,0,0,0,322,181.1);
 
 	this.noti2 = new lib.Símbolo5();
 	this.noti2.name = "noti2";
-	this.noti2.setTransform(353.8,536.4,1,1,0,0,0,322,181.1);
+	this.noti2.setTransform(353.8,390.7,1,1,0,0,0,322,181.1);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.noti2},{t:this.noti1},{t:this.noti3},{t:this.noti4},{t:this.noti5},{t:this.noti6},{t:this.noti7},{t:this.noti8},{t:this.noti9},{t:this.noti10},{t:this.noti11}]},1).wait(5));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.noti2},{t:this.noti3},{t:this.noti4},{t:this.noti5},{t:this.noti6},{t:this.noti7},{t:this.noti8},{t:this.noti9},{t:this.noti10},{t:this.noti11},{t:this.noti1}]},1).wait(5));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(64.4,711.8,1094.8,1099.5);
+p.nominalBounds = new cjs.Rectangle(262.9,561.8,896.3000000000001,830.8);
 // library properties:
 lib.properties = {
 	id: 'E42EECE00DF5554C85AAC680B1F9BF69',
 	width: 1000,
-	height: 1700,
+	height: 1400,
 	fps: 30,
 	color: "#6600FF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/noticias_atlas_1.png?1708456427677", id:"noticias_atlas_1"}
+		{src:"images/noticias_atlas_1.png?1708456878507", id:"noticias_atlas_1"}
 	],
 	preloads: []
 };
