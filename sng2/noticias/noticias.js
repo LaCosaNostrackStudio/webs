@@ -443,13 +443,6 @@ if (reversed == null) { reversed = false; }
 	this.bt.setTransform(245.5,54.95,1,1,0,0,0,245.5,53.9);
 	this.bt.alpha = 0.0117;
 
-	this.titulonulo = new cjs.Text("", "25px 'Arial'", "#0CE4FF");
-	this.titulonulo.name = "titulonulo";
-	this.titulonulo.lineHeight = 30;
-	this.titulonulo.lineWidth = 338;
-	this.titulonulo.parent = this;
-	this.titulonulo.setTransform(-400.1,1.6901,0.8354,0.8354);
-
 	this.miindexx = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.miindexx.name = "miindexx";
 	this.miindexx.lineHeight = 19;
@@ -457,18 +450,11 @@ if (reversed == null) { reversed = false; }
 	this.miindexx.parent = this;
 	this.miindexx.setTransform(-93.7,39.45);
 
-	this.titulo = new cjs.Text("", "25px 'Arial'", "#0CE4FF");
-	this.titulo.name = "titulo";
-	this.titulo.lineHeight = 30;
-	this.titulo.lineWidth = 338;
-	this.titulo.parent = this;
-	this.titulo.setTransform(206.9,1.6901,0.8354,0.8354);
-
 	this.foto = new lib.Símbolo3();
 	this.foto.name = "foto";
 	this.foto.setTransform(0,0,0.304,0.304);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.foto},{t:this.titulo},{t:this.miindexx},{t:this.titulonulo},{t:this.bt}]}).to({state:[]},25).wait(18));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.foto},{t:this.miindexx},{t:this.bt}]}).to({state:[]},25).wait(18));
 
 	// Capa_2
 	this.instance = new lib.Símbolo7();
@@ -480,7 +466,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-401.7,-2.8,896,116.2);
+p.nominalBounds = new cjs.Rectangle(-95.7,-2.8,590,116.2);
 
 
 // stage content:
@@ -781,7 +767,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-236.1,711.8,1496.5,1099.5);
+p.nominalBounds = new cjs.Rectangle(348.9,711.8,911.5000000000001,1099.5);
 // library properties:
 lib.properties = {
 	id: 'E42EECE00DF5554C85AAC680B1F9BF69',
@@ -791,7 +777,7 @@ lib.properties = {
 	color: "#999999",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/noticias_atlas_1.png?1708452391663", id:"noticias_atlas_1"}
+		{src:"images/noticias_atlas_1.png?1708453387811", id:"noticias_atlas_1"}
 	],
 	preloads: []
 };
