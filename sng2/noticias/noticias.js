@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"noticias_atlas_1", frames: [[646,72,173,67],[646,0,240,70],[0,0,644,362],[0,364,644,362],[0,728,498,116],[821,72,148,33],[971,0,45,90],[971,92,45,90],[888,0,67,27],[500,728,491,108]]}
+		{name:"noticias_atlas_1", frames: [[0,910,173,67],[0,838,240,70],[0,0,644,362],[0,364,644,362],[0,979,148,33],[175,910,45,90],[222,910,45,90],[242,838,67,27],[0,728,491,108]]}
 ];
 
 
@@ -55,44 +55,37 @@ lib.ssMetadata = [
 
 
 
-(lib.Mapadebits17 = function() {
+(lib.Mapadebits2 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.Mapadebits2 = function() {
+(lib.Mapadebits20 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.Mapadebits20 = function() {
+(lib.Mapadebits22 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.Mapadebits22 = function() {
+(lib.Mapadebits24 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.Mapadebits24 = function() {
-	this.initialize(ss["noticias_atlas_1"]);
-	this.gotoAndStop(8);
-}).prototype = p = new cjs.Sprite();
-
-
-
 (lib.Mapadebits7 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
-	this.gotoAndStop(9);
+	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -111,6 +104,28 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	prototype.frameBounds = frameBounds;
 	return prototype;
 	}
+
+
+(lib.Símbolo18 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Capa_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#0A001D").s().p("Eg1FAMjIAA5FMBqLAAAIAAZFg");
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Símbolo18, new cjs.Rectangle(-339.8,-80.2,679.6,160.5), null);
 
 
 (lib.Símbolo17 = function(mode,startPosition,loop,reversed) {
@@ -227,27 +242,6 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = getMCSymbolPrototype(lib.Símbolo10, new cjs.Rectangle(0,3,45,90), null);
-
-
-(lib.Símbolo7 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Capa_1
-	this.instance = new lib.Mapadebits17();
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = getMCSymbolPrototype(lib.Símbolo7, new cjs.Rectangle(0,0,498,116), null);
 
 
 (lib.Símbolo4 = function(mode,startPosition,loop,reversed) {
@@ -568,6 +562,8 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
+		this.stop();
+		
 		////carga de index//////
 		var miindex = this.miindexx.text;
 			
@@ -588,7 +584,7 @@ if (reversed == null) { reversed = false; }
 			
 					this.titulo.text = cargar1.getResult(ruta1);
 					this.titulonulo.text = cargar2.getResult(ruta2);
-			
+						this.play();
 			}
 			
 		/////carga de imagen///////
@@ -611,7 +607,7 @@ if (reversed == null) { reversed = false; }
 						
 			}
 	}
-	this.frame_9 = function() {
+	this.frame_14 = function() {
 		this.stop();
 		
 		
@@ -620,13 +616,22 @@ if (reversed == null) { reversed = false; }
 		    this.play(); // Reproducir la película si el campo de texto está vacío
 		}
 	}
-	this.frame_16 = function() {
+	this.frame_19 = function() {
 		this.stop();
 		exportRoot.btnext.play();
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(9).call(this.frame_9).wait(7).call(this.frame_16).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(14).call(this.frame_14).wait(5).call(this.frame_19).wait(1));
+
+	// Capa_4
+	this.instance = new lib.Símbolo16();
+	this.instance.setTransform(306.25,-594.45,1.4818,1.4818);
+
+	this.instance_1 = new lib.Símbolo18();
+	this.instance_1.setTransform(278.3,-612.95,1.2663,1.1919);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).to({state:[]},14).wait(6));
 
 	// Capa_1
 	this.bt = new lib.Símbolo14();
@@ -652,25 +657,18 @@ if (reversed == null) { reversed = false; }
 	this.titulo.lineHeight = 30;
 	this.titulo.lineWidth = 338;
 	this.titulo.parent = this;
-	this.titulo.setTransform(206.9,1.6901,0.8354,0.8354);
+	this.titulo.setTransform(206.1,4.0401,0.8354,0.8354);
 
 	this.foto = new lib.Símbolo3();
 	this.foto.name = "foto";
 	this.foto.setTransform(0,0,0.304,0.304);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.foto},{t:this.titulo},{t:this.miindexx},{t:this.titulonulo},{t:this.bt}]}).to({state:[]},10).wait(7));
-
-	// Capa_2
-	this.instance = new lib.Símbolo7();
-	this.instance.setTransform(245.55,55.25,1,1,0,0,0,248.8,58.1);
-	this.instance.alpha = 0.5313;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({alpha:0},0).to({alpha:0.5313},8).to({alpha:0.0898},7).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.foto},{t:this.titulo},{t:this.miindexx},{t:this.titulonulo},{t:this.bt}]}).wait(20));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-225.4,-2.8,780.1,116);
+p.nominalBounds = new cjs.Rectangle(-225.4,-708.6,934,818.7);
 
 
 (lib.Símbolo5_1 = function(mode,startPosition,loop,reversed) {
@@ -1088,14 +1086,6 @@ if (reversed == null) { reversed = false; }
 	this.n11.parent = this;
 	this.n11.setTransform(231.1,1516.65);
 
-	this.noticianumero = new cjs.Text("0", "25px 'Arial'", "#FFFFFF");
-	this.noticianumero.name = "noticianumero";
-	this.noticianumero.textAlign = "center";
-	this.noticianumero.lineHeight = 30;
-	this.noticianumero.lineWidth = 75;
-	this.noticianumero.parent = this;
-	this.noticianumero.setTransform(522.95,1340.1);
-
 	this.n1 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n1.name = "n1";
 	this.n1.lineHeight = 19;
@@ -1177,9 +1167,13 @@ if (reversed == null) { reversed = false; }
 	this.shape.graphics.f("#00F1EE").s().p("EA42AAaIAAgzITNAAIAAAzgEgjiAAaIAAgzMBcXAAAIAAAzgEhMCAAaIAAgzIPeAAIAAAzg");
 	this.shape.setTransform(496.825,46.85);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.miindexx},{t:this.n2},{t:this.n3},{t:this.n4},{t:this.n5},{t:this.n6},{t:this.n7},{t:this.n8},{t:this.n9},{t:this.n10},{t:this.n1},{t:this.noticianumero},{t:this.n11},{t:this.sumador},{t:this.instance}]}).wait(6));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.miindexx},{t:this.n2},{t:this.n3},{t:this.n4},{t:this.n5},{t:this.n6},{t:this.n7},{t:this.n8},{t:this.n9},{t:this.n10},{t:this.n1},{t:this.n11},{t:this.sumador},{t:this.instance}]}).wait(6));
 
-	// Capa_5
+	// Capa_1
+	this.noti11 = new lib.Símbolo5copia();
+	this.noti11.name = "noti11";
+	this.noti11.setTransform(531.4,1741.25,0.4951,0.4951,0,0,0,322.1,181.1);
+
 	this.btback = new lib.Símbolo9();
 	this.btback.name = "btback";
 	this.btback.setTransform(438.8,1351.9,1.562,1,0,0,180,22.7,45.2);
@@ -1188,9 +1182,6 @@ if (reversed == null) { reversed = false; }
 	this.btnext.name = "btnext";
 	this.btnext.setTransform(608.5,1351.9,1.562,1,0,0,0,22.7,45.2);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.btnext},{t:this.btback}]},1).wait(5));
-
-	// Capa_1
 	this.noti1 = new lib.Símbolo1copia();
 	this.noti1.name = "noti1";
 	this.noti1.setTransform(-74.65,219.65,1.0851,1.0851,0,0,0,111.3,148);
@@ -1231,16 +1222,23 @@ if (reversed == null) { reversed = false; }
 	this.noti2.name = "noti2";
 	this.noti2.setTransform(468.95,563.35,1.0531,1.0848,0,0,0,322.1,181.2);
 
-	this.noti11 = new lib.Símbolo5copia();
-	this.noti11.name = "noti11";
-	this.noti11.setTransform(531.4,1741.25,0.4951,0.4951,0,0,0,322.1,181.1);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.noti2},{t:this.noti3},{t:this.noti4},{t:this.noti5},{t:this.noti6},{t:this.noti7},{t:this.noti8},{t:this.noti9},{t:this.noti10},{t:this.noti1},{t:this.btnext},{t:this.btback},{t:this.noti11}]},1).wait(5));
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.noti11},{t:this.noti2},{t:this.noti3},{t:this.noti4},{t:this.noti5},{t:this.noti6},{t:this.noti7},{t:this.noti8},{t:this.noti9},{t:this.noti10},{t:this.noti1}]},1).wait(5));
+	// Capa_6
+	this.noticianumero = new cjs.Text("0", "25px 'Arial'", "#FFFFFF");
+	this.noticianumero.name = "noticianumero";
+	this.noticianumero.textAlign = "center";
+	this.noticianumero.lineHeight = 30;
+	this.noticianumero.lineWidth = 75;
+	this.noticianumero.parent = this;
+	this.noticianumero.setTransform(522.95,1340.1);
+
+	this.timeline.addTween(cjs.Tween.get(this.noticianumero).wait(6));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-187.5,731,1346.7,976.5999999999999);
+p.nominalBounds = new cjs.Rectangle(-187.5,731,1346.7,975.0999999999999);
 // library properties:
 lib.properties = {
 	id: 'E42EECE00DF5554C85AAC680B1F9BF69',
@@ -1250,7 +1248,7 @@ lib.properties = {
 	color: "#0A001D",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/noticias_atlas_1.png?1708470575934", id:"noticias_atlas_1"}
+		{src:"images/noticias_atlas_1.png?1708471795049", id:"noticias_atlas_1"}
 	],
 	preloads: []
 };
