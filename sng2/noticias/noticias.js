@@ -348,12 +348,12 @@ if (reversed == null) { reversed = false; }
 	this.bt.setTransform(245.5,54.95,1,1,0,0,0,245.5,53.9);
 	this.bt.alpha = 0.0117;
 
-	this.titulonulo = new cjs.Text("", "25px 'Arial'", "#0CE4FF");
+	this.titulonulo = new cjs.Text("", "15px 'Arial'", "#0CE4FF");
 	this.titulonulo.name = "titulonulo";
-	this.titulonulo.lineHeight = 30;
-	this.titulonulo.lineWidth = 338;
+	this.titulonulo.lineHeight = 19;
+	this.titulonulo.lineWidth = 127;
 	this.titulonulo.parent = this;
-	this.titulonulo.setTransform(-400.1,1.6901,0.8354,0.8354);
+	this.titulonulo.setTransform(-223.7817,1.6901,0.8354,0.8354);
 
 	this.miindexx = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.miindexx.name = "miindexx";
@@ -385,7 +385,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-401.7,-2.8,956.4000000000001,116);
+p.nominalBounds = new cjs.Rectangle(-225.4,-2.8,780.1,116);
 
 
 (lib.Símbolo5 = function(mode,startPosition,loop,reversed) {
@@ -470,19 +470,19 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.bt).to({_off:true},24).wait(19));
 
 	// Capa_1
-	this.titulonulo = new cjs.Text("", "25px 'Arial'", "#0CE4FF");
+	this.titulonulo = new cjs.Text("", "15px 'Arial'");
 	this.titulonulo.name = "titulonulo";
-	this.titulonulo.lineHeight = 30;
-	this.titulonulo.lineWidth = 338;
+	this.titulonulo.lineHeight = 19;
+	this.titulonulo.lineWidth = 60;
 	this.titulonulo.parent = this;
-	this.titulonulo.setTransform(-400.1,1.6901,0.8354,0.8354);
+	this.titulonulo.setTransform(-242.9,40.3901,0.8354,0.8354);
 
 	this.miindexx = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.miindexx.name = "miindexx";
 	this.miindexx.lineHeight = 19;
 	this.miindexx.lineWidth = 44;
 	this.miindexx.parent = this;
-	this.miindexx.setTransform(-93.7,39.45);
+	this.miindexx.setTransform(-168.5,39.45);
 
 	this.titulo = new cjs.Text("", "25px 'Arial'", "#0CE4FF");
 	this.titulo.name = "titulo";
@@ -507,7 +507,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-401.7,-2.8,896.5,116);
+p.nominalBounds = new cjs.Rectangle(-244.5,-2.8,739.3,116);
 
 
 // stage content:
@@ -633,18 +633,18 @@ if (reversed == null) { reversed = false; }
 	this.instance = new lib.Mapadebits2();
 	this.instance.setTransform(28,31);
 
-	this.sumador = new cjs.Text("0", "32px 'Arial'", "#FFFFFF");
+	this.sumador = new cjs.Text("0", "15px 'Arial'", "#FFFFFF");
 	this.sumador.name = "sumador";
 	this.sumador.textAlign = "center";
-	this.sumador.lineHeight = 38;
+	this.sumador.lineHeight = 19;
 	this.sumador.lineWidth = 75;
 	this.sumador.parent = this;
 	this.sumador.setTransform(639.15,-136.25);
 
-	this.n11 = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
+	this.n11 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n11.name = "n11";
-	this.n11.lineHeight = 38;
-	this.n11.lineWidth = 164;
+	this.n11.lineHeight = 19;
+	this.n11.lineWidth = 58;
 	this.n11.parent = this;
 	this.n11.setTransform(821.65,1764.15);
 
@@ -656,79 +656,79 @@ if (reversed == null) { reversed = false; }
 	this.noticianumero.parent = this;
 	this.noticianumero.setTransform(522.95,1519.9);
 
-	this.n1 = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
+	this.n1 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n1.name = "n1";
-	this.n1.lineHeight = 38;
-	this.n1.lineWidth = 164;
+	this.n1.lineHeight = 19;
+	this.n1.lineWidth = 62;
 	this.n1.parent = this;
-	this.n1.setTransform(1093.1,42.9);
+	this.n1.setTransform(1093.1,181.6);
 
-	this.n10 = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
+	this.n10 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n10.name = "n10";
-	this.n10.lineHeight = 38;
-	this.n10.lineWidth = 164;
+	this.n10.lineHeight = 19;
+	this.n10.lineWidth = 51;
 	this.n10.parent = this;
 	this.n10.setTransform(1094.25,1381.2);
 
-	this.n9 = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
+	this.n9 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n9.name = "n9";
-	this.n9.lineHeight = 38;
-	this.n9.lineWidth = 164;
+	this.n9.lineHeight = 19;
+	this.n9.lineWidth = 42;
 	this.n9.parent = this;
 	this.n9.setTransform(1093.1,1261.85);
 
-	this.n8 = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
+	this.n8 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n8.name = "n8";
-	this.n8.lineHeight = 38;
-	this.n8.lineWidth = 164;
+	this.n8.lineHeight = 19;
+	this.n8.lineWidth = 47;
 	this.n8.parent = this;
 	this.n8.setTransform(1093.1,1132.7);
 
-	this.n7 = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
+	this.n7 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n7.name = "n7";
-	this.n7.lineHeight = 38;
-	this.n7.lineWidth = 164;
+	this.n7.lineHeight = 19;
+	this.n7.lineWidth = 52;
 	this.n7.parent = this;
 	this.n7.setTransform(1093.1,1005.55);
 
-	this.n6 = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
+	this.n6 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n6.name = "n6";
-	this.n6.lineHeight = 38;
-	this.n6.lineWidth = 164;
+	this.n6.lineHeight = 19;
+	this.n6.lineWidth = 57;
 	this.n6.parent = this;
 	this.n6.setTransform(1093.1,878.4);
 
-	this.n5 = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
+	this.n5 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n5.name = "n5";
-	this.n5.lineHeight = 38;
-	this.n5.lineWidth = 164;
+	this.n5.lineHeight = 19;
+	this.n5.lineWidth = 49;
 	this.n5.parent = this;
 	this.n5.setTransform(1093.1,751.25);
 
-	this.n4 = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
+	this.n4 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n4.name = "n4";
-	this.n4.lineHeight = 38;
-	this.n4.lineWidth = 164;
+	this.n4.lineHeight = 19;
+	this.n4.lineWidth = 52;
 	this.n4.parent = this;
 	this.n4.setTransform(1093.1,630);
 
-	this.n3 = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
+	this.n3 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n3.name = "n3";
-	this.n3.lineHeight = 38;
-	this.n3.lineWidth = 164;
+	this.n3.lineHeight = 19;
+	this.n3.lineWidth = 64;
 	this.n3.parent = this;
 	this.n3.setTransform(1093.1,495.05);
 
-	this.n2 = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
+	this.n2 = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.n2.name = "n2";
-	this.n2.lineHeight = 38;
-	this.n2.lineWidth = 164;
+	this.n2.lineHeight = 19;
+	this.n2.lineWidth = 58;
 	this.n2.parent = this;
 	this.n2.setTransform(1094.25,383.5);
 
-	this.miindexx = new cjs.Text("", "32px 'Arial'", "#FFFFFF");
+	this.miindexx = new cjs.Text("", "15px 'Arial'", "#FFFFFF");
 	this.miindexx.name = "miindexx";
-	this.miindexx.lineHeight = 38;
+	this.miindexx.lineHeight = 19;
 	this.miindexx.lineWidth = 164;
 	this.miindexx.parent = this;
 	this.miindexx.setTransform(314.4,-127.9);
@@ -796,17 +796,17 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-236.1,711.8,1496.5,1099.5);
+p.nominalBounds = new cjs.Rectangle(64.4,711.8,1094.8,1099.5);
 // library properties:
 lib.properties = {
 	id: 'E42EECE00DF5554C85AAC680B1F9BF69',
 	width: 1000,
 	height: 1700,
 	fps: 30,
-	color: "#330033",
+	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/noticias_atlas_1.png?1708455261387", id:"noticias_atlas_1"}
+		{src:"images/noticias_atlas_1.png?1708455770157", id:"noticias_atlas_1"}
 	],
 	preloads: []
 };
