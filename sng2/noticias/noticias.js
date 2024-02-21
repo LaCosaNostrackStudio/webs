@@ -27,14 +27,14 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_9 = function() {
+(lib.CachedBmp_23 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_8 = function() {
+(lib.CachedBmp_22 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
@@ -140,10 +140,10 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_9();
+	this.instance = new lib.CachedBmp_23();
 	this.instance.setTransform(-31.95,-16.1,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_8();
+	this.instance_1 = new lib.CachedBmp_22();
 	this.instance_1.setTransform(-59.95,-17.55,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
@@ -738,7 +738,7 @@ if (reversed == null) { reversed = false; }
 				localStorage.setItem('clave', this.miindexx.text);
 				
 				//window.location.href = "noticia.html";
-				window.open("noticia.html", "_blank");
+				window.open("../noticia.html", "_blank");
 				
 				
 						
@@ -875,7 +875,7 @@ if (reversed == null) { reversed = false; }
 				localStorage.setItem('clave', this.miindexx.text);
 				
 				//window.location.href = "noticia.html";
-				window.open("noticia.html", "_blank");
+				window.open("../noticia.html", "_blank");
 				
 				
 						
@@ -1248,7 +1248,7 @@ lib.properties = {
 	color: "#0A001D",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/noticias_atlas_1.png?1708471795049", id:"noticias_atlas_1"}
+		{src:"images/noticias_atlas_1.png?1708474220188", id:"noticias_atlas_1"}
 	],
 	preloads: []
 };
