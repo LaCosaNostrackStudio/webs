@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"noticias_atlas_1", frames: [[1875,728,173,67],[1382,838,240,70],[1382,0,644,362],[1382,364,644,362],[0,0,1380,920],[1875,797,148,33],[1875,832,45,90],[1922,832,45,90],[1969,832,67,27],[1382,728,491,108]]}
+		{name:"noticias_atlas_1", frames: [[0,910,173,67],[0,838,240,70],[0,0,644,362],[0,364,644,362],[0,979,148,33],[175,910,45,90],[222,910,45,90],[242,838,67,27],[0,728,491,108]]}
 ];
 
 
@@ -27,14 +27,14 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_7 = function() {
+(lib.CachedBmp_13 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_6 = function() {
+(lib.CachedBmp_12 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
@@ -55,44 +55,37 @@ lib.ssMetadata = [
 
 
 
-(lib.Mapadebits19copia = function() {
+(lib.Mapadebits2 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.Mapadebits2 = function() {
+(lib.Mapadebits20 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.Mapadebits20 = function() {
+(lib.Mapadebits22 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.Mapadebits22 = function() {
+(lib.Mapadebits24 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.Mapadebits24 = function() {
-	this.initialize(ss["noticias_atlas_1"]);
-	this.gotoAndStop(8);
-}).prototype = p = new cjs.Sprite();
-
-
-
 (lib.Mapadebits7 = function() {
 	this.initialize(ss["noticias_atlas_1"]);
-	this.gotoAndStop(9);
+	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -111,29 +104,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	prototype.frameBounds = frameBounds;
 	return prototype;
 	}
-
-
-(lib.Símbolo20 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Capa_1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("EhvuBvvMAAAjfdMDfdAAAMAAADfdg");
-	this.shape.setTransform(715.125,715.125);
-
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = getMCSymbolPrototype(lib.Símbolo20, new cjs.Rectangle(0,0,1430.3,1430.3), null);
 
 
 (lib.Símbolo18 = function(mode,startPosition,loop,reversed) {
@@ -170,10 +140,10 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_7();
+	this.instance = new lib.CachedBmp_13();
 	this.instance.setTransform(-31.95,-16.1,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_6();
+	this.instance_1 = new lib.CachedBmp_12();
 	this.instance_1.setTransform(-59.95,-17.55,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
@@ -378,35 +348,6 @@ if (reversed == null) { reversed = false; }
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,0,0,0);
-
-
-(lib.Símbolo19 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Capa_2
-	this.instance = new lib.Símbolo20();
-	this.instance.setTransform(715.1,715.1,1,1,0,0,0,715.1,715.1);
-	this.instance.alpha = 0.6914;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-	// Capa_1
-	this.instance_1 = new lib.Mapadebits19copia();
-	this.instance_1.setTransform(0,0,1.0354,1.1049,0,-90,90);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = getMCSymbolPrototype(lib.Símbolo19, new cjs.Rectangle(0,0,1430.3,1430.3), null);
 
 
 (lib.Símbolo16 = function(mode,startPosition,loop,reversed) {
@@ -775,7 +716,7 @@ if (reversed == null) { reversed = false; }
 		
 		////////carga la imagen/////
 		this.stop();
-		var foto = new createjs.Bitmap("publicaciones/"+miindex+"/imagen.jpg");
+		var foto = new createjs.Bitmap("publicaciones/"+miindex+"/imagen1.jpg");
 		
 		// Agregar un evento de carga a la imagen
 		foto.image.onload = function() {
@@ -890,7 +831,7 @@ if (reversed == null) { reversed = false; }
 			
 			var ruta1 = "publicaciones/"+miindex+"/titulo.txt";
 			var ruta2 = "publicaciones/"+miindex+"/titulox.txt";
-			var ruta3 = "publicaciones/"+miindex+"/texto.txt";
+			var ruta3 = "publicaciones/"+miindex+"/texto1.txt";
 			
 			cargar1.loadFile(ruta1);
 			cargar2.loadFile(ruta2);
@@ -912,7 +853,7 @@ if (reversed == null) { reversed = false; }
 			
 		////////carga la imagen/////
 		this.stop();
-		var foto = new createjs.Bitmap("publicaciones/"+miindex+"/imagen.jpg");
+		var foto = new createjs.Bitmap("publicaciones/"+miindex+"/imagen1.jpg");
 		
 		// Agregar un evento de carga a la imagen
 		foto.image.onload = function() {
@@ -1294,16 +1235,10 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get(this.noticianumero).wait(6));
 
-	// Capa_2
-	this.instance_1 = new lib.Símbolo19();
-	this.instance_1.setTransform(502.2,696.4,1,1,0,0,0,508.2,714.4);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(6));
-
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-187.5,682,1611.8,1024.1);
+p.nominalBounds = new cjs.Rectangle(-187.5,731,1346.7,975.0999999999999);
 // library properties:
 lib.properties = {
 	id: 'E42EECE00DF5554C85AAC680B1F9BF69',
@@ -1313,7 +1248,7 @@ lib.properties = {
 	color: "#0A001D",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/noticias_atlas_1.png?1708485940434", id:"noticias_atlas_1"}
+		{src:"images/noticias_atlas_1.png?1708573983973", id:"noticias_atlas_1"}
 	],
 	preloads: []
 };
