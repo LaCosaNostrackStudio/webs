@@ -1,1 +1,1 @@
-El primer videojuego ampliamente reconocido como tal es Pong. Fue desarrollado por la empresa Atari como una recreación electrónica del ping pong y lanzado en 1972
+El primer videojuego <a href="http://www.google.com">http://www.google.com</a> ampliamente reconocido como tal es Pong. Fue desarrollado por la empresa Atari como una recreación electrónica del ping pong y lanzado en 1972
