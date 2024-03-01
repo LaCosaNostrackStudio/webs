@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+    body {
+        width: 1000px;
+        height: 1500px;
+        margin: 0 auto;
+        position: relative;
+        background-color: #FFA9FF;
+    }
+    .imagen1 {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+    .imagen2 {
+        position: absolute;
+        left: 450px;
+        top: 10px;
+    }
+    .cuadro-texto {
+        position: absolute;
+        left: 10px;
+        top: 548px;
+        width: 393px;
+        height: 395px;
+        border: 1px solid #FF0004; /* Añade un borde negro al cuadro de texto */
+        padding: 10px; /* Añade un espacio interno de 10px alrededor del texto */
+        font-family: 'CaviarDreams', sans-serif; /* Aplica la fuente específica al texto dentro del cuadro */
+    }
+    .cuadro-texto2 {
+        position: absolute;
+        left: 450px;
+        top: 548px;
+        width: 393px;
+        height: 395px;
+        border: 1px solid #FF0004; /* Añade un borde negro al cuadro de texto */
+        padding: 10px; /* Añade un espacio interno de 10px alrededor del texto */
+        font-family: 'LithosPro-Black', sans-serif; /* Aplica la fuente específica al texto dentro del cuadro */
+        font-size: 25px; /* Establece el tamaño de fuente a 25px */
+    }
+    iframe {
+        position: absolute;
+        left: 0px;
+        top: 1200px;
+        width: 1000px; /* Ancho ajustado al cuerpo */
+        height: 300px; /* Altura del iframe */
+        border: none; /* Quita el borde del iframe */
+    }
+    @font-face {
+        font-family: 'Caviar Dreams';
+        src: url('fuentes/CaviarDreams.ttf') format('truetype'); /* Ruta a la fuente personalizada */
+    }
+    @font-face {
+        font-family: 'LithosPro-Black';
+        src: url('fuentes/LithosPro-Black.otf') format('opentype'); /* Ruta a la fuente personalizada */
+    }
+</style>
+</head>
+<body>
+    <img class="imagen1" src="imagenes/miimagen.jpg" alt="Mi imagen 1">
+    <img class="imagen2" src="imagenes/miimagen2.jpg" alt="Mi imagen 2">
+    <div class="cuadro-texto" id="texto1">
+        <!-- El contenido del archivo de texto se cargará aquí -->
+    </div>
+    <div class="cuadro-texto2">
+        Fue desarrollado por la empresa Atari como una recreación electrónica del ping pong y lanzado en 1972 <a href="http://www.google.com">http://www.google.com</a>
+    </div>
+    <iframe src="htmls/pagina1.html"></iframe>
+
+    <script>
+        // Cargar el contenido del archivo de texto en el div cuadro-texto
+        fetch('textos/1.txt')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('texto1').innerText = text;
+            });
+    </script>
+</body>
+</html>
