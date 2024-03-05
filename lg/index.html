@@ -14,14 +14,21 @@
 <title>LowGarciaWebApp</title>
 <!-- write your code here -->
 <style>
+  body {
+    background-color: black; /* Cambia el color de fondo del cuerpo a negro */
+    margin: 0; /* Elimina los márgenes predeterminados del cuerpo */
+  }
+
   #animation_container {
-	position:absolute;
-	margin:auto;
-	left:0;right:0;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 1.00); /* Mantiene el color de fondo del contenedor de animación */
   }
 </style>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-<script src="LowGarciaWebApp.js?1709583082164"></script>
+<script src="LowGarciaWebApp.js?1709599301174"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -66,9 +73,9 @@ function handleComplete(evt,comp) {
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:1000px; height:1790px">
-		<canvas id="canvas" width="1000" height="1790" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1000px; height:1790px; position: absolute; left: 0px; top: 0px; display: block;">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:950px; height:1700px">
+		<canvas id="canvas" width="950" height="1700" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:950px; height:1700px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
 </body>
