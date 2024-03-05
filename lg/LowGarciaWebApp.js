@@ -512,7 +512,7 @@ lib.ssMetadata = [
 
 
 (lib._2010i123005carheadlightsADcomposition = function() {
-	this.initialize(img.2010i123005carheadlightsADcomposition);
+	this.initialize(img._2010i123005carheadlightsADcomposition);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,6947,4000);
 
@@ -1652,7 +1652,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/_2010i123005carheadlightsADcomposition.jpg?1709599301153", id:"_2010i123005carheadlightsADcomposition"},
+		{src:"images/2010i123005carheadlightsADcomposition.jpg?1709599301153", id:"_2010i123005carheadlightsADcomposition"},
 		{src:"images/LowGarciaWebApp_atlas_1.png?1709599300995", id:"LowGarciaWebApp_atlas_1"},
 		{src:"images/LowGarciaWebApp_atlas_2.png?1709599300996", id:"LowGarciaWebApp_atlas_2"}
 	],
