@@ -512,7 +512,7 @@ lib.ssMetadata = [
 
 
 (lib._2010i123005carheadlightsADcomposition = function() {
-	this.initialize(img._2010i123005carheadlightsADcomposition);
+	this.initialize(img.2010i123005carheadlightsADcomposition);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,6947,4000);
 
