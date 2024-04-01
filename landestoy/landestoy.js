@@ -609,45 +609,45 @@ if (reversed == null) { reversed = false; }
 		this.b1.addEventListener("click", fl_ClickToGoToWebPage1);
 		
 		function fl_ClickToGoToWebPage1() {
-			window.open("demos/1.mpeg.", "_blank");
+			window.open("demos/1.mpeg", "_blank");
 		}
 		
 		this.b2.addEventListener("click", fl_ClickToGoToWebPage2);
 		
 		function fl_ClickToGoToWebPage2() {
-			window.open("demos/2.mpeg.", "_blank");
+			window.open("demos/2.mpeg", "_blank");
 		}
 		
 		this.b3.addEventListener("click", fl_ClickToGoToWebPage3);
 		
 		function fl_ClickToGoToWebPage3() {
-			window.open("demos/3.mpeg.", "_blank");
+			window.open("demos/3.mpeg", "_blank");
 		}
 		
 		this.b4.addEventListener("click", fl_ClickToGoToWebPage4);
 		
 		function fl_ClickToGoToWebPage4() {
-			window.open("demos/4.mpeg.", "_blank");
+			window.open("demos/4.mpeg", "_blank");
 		}
 		
 		
 		this.b5.addEventListener("click", fl_ClickToGoToWebPage5);
 		
 		function fl_ClickToGoToWebPage5() {
-			window.open("demos/5.mpeg.", "_blank");
+			window.open("demos/5.mpeg", "_blank");
 		}
 		
 		this.b6.addEventListener("click", fl_ClickToGoToWebPage6);
 		
 		function fl_ClickToGoToWebPage6() {
-			window.open("demos/6.mpeg.", "_blank");
+			window.open("demos/6.mpeg", "_blank");
 		}
 		
 		
 		this.b7.addEventListener("click", fl_ClickToGoToWebPage7);
 		
 		function fl_ClickToGoToWebPage7() {
-			window.open("demos/7.mpeg.", "_blank");
+			window.open("demos/7.mpeg", "_blank");
 		}
 	}
 
@@ -730,8 +730,8 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/landestoy_atlas_1.png?1711992071725", id:"landestoy_atlas_1"},
-		{src:"images/landestoy_atlas_2.png?1711992071725", id:"landestoy_atlas_2"}
+		{src:"images/landestoy_atlas_1.png?1711992497706", id:"landestoy_atlas_1"},
+		{src:"images/landestoy_atlas_2.png?1711992497707", id:"landestoy_atlas_2"}
 	],
 	preloads: []
 };
