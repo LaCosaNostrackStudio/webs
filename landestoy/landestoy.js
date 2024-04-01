@@ -730,8 +730,8 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/landestoy_atlas_1.png?1711992497706", id:"landestoy_atlas_1"},
-		{src:"images/landestoy_atlas_2.png?1711992497707", id:"landestoy_atlas_2"}
+		{src:"images/landestoy_atlas_1.png?1711992690744", id:"landestoy_atlas_1"},
+		{src:"images/landestoy_atlas_2.png?1711992690744", id:"landestoy_atlas_2"}
 	],
 	preloads: []
 };
