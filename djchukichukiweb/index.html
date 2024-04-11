@@ -16,63 +16,41 @@
         border: none;
         margin: 0;
         margin-bottom: 0px; /* Agrega margen inferior de 50px entre los iframes */
-		
+        width: 100%; /* Ajusta el ancho del iframe al 100% del contenedor */
+        height: 100%; /* Ajusta la altura del iframe al 100% del contenedor */
     }
-        /* Estilo base para los iframes con animación de desvanecimiento */
-        .iframe-container iframe {
-            border: none;
-            margin: 0;
-            margin-bottom: 0px;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
+    
+    /* Estilo base para los iframes con animación de desvanecimiento */
+    .iframe-container iframe {
+        border: none;
+        margin: 0;
+        margin-bottom: 0px;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
 
-        /* Agrega la clase 'fade-in' a los iframes cuando son cargados */
-        .iframe-container iframe[data-loaded="true"] {
-            opacity: 1;
-        }
+    /* Agrega la clase 'fade-in' a los iframes cuando son cargados */
+    .iframe-container iframe[data-loaded="true"] {
+        opacity: 1;
+    }
+
     /* Estilo para el color de fondo del cuerpo */
-body {
-		
+    body {
         background-color: #000000; /* Puedes cambiar #f0f0f0 por cualquier otro color hexadecimal o nombre de color */
-
-}
-
-    /* Estilo para alinear el primer iframe a la izquierda */
-    /*.iframe-container iframe:nth-child(1) {
-        align-self: flex-start;
-    }
-
-    /* Estilo para alinear el segundo iframe a la derecha */
-    /*.iframe-container iframe:nth-child(2) {
-        align-self: flex-end;
-    }
-
-    /* Estilo para centrar el último iframe */
-    /*.iframe-container iframe:last-child {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0; /* Elimina el margen por defecto del cuerpo */
     }
 </style>
 
 <!-- Metaetiquetas Open Graph para la vista previa de enlace -->
-
 <meta property="og:title" content="Dj Chuki Chuki">
 <meta property="og:description" content="El mejor en los eventos">
 <meta property="og:image" content="https://lacosanostrackstudio.github.io/webs/djchukichuiweb/flayer.jpg">
-
-
-
 
 </head>
 
 <body>
 <div class="iframe-container">
-	
-    <iframe data-src="DjChukiChuki.html" height="2146"></iframe>
-	
-
-
+    <iframe data-src="DjChukiChuki.html"></iframe>
 </div>
 
 <script>
