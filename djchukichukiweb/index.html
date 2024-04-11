@@ -1,84 +1,89 @@
 <!DOCTYPE html>
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+	4. Blank lines will be removed automatically.
+	5. Remove unnecessary comments before creating your template.
+-->
 <html>
 <head>
-<meta charset="utf-8">
-<title>Dj Chuki Chuki</title>
+<meta charset="UTF-8">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>DjChukiChuki</title>
+<!-- write your code here -->
 <style>
-    /* Estilos para el contenedor de iframes */
-    .iframe-container {
-        display: flex;
-        flex-direction: column; /* Apila los iframes verticalmente */
-        align-items: center; /* Centra horizontalmente los iframes */
-    }
-    
-    /* Estilos para los iframes */
-    .iframe-container iframe {
-        border: none;
-        margin: 0;
-        margin-bottom: 0px; /* Agrega margen inferior de 50px entre los iframes */
-        width: 100%; /* Ajusta el ancho del iframe al 100% del contenedor */
-        height: 100%; /* Ajusta la altura del iframe al 100% del contenedor */
-    }
-    
-    /* Estilo base para los iframes con animación de desvanecimiento */
-    .iframe-container iframe {
-        border: none;
-        margin: 0;
-        margin-bottom: 0px;
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-    }
-
-    /* Agrega la clase 'fade-in' a los iframes cuando son cargados */
-    .iframe-container iframe[data-loaded="true"] {
-        opacity: 1;
-    }
-
-    /* Estilo para el color de fondo del cuerpo */
-    body {
-        background-color: #000000; /* Puedes cambiar #f0f0f0 por cualquier otro color hexadecimal o nombre de color */
-        margin: 0; /* Elimina el margen por defecto del cuerpo */
-    }
+  #animation_container, #_preload_div_ {
+	position:absolute;
+	margin:auto;
+	left:0;right:0;
+  }
+  
+  /* Estilo para el color de fondo del cuerpo */
+  body {
+	background-color: #000000; /* Fondo negro */
+	margin: 0; /* Elimina el margen por defecto del cuerpo */
+  }
 </style>
-
-<!-- Metaetiquetas Open Graph para la vista previa de enlace -->
-<meta property="og:title" content="Dj Chuki Chuki">
-<meta property="og:description" content="El mejor en los eventos">
-<meta property="og:image" content="https://lacosanostrackstudio.github.io/webs/djchukichuiweb/flayer.jpg">
-
-</head>
-
-<body>
-<div class="iframe-container">
-    <iframe data-src="DjChukiChuki.html"></iframe>
-</div>
-
+	
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="DjChukiChuki.js?1712868923718"></script>
 <script>
-var iframes = document.querySelectorAll('.iframe-container iframe');
-
-function loadVisibleIframes() {
-    iframes.forEach(function(iframe) {
-        var rect = iframe.getBoundingClientRect();
-
-        if (
-            rect.bottom >= 0 && // El iframe está al menos parcialmente visible
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-            !iframe.hasAttribute('data-loaded') // Verifica si no se ha cargado antes
-        ) {
-            iframe.src = iframe.getAttribute('data-src'); // Carga la src del iframe
-            iframe.setAttribute('data-loaded', 'true'); // Marca el iframe como cargado
-        }
-    });
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("A8626CB9089B6244AD17489256192AF9");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.installPlugin(createjs.Sound);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
 }
-
-// Agrega un event listener para cargar los iframes cuando son visibles
-window.addEventListener('scroll', loadVisibleIframes);
-window.addEventListener('resize', loadVisibleIframes);
-window.addEventListener('DOMContentLoaded', loadVisibleIframes);
-
-// Carga los iframes al cargar la página inicialmente
-window.addEventListener('load', loadVisibleIframes);
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	var preloaderDiv = document.getElementById("_preload_div_");
+	preloaderDiv.style.display = 'none';
+	canvas.style.display = 'block';
+	exportRoot = new lib.DjChukiChuki();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,preloaderDiv,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+function playSound(id, loop, offset) {
+	return createjs.Sound.play(id, {'interrupt':createjs.Sound.INTERRUPT_EARLY, 'loop': loop, 'offset': offset});}
 </script>
-
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+	<div id="animation_container" style="background-color:rgba(0, 0, 0, 1.00); width:1200px; height:2146px">
+		<canvas id="canvas" width="1200" height="2146" style="position: absolute; display: none; background-color:rgba(0, 0, 0, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1200px; height:2146px; position: absolute; left: 0px; top: 0px; display: none;">
+		</div>
+	</div>
+    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:2146px; width: 1200px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images/_preloader.gif?1712868923719 style='vertical-align: middle; max-height: 100%'/></div>
 </body>
 </html>
