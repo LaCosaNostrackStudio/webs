@@ -937,20 +937,20 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-296.7,968,2295.5,1019.4000000000001);
+p.nominalBounds = new cjs.Rectangle(-421.7,760,2420.5,1227.4);
 // library properties:
 lib.properties = {
 	id: 'A8626CB9089B6244AD17489256192AF9',
-	width: 1200,
-	height: 2000,
+	width: 950,
+	height: 1584,
 	fps: 60,
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/DjChukiChuki_atlas_1.png?1712923651131", id:"DjChukiChuki_atlas_1"},
-		{src:"images/DjChukiChuki_atlas_2.png?1712923651131", id:"DjChukiChuki_atlas_2"},
-		{src:"images/DjChukiChuki_atlas_3.png?1712923651131", id:"DjChukiChuki_atlas_3"},
-		{src:"sounds/djchukichukisound.mp3?1712923651238", id:"djchukichukisound"}
+		{src:"images/DjChukiChuki_atlas_1.png?1712923869064", id:"DjChukiChuki_atlas_1"},
+		{src:"images/DjChukiChuki_atlas_2.png?1712923869064", id:"DjChukiChuki_atlas_2"},
+		{src:"images/DjChukiChuki_atlas_3.png?1712923869064", id:"DjChukiChuki_atlas_3"},
+		{src:"sounds/djchukichukisound.mp3?1712923869180", id:"djchukichukisound"}
 	],
 	preloads: []
 };
