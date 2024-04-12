@@ -3,9 +3,9 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"DjChukiChuki_atlas_1", frames: [[0,0,1202,1202]]},
+		{name:"DjChukiChuki_atlas_1", frames: [[0,371,1243,302],[0,0,1348,369],[0,675,1730,150],[0,1531,1727,8],[1031,1368,972,48],[1031,1418,566,53],[1401,1174,591,192],[1031,1473,566,53],[1245,371,591,267],[0,1476,566,53],[703,827,591,230],[0,827,701,310],[360,1252,669,110],[360,1364,669,110],[703,1059,696,191],[1754,0,256,256],[1401,827,256,256],[1732,640,290,532],[0,1139,358,281],[1350,0,402,363]]},
 		{name:"DjChukiChuki_atlas_2", frames: [[0,1301,1730,550],[0,0,1225,910],[1227,0,763,1299]]},
-		{name:"DjChukiChuki_atlas_3", frames: [[0,371,1243,302],[0,0,1348,369],[0,675,1730,150],[0,1531,1727,8],[1031,1368,972,48],[1031,1418,566,53],[1401,1174,591,192],[1031,1473,566,53],[1245,371,591,267],[0,1476,566,53],[703,827,591,230],[0,827,701,310],[360,1252,669,110],[360,1364,669,110],[703,1059,696,191],[1754,0,256,256],[1401,827,256,256],[1732,640,290,532],[0,1139,358,281],[1350,0,402,363]]}
+		{name:"DjChukiChuki_atlas_3", frames: [[0,0,1202,1202]]}
 ];
 
 
@@ -30,14 +30,14 @@ lib.ssMetadata = [
 
 
 (lib.CachedBmp_17 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_16 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
@@ -51,91 +51,91 @@ lib.ssMetadata = [
 
 
 (lib.CachedBmp_14 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_13 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_12 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_11 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_10 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_9 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_8 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_7 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(9);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_6 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(10);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_5 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(11);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_4 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(12);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_2 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(13);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_3 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(14);
 }).prototype = p = new cjs.Sprite();
 
@@ -149,35 +149,35 @@ lib.ssMetadata = [
 
 
 (lib.Mapadebits12 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(15);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Mapadebits13 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(16);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Mapadebits5 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(17);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Mapadebits6 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(18);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Mapadebits7 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_1"]);
+	this.initialize(ss["DjChukiChuki_atlas_3"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
@@ -191,7 +191,7 @@ lib.ssMetadata = [
 
 
 (lib.Mapadebits9 = function() {
-	this.initialize(ss["DjChukiChuki_atlas_3"]);
+	this.initialize(ss["DjChukiChuki_atlas_1"]);
 	this.gotoAndStop(19);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
@@ -943,14 +943,14 @@ lib.properties = {
 	id: 'A8626CB9089B6244AD17489256192AF9',
 	width: 1200,
 	height: 2000,
-	fps: 40,
+	fps: 60,
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/DjChukiChuki_atlas_1.png?1712922129611", id:"DjChukiChuki_atlas_1"},
-		{src:"images/DjChukiChuki_atlas_2.png?1712922129611", id:"DjChukiChuki_atlas_2"},
-		{src:"images/DjChukiChuki_atlas_3.png?1712922129611", id:"DjChukiChuki_atlas_3"},
-		{src:"sounds/djchukichukisound.mp3?1712922129731", id:"djchukichukisound"}
+		{src:"images/DjChukiChuki_atlas_1.png?1712923063528", id:"DjChukiChuki_atlas_1"},
+		{src:"images/DjChukiChuki_atlas_2.png?1712923063528", id:"DjChukiChuki_atlas_2"},
+		{src:"images/DjChukiChuki_atlas_3.png?1712923063528", id:"DjChukiChuki_atlas_3"},
+		{src:"sounds/djchukichukisound.mp3?1712923063630", id:"djchukichukisound"}
 	],
 	preloads: []
 };
