@@ -947,10 +947,10 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/DjChukiChuki_atlas_1.png?1712923063528", id:"DjChukiChuki_atlas_1"},
-		{src:"images/DjChukiChuki_atlas_2.png?1712923063528", id:"DjChukiChuki_atlas_2"},
-		{src:"images/DjChukiChuki_atlas_3.png?1712923063528", id:"DjChukiChuki_atlas_3"},
-		{src:"sounds/djchukichukisound.mp3?1712923063630", id:"djchukichukisound"}
+		{src:"images/DjChukiChuki_atlas_1.png?1712923108041", id:"DjChukiChuki_atlas_1"},
+		{src:"images/DjChukiChuki_atlas_2.png?1712923108041", id:"DjChukiChuki_atlas_2"},
+		{src:"images/DjChukiChuki_atlas_3.png?1712923108041", id:"DjChukiChuki_atlas_3"},
+		{src:"sounds/djchukichukisound.mp3?1712923108142", id:"djchukichukisound"}
 	],
 	preloads: []
 };
