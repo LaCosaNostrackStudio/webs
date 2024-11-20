@@ -3,8 +3,8 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"juego loquin82_atlas_1", frames: [[0,1282,546,546],[1127,367,400,400],[1127,769,400,400],[1127,1171,400,400],[994,1573,400,400],[1396,1573,400,400],[548,1282,444,600],[906,0,219,1251],[1127,0,667,365],[1796,0,140,1200],[0,0,904,1280]]},
-		{name:"juego loquin82_atlas_2", frames: [[1206,1122,282,351],[1190,1644,111,124],[1308,1475,150,167],[0,0,400,400],[0,402,400,400],[0,804,400,400],[0,1206,400,400],[0,1608,400,400],[402,0,400,400],[402,402,400,400],[402,804,400,400],[402,1206,400,400],[402,1608,400,400],[804,0,400,400],[804,402,400,400],[804,804,400,400],[804,1675,128,128],[1460,1475,128,128],[1460,1605,128,128],[1303,1644,74,121],[1141,1770,153,54],[804,1805,153,54],[804,1462,198,211],[1004,1475,302,117],[959,1831,207,27],[1206,0,105,1120],[1168,1826,58,58],[934,1675,64,11],[1141,1715,40,44],[959,1784,146,45],[804,1861,77,15],[1190,1594,107,32],[959,1860,71,45],[934,1715,205,67],[1296,1770,76,76],[1004,1594,184,119],[804,1206,372,254],[1379,1644,67,133]]}
+		{name:"juego loquin82_atlas_1", frames: [[1206,1122,282,351],[1190,1644,111,124],[1308,1475,150,167],[0,0,400,400],[0,402,400,400],[0,804,400,400],[0,1206,400,400],[0,1608,400,400],[402,0,400,400],[402,402,400,400],[402,804,400,400],[402,1206,400,400],[402,1608,400,400],[804,0,400,400],[804,402,400,400],[804,804,400,400],[804,1675,128,128],[1460,1475,128,128],[1460,1605,128,128],[1303,1644,74,121],[1141,1770,153,54],[804,1805,153,54],[804,1462,198,211],[1004,1475,302,117],[959,1831,207,27],[1206,0,105,1120],[1168,1826,58,58],[934,1675,64,11],[1141,1715,40,44],[959,1784,146,45],[804,1861,77,15],[1190,1594,107,32],[959,1860,71,45],[934,1715,205,67],[1296,1770,76,76],[1004,1594,184,119],[804,1206,372,254],[1379,1644,67,133]]},
+		{name:"juego loquin82_atlas_2", frames: [[0,1282,546,546],[1127,367,400,400],[1127,769,400,400],[1127,1171,400,400],[994,1573,400,400],[1396,1573,400,400],[548,1282,444,600],[906,0,219,1251],[1127,0,667,365],[1796,0,140,1200],[0,0,904,1280]]}
 ];
 
 
@@ -29,329 +29,329 @@ lib.ssMetadata = [
 
 
 (lib.CachedBmp_55 = function() {
-	this.initialize(ss["juego loquin82_atlas_1"]);
+	this.initialize(ss["juego loquin82_atlas_2"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_54 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_53 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_52 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_0 = function() {
-	this.initialize(ss["juego loquin82_atlas_1"]);
+	this.initialize(ss["juego loquin82_atlas_2"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_1 = function() {
-	this.initialize(ss["juego loquin82_atlas_1"]);
+	this.initialize(ss["juego loquin82_atlas_2"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_10 = function() {
-	this.initialize(ss["juego loquin82_atlas_1"]);
+	this.initialize(ss["juego loquin82_atlas_2"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_11 = function() {
-	this.initialize(ss["juego loquin82_atlas_1"]);
+	this.initialize(ss["juego loquin82_atlas_2"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_12 = function() {
-	this.initialize(ss["juego loquin82_atlas_1"]);
+	this.initialize(ss["juego loquin82_atlas_2"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_13 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_14 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_15 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_16 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_17 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_2 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_3 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(9);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_4 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(10);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_5 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(11);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_6 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(12);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_7 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(13);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_8 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(14);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._1434843_2deda_9 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(15);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._2343e36be8690f6a5a83f3afcab490f9PhotoRoompngPhotoRoom = function() {
-	this.initialize(ss["juego loquin82_atlas_1"]);
+	this.initialize(ss["juego loquin82_atlas_2"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._3225191_app_instagram_logo_media_popular_icon3 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(16);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._5296499_fb_facebook_facebooklogo_icon = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(17);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._5296521_play_video_vlog_youtube_youtubelogo_icon1 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(18);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap13 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(19);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap14 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(20);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap16 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(21);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap2 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(22);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap20 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(23);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap21 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(24);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap22 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(25);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap25 = function() {
-	this.initialize(ss["juego loquin82_atlas_1"]);
+	this.initialize(ss["juego loquin82_atlas_2"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap27 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(26);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap28 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(27);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap3 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(28);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap30 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(29);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap31 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(30);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap32 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(31);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap33 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(32);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap36 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(33);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap37 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(34);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap38 = function() {
-	this.initialize(ss["juego loquin82_atlas_1"]);
+	this.initialize(ss["juego loquin82_atlas_2"]);
 	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap39 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(35);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap41 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(36);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Bitmap9 = function() {
-	this.initialize(ss["juego loquin82_atlas_2"]);
+	this.initialize(ss["juego loquin82_atlas_1"]);
 	this.gotoAndStop(37);
 }).prototype = p = new cjs.Sprite();
 
@@ -376,14 +376,14 @@ p.nominalBounds = new cjs.Rectangle(0,0,2100,660);
 
 
 (lib.metaltorr = function() {
-	this.initialize(ss["juego loquin82_atlas_1"]);
+	this.initialize(ss["juego loquin82_atlas_2"]);
 	this.gotoAndStop(9);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.WhatsAppImage20220104at92253PMPhotoRoompngPhotoRoom = function() {
-	this.initialize(ss["juego loquin82_atlas_1"]);
+	this.initialize(ss["juego loquin82_atlas_2"]);
 	this.gotoAndStop(10);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
@@ -1780,7 +1780,7 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.shape = new cjs.Shape();
-	var sprImg_shape = cjs.SpriteSheetUtils.extractFrame(ss["juego loquin82_atlas_2"],28);
+	var sprImg_shape = cjs.SpriteSheetUtils.extractFrame(ss["juego loquin82_atlas_1"],28);
 	sprImg_shape.onload = function(){
 		this.shape.graphics.bf(sprImg_shape, null, new cjs.Matrix2D(1,0,0,1,-20,-22)).s().p("AjHDcIAAm3IGPAAIAAG3g")
 	}.bind(this);
@@ -3430,7 +3430,21 @@ if (reversed == null) { reversed = false; }
 		    }
 	}
 	this.frame_3 = function() {
+		function darkenScreen() {
+		  var element = document.documentElement; // Obtener el elemento raíz del documento
 		
+		  if (element.requestFullscreen) {
+		    element.requestFullscreen();
+		  } else if (element.mozRequestFullScreen) { // Para navegadores Firefox
+		    element.mozRequestFullScreen();
+		  } else if (element.webkitRequestFullscreen) { // Para navegadores WebKit (Chrome, Safari)
+		    element.webkitRequestFullscreen();
+		  } else if (element.msRequestFullscreen) { // Para navegadores Internet Explorer
+		    element.msRequestFullscreen();
+		  }
+		}
+		
+		darkenScreen();
 	}
 	this.frame_5 = function() {
 		playSound("popsuabe");
@@ -4333,27 +4347,27 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/fondo1_00000_00000.jpg?1732108149829", id:"fondo1_00000_00000"},
-		{src:"images/fondo2_00000.jpg?1732108149829", id:"fondo2_00000"},
-		{src:"images/fondo3_00000.jpg?1732108149829", id:"fondo3_00000"},
-		{src:"images/juego loquin82_atlas_1.png?1732108149398", id:"juego loquin82_atlas_1"},
-		{src:"images/juego loquin82_atlas_2.png?1732108149399", id:"juego loquin82_atlas_2"},
-		{src:"sounds/bienhecho.mp3?1732108149829", id:"bienhecho"},
-		{src:"sounds/botonfun.mp3?1732108149829", id:"botonfun"},
-		{src:"sounds/casilologramos.mp3?1732108149829", id:"casilologramos"},
-		{src:"sounds/Egipcia.mp3?1732108149829", id:"Egipcia"},
-		{src:"sounds/gameover.mp3?1732108149829", id:"gameover"},
-		{src:"sounds/jungla.mp3?1732108149829", id:"jungla"},
-		{src:"sounds/listoparalaaventura.mp3?1732108149829", id:"listoparalaaventura"},
-		{src:"sounds/moneda2.mp3?1732108149829", id:"moneda2"},
-		{src:"sounds/moneda.mp3?1732108149829", id:"moneda"},
-		{src:"sounds/popsuabe.mp3?1732108149829", id:"popsuabe"},
-		{src:"sounds/quedivertido.mp3?1732108149829", id:"quedivertido"},
-		{src:"sounds/rompisteelrecorfelicidades.mp3?1732108149829", id:"rompisteelrecorfelicidades"},
-		{src:"sounds/seleccionaunnivel.mp3?1732108149829", id:"seleccionaunnivel"},
-		{src:"sounds/space.mp3?1732108149829", id:"space"},
-		{src:"sounds/_super.mp3?1732108149829", id:"_super"},
-		{src:"sounds/zapsplatcartoonbubble.mp3?1732108149829", id:"zapsplatcartoonbubble"}
+		{src:"images/fondo1_00000_00000.jpg?1732108569670", id:"fondo1_00000_00000"},
+		{src:"images/fondo2_00000.jpg?1732108569670", id:"fondo2_00000"},
+		{src:"images/fondo3_00000.jpg?1732108569670", id:"fondo3_00000"},
+		{src:"images/juego loquin82_atlas_1.png?1732108569297", id:"juego loquin82_atlas_1"},
+		{src:"images/juego loquin82_atlas_2.png?1732108569298", id:"juego loquin82_atlas_2"},
+		{src:"sounds/bienhecho.mp3?1732108569670", id:"bienhecho"},
+		{src:"sounds/botonfun.mp3?1732108569670", id:"botonfun"},
+		{src:"sounds/casilologramos.mp3?1732108569670", id:"casilologramos"},
+		{src:"sounds/Egipcia.mp3?1732108569670", id:"Egipcia"},
+		{src:"sounds/gameover.mp3?1732108569670", id:"gameover"},
+		{src:"sounds/jungla.mp3?1732108569670", id:"jungla"},
+		{src:"sounds/listoparalaaventura.mp3?1732108569670", id:"listoparalaaventura"},
+		{src:"sounds/moneda2.mp3?1732108569670", id:"moneda2"},
+		{src:"sounds/moneda.mp3?1732108569670", id:"moneda"},
+		{src:"sounds/popsuabe.mp3?1732108569670", id:"popsuabe"},
+		{src:"sounds/quedivertido.mp3?1732108569670", id:"quedivertido"},
+		{src:"sounds/rompisteelrecorfelicidades.mp3?1732108569670", id:"rompisteelrecorfelicidades"},
+		{src:"sounds/seleccionaunnivel.mp3?1732108569670", id:"seleccionaunnivel"},
+		{src:"sounds/space.mp3?1732108569670", id:"space"},
+		{src:"sounds/_super.mp3?1732108569670", id:"_super"},
+		{src:"sounds/zapsplatcartoonbubble.mp3?1732108569670", id:"zapsplatcartoonbubble"}
 	],
 	preloads: []
 };
