@@ -3417,7 +3417,7 @@ if (reversed == null) { reversed = false; }
 	this.actionFrames = [0,3,5,9,10,11,12];
 	// timeline functions:
 	this.frame_0 = function() {
-		this.stop();
+		//this.stop();
 		createjs.Sound.stop();
 		
 		this.btjugar.addEventListener("click", jugar.bind(this));
@@ -4347,27 +4347,27 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/fondo1_00000_00000.jpg?1732108569670", id:"fondo1_00000_00000"},
-		{src:"images/fondo2_00000.jpg?1732108569670", id:"fondo2_00000"},
-		{src:"images/fondo3_00000.jpg?1732108569670", id:"fondo3_00000"},
-		{src:"images/juego loquin82_atlas_1.png?1732108569297", id:"juego loquin82_atlas_1"},
-		{src:"images/juego loquin82_atlas_2.png?1732108569298", id:"juego loquin82_atlas_2"},
-		{src:"sounds/bienhecho.mp3?1732108569670", id:"bienhecho"},
-		{src:"sounds/botonfun.mp3?1732108569670", id:"botonfun"},
-		{src:"sounds/casilologramos.mp3?1732108569670", id:"casilologramos"},
-		{src:"sounds/Egipcia.mp3?1732108569670", id:"Egipcia"},
-		{src:"sounds/gameover.mp3?1732108569670", id:"gameover"},
-		{src:"sounds/jungla.mp3?1732108569670", id:"jungla"},
-		{src:"sounds/listoparalaaventura.mp3?1732108569670", id:"listoparalaaventura"},
-		{src:"sounds/moneda2.mp3?1732108569670", id:"moneda2"},
-		{src:"sounds/moneda.mp3?1732108569670", id:"moneda"},
-		{src:"sounds/popsuabe.mp3?1732108569670", id:"popsuabe"},
-		{src:"sounds/quedivertido.mp3?1732108569670", id:"quedivertido"},
-		{src:"sounds/rompisteelrecorfelicidades.mp3?1732108569670", id:"rompisteelrecorfelicidades"},
-		{src:"sounds/seleccionaunnivel.mp3?1732108569670", id:"seleccionaunnivel"},
-		{src:"sounds/space.mp3?1732108569670", id:"space"},
-		{src:"sounds/_super.mp3?1732108569670", id:"_super"},
-		{src:"sounds/zapsplatcartoonbubble.mp3?1732108569670", id:"zapsplatcartoonbubble"}
+		{src:"images/fondo1_00000_00000.jpg?1732109283331", id:"fondo1_00000_00000"},
+		{src:"images/fondo2_00000.jpg?1732109283331", id:"fondo2_00000"},
+		{src:"images/fondo3_00000.jpg?1732109283331", id:"fondo3_00000"},
+		{src:"images/juego loquin82_atlas_1.png?1732109282971", id:"juego loquin82_atlas_1"},
+		{src:"images/juego loquin82_atlas_2.png?1732109282971", id:"juego loquin82_atlas_2"},
+		{src:"sounds/bienhecho.mp3?1732109283331", id:"bienhecho"},
+		{src:"sounds/botonfun.mp3?1732109283331", id:"botonfun"},
+		{src:"sounds/casilologramos.mp3?1732109283331", id:"casilologramos"},
+		{src:"sounds/Egipcia.mp3?1732109283331", id:"Egipcia"},
+		{src:"sounds/gameover.mp3?1732109283331", id:"gameover"},
+		{src:"sounds/jungla.mp3?1732109283331", id:"jungla"},
+		{src:"sounds/listoparalaaventura.mp3?1732109283331", id:"listoparalaaventura"},
+		{src:"sounds/moneda2.mp3?1732109283331", id:"moneda2"},
+		{src:"sounds/moneda.mp3?1732109283331", id:"moneda"},
+		{src:"sounds/popsuabe.mp3?1732109283331", id:"popsuabe"},
+		{src:"sounds/quedivertido.mp3?1732109283331", id:"quedivertido"},
+		{src:"sounds/rompisteelrecorfelicidades.mp3?1732109283331", id:"rompisteelrecorfelicidades"},
+		{src:"sounds/seleccionaunnivel.mp3?1732109283331", id:"seleccionaunnivel"},
+		{src:"sounds/space.mp3?1732109283331", id:"space"},
+		{src:"sounds/_super.mp3?1732109283331", id:"_super"},
+		{src:"sounds/zapsplatcartoonbubble.mp3?1732109283331", id:"zapsplatcartoonbubble"}
 	],
 	preloads: []
 };
