@@ -28,21 +28,21 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_12 = function() {
+(lib.CachedBmp_8 = function() {
 	this.initialize(ss["landing_atlas_2"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_10 = function() {
+(lib.CachedBmp_6 = function() {
 	this.initialize(ss["landing_atlas_2"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_11 = function() {
+(lib.CachedBmp_7 = function() {
 	this.initialize(ss["landing_atlas_2"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
@@ -165,10 +165,10 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_12();
+	this.instance = new lib.CachedBmp_8();
 	this.instance.setTransform(39.45,8.35,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_11();
+	this.instance_1 = new lib.CachedBmp_7();
 	this.instance_1.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
@@ -190,10 +190,10 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_10();
+	this.instance = new lib.CachedBmp_6();
 	this.instance.setTransform(39.45,8.35,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_11();
+	this.instance_1 = new lib.CachedBmp_7();
 	this.instance_1.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
@@ -561,10 +561,10 @@ if (reversed == null) { reversed = false; }
 	this.instance_3.setTransform(169.4,1000.25,1,1,0,0,0,263.2,267.3);
 
 	this.instance_4 = new lib.Símbolo4();
-	this.instance_4.setTransform(680,211.3,1,1,0,0,0,117.5,31.2);
+	this.instance_4.setTransform(680,203.5,1,1,0,0,0,117.5,31.2);
 
 	this.instance_5 = new lib.Símbolo3();
-	this.instance_5.setTransform(936,211.3,1,1,0,0,0,117.5,31.2);
+	this.instance_5.setTransform(936,203.5,1,1,0,0,0,117.5,31.2);
 
 	this.instance_6 = new lib.CachedBmp_3();
 	this.instance_6.setTransform(408.85,393.7,0.5,0.5);
@@ -573,7 +573,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_7.setTransform(264.35,51.65,0.5,0.5);
 
 	this.instance_8 = new lib.Símbolo1();
-	this.instance_8.setTransform(142.65,142.85,0.8169,0.8169,0,0,0,117,130.8);
+	this.instance_8.setTransform(110.1,116.5,0.8169,0.8169,0,0,0,117,130.8);
 
 	this.instance_9 = new lib.CachedBmp_1();
 	this.instance_9.setTransform(0,141.15,0.5,0.5);
@@ -582,14 +582,14 @@ if (reversed == null) { reversed = false; }
 
 	// Capa_2
 	this.instance_10 = new lib.Símbolo2();
-	this.instance_10.setTransform(540,426.8,1,1,0,0,0,540,426.8);
+	this.instance_10.setTransform(540,409.75,1,1,0,0,0,540,426.8);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(446.2,620,823.3,651.9000000000001);
+p.nominalBounds = new cjs.Rectangle(446.2,603,823.3,668.9000000000001);
 // library properties:
 lib.properties = {
 	id: 'BD6F014A5302B84B9BE3D1E9DCB6D475',
@@ -599,9 +599,9 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_1.png?1739371725303", id:"CachedBmp_1"},
-		{src:"images/landing_atlas_1.png?1739371725265", id:"landing_atlas_1"},
-		{src:"images/landing_atlas_2.png?1739371725265", id:"landing_atlas_2"}
+		{src:"images/CachedBmp_1.png?1739374695164", id:"CachedBmp_1"},
+		{src:"images/landing_atlas_1.png?1739374695117", id:"landing_atlas_1"},
+		{src:"images/landing_atlas_2.png?1739374695117", id:"landing_atlas_2"}
 	],
 	preloads: []
 };
