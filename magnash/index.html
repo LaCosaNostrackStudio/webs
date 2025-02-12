@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pinturas Magnash</title>
+<style>
+    /* Estilos para el contenedor de iframes */
+    .iframe-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Estilos para los iframes */
+    .iframe-container iframe {
+        border: none;
+        margin-bottom: 0px;
+        opacity: 0;
+        transform: translateY(300px); /* Inicia 100px abajo */
+        transition: opacity 2s ease-in-out, transform 3s cubic-bezier(0.1, 0.7, 0.3, 1);
+    }
+
+    /* Cuando el iframe está cargado, se activa la animación */
+    .iframe-container iframe[data-loaded="true"] {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Color de fondo */
+    body {
+        background-color: #FFFFFF;
+    }
+</style>
+
+<meta property="og:title" content="Pinturas Magnash">
+<meta property="og:description" content="Catalogo">
+<meta property="og:image" content="https://lacosanostrackstudio.github.io/webs/magnash/flayer.jpg">
+
+</head>
+
+<body>
+<div class="iframe-container">
+    <iframe data-src="portada_00000.jpg" width="1080" height="1920"></iframe>
+    <iframe data-src="p1_00000.jpg" width="1080" height="1920"></iframe>
+    <iframe data-src="colores_00000.jpg" width="1080" height="1920"></iframe>
+    <iframe data-src="p2_00000.jpg" width="1080" height="1920"></iframe>
+    <iframe data-src="p3_00000.jpg" width="1080" height="1920"></iframe>
+    <iframe data-src="cportada_00000.jpg" width="1080" height="1920"></iframe>
+</div>
+
+<script>
+var iframes = document.querySelectorAll('.iframe-container iframe');
+
+function loadVisibleIframes() {
+    iframes.forEach(function(iframe) {
+        var rect = iframe.getBoundingClientRect();
+        if (
+            rect.bottom >= 0 &&
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            !iframe.hasAttribute('data-loaded')
+        ) {
+            iframe.src = iframe.getAttribute('data-src');
+            iframe.setAttribute('data-loaded', 'true'); // Activa la animación
+        }
+    });
+}
+
+window.addEventListener('scroll', loadVisibleIframes);
+window.addEventListener('resize', loadVisibleIframes);
+window.addEventListener('DOMContentLoaded', loadVisibleIframes);
+window.addEventListener('load', loadVisibleIframes);
+</script>
+
+</body>
+</html>
