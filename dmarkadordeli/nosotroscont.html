@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nosotros</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 1050px;
+      height: 1500px;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .contenido {
+      padding: 20px;
+      width: 1010px; /* 1050 - 2*20 de padding */
+      height: 1460px;
+      box-sizing: border-box;
+    }
+
+    img.imagen {
+      float: left;
+      margin-right: 20px;
+      width: 520px;
+      height: 1000px;
+    }
+
+    .texto {
+      text-align: justify;
+		font-size: 25px; /* Tamaño del texto ajustado */
+    }
+  </style>
+</head>
+<body>
+  <div class="contenido">
+    <img class="imagen" src="nosotros/nosotros.png" alt="Imagen Nosotros">
+    <div class="texto" id="texto">
+      <!-- Aquí se insertará el texto dinámicamente -->
+    </div>
+  </div>
+
+  <script>
+    // Cargar el texto desde el archivo nosotros.txt
+    fetch("nosotros/nosotros.txt")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("texto").textContent = data;
+      })
+      .catch(error => {
+        document.getElementById("texto").textContent = "Error al cargar el texto.";
+        console.error("Error al cargar el texto:", error);
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contacto</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+    }
+
+    .contenedor {
+      width: 1050px;
+      height: 1000px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .intro {
+      font-size: 25px; /* Tamaño ajustado */
+      margin-bottom: 40px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .contacto {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+
+    .contacto img {
+      width: 64px;
+      height: 64px;
+      margin-right: 20px;
+    }
+
+    .contacto span {
+      font-size: 25px; /* Tamaño ajustado */
+      color: #333;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <p class="intro" id="texto-intro">Cargando texto...</p>
+
+    <div class="contacto" id="mail">
+      <img src="nosotros/mail.png" alt="Email">
+      <span>Cargando correo...</span>
+    </div>
+
+    <div class="contacto" id="phone">
+      <img src="nosotros/phone.png" alt="Teléfono">
+      <span>Cargando teléfono...</span>
+    </div>
+
+    <div class="contacto" id="wapp">
+      <img src="nosotros/wapp.png" alt="WhatsApp">
+      <span>Cargando WhatsApp...</span>
+    </div>
+  </div>
+
+  <script>
+    async function cargarTexto(path) {
+      try {
+        const response = await fetch(path);
+        return await response.text();
+      } catch (e) {
+        console.error("Error cargando:", path, e);
+        return "";
+      }
+    }
+
+    async function inicializar() {
+      const textoIntro = await cargarTexto('nosotros/contactanos.txt');
+      const mail = await cargarTexto('nosotros/mail.txt');
+      const phone = await cargarTexto('nosotros/phone.txt');
+      const wapp = await cargarTexto('nosotros/wapp.txt');
+
+      document.getElementById('texto-intro').textContent = textoIntro.trim();
+
+      const mailElem = document.getElementById('mail');
+      mailElem.querySelector('span').textContent = mail.trim();
+      mailElem.onclick = () => {
+        window.location.href = 'mailto:' + mail.trim();
+      };
+
+      const phoneElem = document.getElementById('phone');
+      phoneElem.querySelector('span').textContent = phone.trim();
+      phoneElem.onclick = () => {
+        window.location.href = 'tel:' + phone.trim();
+      };
+
+      const wappElem = document.getElementById('wapp');
+      wappElem.querySelector('span').textContent = wapp.trim();
+      wappElem.onclick = () => {
+        const numero = wapp.trim().replace(/\D/g, '');
+        const mensaje = encodeURIComponent("Pueden darme más información?");
+        window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
+      };
+    }
+
+    inicializar();
+  </script>
+</body>
+</html>
