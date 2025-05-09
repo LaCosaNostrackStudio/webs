@@ -1370,7 +1370,7 @@ if (reversed == null) { reversed = false; }
 		    }
 			this.tiempoview.gotoAndStop("ver");
 			localStorage.setItem('siver', this.total.text);
-		    var numero = "12722230550"; // Reemplaza con tu número de WhatsApp
+		    var numero = "18496532129"; // Reemplaza con tu número de WhatsApp
 		    var mensaje = encodeURIComponent(this.miTexto.text); // Obtiene el texto del campo
 		    var enlace = "https://wa.me/" + numero + "?text=" + mensaje;
 		
