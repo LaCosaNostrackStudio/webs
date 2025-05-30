@@ -59,20 +59,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	}
 
 
-(lib.an_Video = function(options) {
-	this.initialize();
-	this._element = new $.an.Video(options);
-	this._el = this._element.create();
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,400,300);
-
-p._tick = _tick;
-p._handleDrawEnd = _handleDrawEnd;
-p._updateVisibility = _updateVisibility;
-p.draw = _componentDraw;
-
-
-
 (lib.Símbolo14 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -411,20 +397,12 @@ if (reversed == null) { reversed = false; }
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).wait(14).call(this.frame_14).wait(1));
 
-	// Capa_3
-	this.instance = new lib.an_Video({'id': '', 'src':'videos/top.mp4', 'autoplay':true, 'controls':false, 'muted':true, 'loop':true, 'poster':'', 'preload':true, 'class':'video'});
-
-	this.instance.setTransform(234.75,417.2,1.1737,2.7813,0,0,0,200,150);
-	this.instance._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(14).to({_off:false},0).wait(1));
-
 	// Capa_1
-	this.instance_1 = new lib.top_00000();
-	this.instance_1.setTransform(0,0,1.1125,1.1125);
+	this.instance = new lib.top_00000();
+	this.instance.setTransform(0,0,1.1125,1.1125);
 
-	this.instance_2 = new lib.Símbolo7();
-	this.instance_2.setTransform(551.55,1030.2,1,1,0,0,0,226.6,77.4);
+	this.instance_1 = new lib.Símbolo7();
+	this.instance_1.setTransform(551.55,1030.2,1,1,0,0,0,226.6,77.4);
 
 	this.shape = new cjs.Shape();
 	this.shape.graphics.f("rgba(255,255,255,0.996)").s().p("AgPBzIAAghIAfAAIAAAhgAgIA6IgJh5IAAgzIAiAAIAAAzIgIB5g");
@@ -1310,26 +1288,26 @@ if (reversed == null) { reversed = false; }
 	this.shape_220.graphics.f("rgba(255,255,255,0.996)").s().p("AA/ByIgfgvQgMgVgKgKQgIgLgGgFQgHgEgGgCIgRgBIgkAAIAABlIgeAAIAAjjIBlAAQAegBAQAHQAQAGAKAPQAJAQABATQgBAZgQAQQgPAQghAFQAMAFAGAFQANANAMASIAoA+gAhGgNIBBAAQAUAAAMgDQAMgFAGgKQAGgJAAgLQAAgRgMgKQgMgKgZAAIhIAAg");
 	this.shape_220.setTransform(504.75,523);
 
-	this.instance_3 = new lib.logo_00158();
-	this.instance_3.setTransform(464,-9);
+	this.instance_2 = new lib.logo_00158();
+	this.instance_2.setTransform(464,-9);
 
-	this.instance_4 = new lib.Símbolo11();
-	this.instance_4.setTransform(754.1,677.65,1,1,0,0,0,287.2,178.8);
-	this.instance_4.alpha = 0.4492;
+	this.instance_3 = new lib.Símbolo11();
+	this.instance_3.setTransform(754.1,677.65,1,1,0,0,0,287.2,178.8);
+	this.instance_3.alpha = 0.4492;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_4},{t:this.instance_3},{t:this.shape_220},{t:this.shape_219},{t:this.shape_218},{t:this.shape_217},{t:this.shape_216},{t:this.shape_215},{t:this.shape_214},{t:this.shape_213},{t:this.shape_212},{t:this.shape_211},{t:this.shape_210},{t:this.shape_209},{t:this.shape_208},{t:this.shape_207},{t:this.shape_206},{t:this.shape_205},{t:this.shape_204},{t:this.shape_203},{t:this.shape_202},{t:this.shape_201},{t:this.shape_200},{t:this.shape_199},{t:this.shape_198},{t:this.shape_197},{t:this.shape_196},{t:this.shape_195},{t:this.shape_194},{t:this.shape_193},{t:this.shape_192},{t:this.shape_191},{t:this.shape_190},{t:this.shape_189},{t:this.shape_188},{t:this.shape_187},{t:this.shape_186},{t:this.shape_185},{t:this.shape_184},{t:this.shape_183},{t:this.shape_182},{t:this.shape_181},{t:this.shape_180},{t:this.shape_179},{t:this.shape_178},{t:this.shape_177},{t:this.shape_176},{t:this.shape_175},{t:this.shape_174},{t:this.shape_173},{t:this.shape_172},{t:this.shape_171},{t:this.shape_170},{t:this.shape_169},{t:this.shape_168},{t:this.shape_167},{t:this.shape_166},{t:this.shape_165},{t:this.shape_164},{t:this.shape_163},{t:this.shape_162},{t:this.shape_161},{t:this.shape_160},{t:this.shape_159},{t:this.shape_158},{t:this.shape_157},{t:this.shape_156},{t:this.shape_155},{t:this.shape_154},{t:this.shape_153},{t:this.shape_152},{t:this.shape_151},{t:this.shape_150},{t:this.shape_149},{t:this.shape_148},{t:this.shape_147},{t:this.shape_146},{t:this.shape_145},{t:this.shape_144},{t:this.shape_143},{t:this.shape_142},{t:this.shape_141},{t:this.shape_140},{t:this.shape_139},{t:this.shape_138},{t:this.shape_137},{t:this.shape_136},{t:this.shape_135},{t:this.shape_134},{t:this.shape_133},{t:this.shape_132},{t:this.shape_131},{t:this.shape_130},{t:this.shape_129},{t:this.shape_128},{t:this.shape_127},{t:this.shape_126},{t:this.shape_125},{t:this.shape_124},{t:this.shape_123},{t:this.shape_122},{t:this.shape_121},{t:this.shape_120},{t:this.shape_119},{t:this.shape_118},{t:this.shape_117},{t:this.shape_116},{t:this.shape_115},{t:this.shape_114},{t:this.shape_113},{t:this.shape_112},{t:this.shape_111},{t:this.shape_110},{t:this.shape_109},{t:this.shape_108},{t:this.shape_107},{t:this.shape_106},{t:this.shape_105},{t:this.shape_104},{t:this.shape_103},{t:this.shape_102},{t:this.shape_101},{t:this.shape_100},{t:this.shape_99},{t:this.shape_98},{t:this.shape_97},{t:this.shape_96},{t:this.shape_95},{t:this.shape_94},{t:this.shape_93},{t:this.shape_92},{t:this.shape_91},{t:this.shape_90},{t:this.shape_89},{t:this.shape_88},{t:this.shape_87},{t:this.shape_86},{t:this.shape_85},{t:this.shape_84},{t:this.shape_83},{t:this.shape_82},{t:this.shape_81},{t:this.shape_80},{t:this.shape_79},{t:this.shape_78},{t:this.shape_77},{t:this.shape_76},{t:this.shape_75},{t:this.shape_74},{t:this.shape_73},{t:this.shape_72},{t:this.shape_71},{t:this.shape_70},{t:this.shape_69},{t:this.shape_68},{t:this.shape_67},{t:this.shape_66},{t:this.shape_65},{t:this.shape_64},{t:this.shape_63},{t:this.shape_62},{t:this.shape_61},{t:this.shape_60},{t:this.shape_59},{t:this.shape_58},{t:this.shape_57},{t:this.shape_56},{t:this.shape_55},{t:this.shape_54},{t:this.shape_53},{t:this.shape_52},{t:this.shape_51},{t:this.shape_50},{t:this.shape_49},{t:this.shape_48},{t:this.shape_47},{t:this.shape_46},{t:this.shape_45},{t:this.shape_44},{t:this.shape_43},{t:this.shape_42},{t:this.shape_41},{t:this.shape_40},{t:this.shape_39},{t:this.shape_38},{t:this.shape_37},{t:this.shape_36},{t:this.shape_35},{t:this.shape_34},{t:this.shape_33},{t:this.shape_32},{t:this.shape_31},{t:this.shape_30},{t:this.shape_29},{t:this.shape_28},{t:this.shape_27},{t:this.shape_26},{t:this.shape_25},{t:this.shape_24},{t:this.shape_23},{t:this.shape_22},{t:this.shape_21},{t:this.shape_20},{t:this.shape_19},{t:this.shape_18},{t:this.shape_17},{t:this.shape_16},{t:this.shape_15},{t:this.shape_14},{t:this.shape_13},{t:this.shape_12},{t:this.shape_11},{t:this.shape_10},{t:this.shape_9},{t:this.shape_8},{t:this.shape_7},{t:this.shape_6},{t:this.shape_5},{t:this.shape_4},{t:this.shape_3},{t:this.shape_2},{t:this.shape_1},{t:this.shape},{t:this.instance_2},{t:this.instance_1}]}).wait(15));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_3},{t:this.instance_2},{t:this.shape_220},{t:this.shape_219},{t:this.shape_218},{t:this.shape_217},{t:this.shape_216},{t:this.shape_215},{t:this.shape_214},{t:this.shape_213},{t:this.shape_212},{t:this.shape_211},{t:this.shape_210},{t:this.shape_209},{t:this.shape_208},{t:this.shape_207},{t:this.shape_206},{t:this.shape_205},{t:this.shape_204},{t:this.shape_203},{t:this.shape_202},{t:this.shape_201},{t:this.shape_200},{t:this.shape_199},{t:this.shape_198},{t:this.shape_197},{t:this.shape_196},{t:this.shape_195},{t:this.shape_194},{t:this.shape_193},{t:this.shape_192},{t:this.shape_191},{t:this.shape_190},{t:this.shape_189},{t:this.shape_188},{t:this.shape_187},{t:this.shape_186},{t:this.shape_185},{t:this.shape_184},{t:this.shape_183},{t:this.shape_182},{t:this.shape_181},{t:this.shape_180},{t:this.shape_179},{t:this.shape_178},{t:this.shape_177},{t:this.shape_176},{t:this.shape_175},{t:this.shape_174},{t:this.shape_173},{t:this.shape_172},{t:this.shape_171},{t:this.shape_170},{t:this.shape_169},{t:this.shape_168},{t:this.shape_167},{t:this.shape_166},{t:this.shape_165},{t:this.shape_164},{t:this.shape_163},{t:this.shape_162},{t:this.shape_161},{t:this.shape_160},{t:this.shape_159},{t:this.shape_158},{t:this.shape_157},{t:this.shape_156},{t:this.shape_155},{t:this.shape_154},{t:this.shape_153},{t:this.shape_152},{t:this.shape_151},{t:this.shape_150},{t:this.shape_149},{t:this.shape_148},{t:this.shape_147},{t:this.shape_146},{t:this.shape_145},{t:this.shape_144},{t:this.shape_143},{t:this.shape_142},{t:this.shape_141},{t:this.shape_140},{t:this.shape_139},{t:this.shape_138},{t:this.shape_137},{t:this.shape_136},{t:this.shape_135},{t:this.shape_134},{t:this.shape_133},{t:this.shape_132},{t:this.shape_131},{t:this.shape_130},{t:this.shape_129},{t:this.shape_128},{t:this.shape_127},{t:this.shape_126},{t:this.shape_125},{t:this.shape_124},{t:this.shape_123},{t:this.shape_122},{t:this.shape_121},{t:this.shape_120},{t:this.shape_119},{t:this.shape_118},{t:this.shape_117},{t:this.shape_116},{t:this.shape_115},{t:this.shape_114},{t:this.shape_113},{t:this.shape_112},{t:this.shape_111},{t:this.shape_110},{t:this.shape_109},{t:this.shape_108},{t:this.shape_107},{t:this.shape_106},{t:this.shape_105},{t:this.shape_104},{t:this.shape_103},{t:this.shape_102},{t:this.shape_101},{t:this.shape_100},{t:this.shape_99},{t:this.shape_98},{t:this.shape_97},{t:this.shape_96},{t:this.shape_95},{t:this.shape_94},{t:this.shape_93},{t:this.shape_92},{t:this.shape_91},{t:this.shape_90},{t:this.shape_89},{t:this.shape_88},{t:this.shape_87},{t:this.shape_86},{t:this.shape_85},{t:this.shape_84},{t:this.shape_83},{t:this.shape_82},{t:this.shape_81},{t:this.shape_80},{t:this.shape_79},{t:this.shape_78},{t:this.shape_77},{t:this.shape_76},{t:this.shape_75},{t:this.shape_74},{t:this.shape_73},{t:this.shape_72},{t:this.shape_71},{t:this.shape_70},{t:this.shape_69},{t:this.shape_68},{t:this.shape_67},{t:this.shape_66},{t:this.shape_65},{t:this.shape_64},{t:this.shape_63},{t:this.shape_62},{t:this.shape_61},{t:this.shape_60},{t:this.shape_59},{t:this.shape_58},{t:this.shape_57},{t:this.shape_56},{t:this.shape_55},{t:this.shape_54},{t:this.shape_53},{t:this.shape_52},{t:this.shape_51},{t:this.shape_50},{t:this.shape_49},{t:this.shape_48},{t:this.shape_47},{t:this.shape_46},{t:this.shape_45},{t:this.shape_44},{t:this.shape_43},{t:this.shape_42},{t:this.shape_41},{t:this.shape_40},{t:this.shape_39},{t:this.shape_38},{t:this.shape_37},{t:this.shape_36},{t:this.shape_35},{t:this.shape_34},{t:this.shape_33},{t:this.shape_32},{t:this.shape_31},{t:this.shape_30},{t:this.shape_29},{t:this.shape_28},{t:this.shape_27},{t:this.shape_26},{t:this.shape_25},{t:this.shape_24},{t:this.shape_23},{t:this.shape_22},{t:this.shape_21},{t:this.shape_20},{t:this.shape_19},{t:this.shape_18},{t:this.shape_17},{t:this.shape_16},{t:this.shape_15},{t:this.shape_14},{t:this.shape_13},{t:this.shape_12},{t:this.shape_11},{t:this.shape_10},{t:this.shape_9},{t:this.shape_8},{t:this.shape_7},{t:this.shape_6},{t:this.shape_5},{t:this.shape_4},{t:this.shape_3},{t:this.shape_2},{t:this.shape_1},{t:this.shape},{t:this.instance_1},{t:this.instance}]}).wait(15));
 
 	// Capa_2
-	this.instance_5 = new lib.Símbolo14();
-	this.instance_5.setTransform(667.5,667.5,1.1125,1.1125,0,0,0,600,600);
-	this.instance_5.alpha = 0.25;
+	this.instance_4 = new lib.Símbolo14();
+	this.instance_4.setTransform(667.5,667.5,1.1125,1.1125,0,0,0,600,600);
+	this.instance_4.alpha = 0.25;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(15));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(15));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(524.4,552,810.6,783);
+p.nominalBounds = new cjs.Rectangle(525,552,810,783);
 // library properties:
 lib.properties = {
 	id: '9F19E592495FAE4EA74FABDF34D3DF52',
@@ -1339,12 +1317,9 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/fondo.jpg?1748611335206", id:"fondo"},
-		{src:"images/logo_00158.png?1748611335206", id:"logo_00158"},
-		{src:"images/top_00000.jpg?1748611335206", id:"top_00000"},
-		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1748611335206", id:"lib/jquery-3.4.1.min.js"},
-		{src:"components/sdk/anwidget.js?1748611335206", id:"sdk/anwidget.js"},
-		{src:"components/video/src/video.js?1748611335206", id:"an.Video"}
+		{src:"images/fondo.jpg?1748611557953", id:"fondo"},
+		{src:"images/logo_00158.png?1748611557953", id:"logo_00158"},
+		{src:"images/top_00000.jpg?1748611557953", id:"top_00000"}
 	],
 	preloads: []
 };
@@ -1436,56 +1411,6 @@ an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers)
 		stage.tickOnUpdate = false;            
 		stage.update();            
 		stage.tickOnUpdate = true;		
-	}
-}
-function _updateVisibility(evt) {
-	var parent = this.parent;
-	var detach = this.stage == null || this._off || !parent;
-	while(parent) {
-		if(parent.visible) {
-			parent = parent.parent;
-		}
-		else{
-			detach = true;
-			break;
-		}
-	}
-	detach = detach && this._element && this._element._attached;
-	if(detach) {
-		this._element.detach();
-		this.dispatchEvent('detached');
-		stage.removeEventListener('drawstart', this._updateVisibilityCbk);
-		this._updateVisibilityCbk = false;
-	}
-}
-function _handleDrawEnd(evt) {
-	if(this._element && this._element._attached) {
-		var props = this.getConcatenatedDisplayProps(this._props), mat = props.matrix;
-		var tx1 = mat.decompose(); var sx = tx1.scaleX; var sy = tx1.scaleY;
-		var dp = window.devicePixelRatio || 1; var w = this.nominalBounds.width * sx; var h = this.nominalBounds.height * sy;
-		mat.tx/=dp;mat.ty/=dp; mat.a/=(dp*sx);mat.b/=(dp*sx);mat.c/=(dp*sy);mat.d/=(dp*sy);
-		this._element.setProperty('transform-origin', this.regX + 'px ' + this.regY + 'px');
-		var x = (mat.tx + this.regX*mat.a + this.regY*mat.c - this.regX);
-		var y = (mat.ty + this.regX*mat.b + this.regY*mat.d - this.regY);
-		var tx = 'matrix(' + mat.a + ',' + mat.b + ',' + mat.c + ',' + mat.d + ',' + x + ',' + y + ')';
-		this._element.setProperty('transform', tx);
-		this._element.setProperty('width', w);
-		this._element.setProperty('height', h);
-		this._element.update();
-	}
-}
-
-function _tick(evt) {
-	var stage = this.stage;
-	stage&&stage.on('drawend', this._handleDrawEnd, this, true);
-	if(!this._updateVisibilityCbk) {
-		this._updateVisibilityCbk = stage.on('drawstart', this._updateVisibility, this, false);
-	}
-}
-function _componentDraw(ctx) {
-	if(this._element && !this._element._attached) {
-		this._element.attach($('#dom_overlay_container'));
-		this.dispatchEvent('attached');
 	}
 }
 an.handleSoundStreamOnTick = function(event) {
