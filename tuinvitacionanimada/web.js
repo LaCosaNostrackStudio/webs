@@ -1325,12 +1325,12 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/fondo.jpg?1748610458682", id:"fondo"},
-		{src:"images/logo_00158.png?1748610458682", id:"logo_00158"},
-		{src:"images/top_00000.jpg?1748610458682", id:"top_00000"},
-		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1748610458682", id:"lib/jquery-3.4.1.min.js"},
-		{src:"components/sdk/anwidget.js?1748610458682", id:"sdk/anwidget.js"},
-		{src:"components/video/src/video.js?1748610458682", id:"an.Video"}
+		{src:"images/fondo.jpg?1748610982283", id:"fondo"},
+		{src:"images/logo_00158.png?1748610982283", id:"logo_00158"},
+		{src:"images/top_00000.jpg?1748610982283", id:"top_00000"},
+		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1748610982283", id:"lib/jquery-3.4.1.min.js"},
+		{src:"components/sdk/anwidget.js?1748610982283", id:"sdk/anwidget.js"},
+		{src:"components/video/src/video.js?1748610982283", id:"an.Video"}
 	],
 	preloads: []
 };
