@@ -11,7 +11,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
-<title>web</title>
+<title>goto</title>
 <!-- write your code here -->
 <style>
   #animation_container, #_preload_div_ {
@@ -21,14 +21,14 @@
   }
 </style>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-<script src="web.js?1748639014966"></script>
+<script src="goto.js?1748639130577"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
 	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("9F19E592495FAE4EA74FABDF34D3DF52");
+	var comp=AdobeAn.getComposition("35DF4F6CAE77C24386D73F952051B528");
 	var lib=comp.getLibrary();
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
@@ -51,8 +51,8 @@ function handleComplete(evt,comp) {
 	}
 	var preloaderDiv = document.getElementById("_preload_div_");
 	preloaderDiv.style.display = 'none';
-	dom_overlay_container.style.display = canvas.style.display = 'block';
-	exportRoot = new lib.web();
+	canvas.style.display = 'block';
+	exportRoot = new lib._goto();
 	stage = new lib.Stage(canvas);	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
@@ -69,11 +69,11 @@ function handleComplete(evt,comp) {
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(0, 0, 0, 1.00); width:1050px; height:1122px">
-		<canvas id="canvas" width="1050" height="1122" style="position: absolute; display: none; background-color:rgba(0, 0, 0, 1.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1050px; height:1122px; position: absolute; left: 0px; top: 0px; display: none;">
+	<div id="animation_container" style="background-color:rgba(0, 0, 0, 1.00); width:1050px; height:270px">
+		<canvas id="canvas" width="1050" height="270" style="position: absolute; display: none; background-color:rgba(0, 0, 0, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1050px; height:270px; position: absolute; left: 0px; top: 0px; display: none;">
 		</div>
 	</div>
-    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:1122px; width: 1050px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images/_preloader.gif?1748639014966 style='vertical-align: middle; max-height: 100%'/></div>
+    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:270px; width: 1050px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images/_preloader.gif?1748639130578 style='vertical-align: middle; max-height: 100%'/></div>
 </body>
 </html>
