@@ -427,8 +427,8 @@ lib.properties = {
 	color: "#25015A",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/body2_atlas_P_1.png?1748628817605", id:"body2_atlas_P_1"},
-		{src:"images/body2_atlas_NP_1.jpg?1748628817605", id:"body2_atlas_NP_1"}
+		{src:"images/body2_atlas_P_1.png?1748635719321", id:"body2_atlas_P_1"},
+		{src:"images/body2_atlas_NP_1.jpg?1748635719322", id:"body2_atlas_NP_1"}
 	],
 	preloads: []
 };

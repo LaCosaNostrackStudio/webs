@@ -362,8 +362,8 @@ lib.properties = {
 	color: "#25015A",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/body3_atlas_P_1.png?1748628796930", id:"body3_atlas_P_1"},
-		{src:"images/body3_atlas_NP_1.jpg?1748628796930", id:"body3_atlas_NP_1"}
+		{src:"images/body3_atlas_P_1.png?1748635745904", id:"body3_atlas_P_1"},
+		{src:"images/body3_atlas_NP_1.jpg?1748635745904", id:"body3_atlas_NP_1"}
 	],
 	preloads: []
 };
