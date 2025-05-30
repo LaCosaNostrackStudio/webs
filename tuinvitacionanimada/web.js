@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"web_atlas_1", frames: [[1154,1254,715,154],[0,1202,1152,684],[0,0,1200,1200],[1202,752,562,500],[1202,0,422,750]]}
+		{name:"web_atlas_1", frames: [[1154,1254,715,154],[0,1202,1152,608],[0,0,1200,1200],[1202,752,562,500],[1202,0,422,750]]}
 ];
 
 
@@ -340,6 +340,26 @@ if (reversed == null) { reversed = false; }
 		if(this.totalFrames == 1) {
 			this.isSingleFrame = true;
 		}
+		var frequency = 10;
+		stage.enableMouseOver(frequency);
+		
+		// Evento para aumentar la escala al pasar el mouse
+		this.bt.addEventListener("mouseover", aumentarEscala.bind(this));
+		
+		// Evento para volver a la escala original al quitar el mouse
+		this.bt.addEventListener("mouseout", restaurarEscala.bind(this));
+		
+		// Función para aumentar la escala
+		function aumentarEscala() {
+		    createjs.Tween.get(this.bt).to({ scaleX: 1.2, scaleY: 1.2 }, 300, createjs.Ease.quadOut);
+		}
+		
+		// Función para restaurar la escala original
+		function restaurarEscala() {
+		    createjs.Tween.get(this.bt).to({ scaleX: 1, scaleY: 1 }, 300, createjs.Ease.quadOut);
+		}
+		
+		
 		this.bt.addEventListener("click", fl_ClickToHide.bind(this));
 		
 		function fl_ClickToHide()
@@ -388,22 +408,12 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	this.actionFrames = [14];
-	// timeline functions:
-	this.frame_14 = function() {
-		this.stop();
-	}
-
-	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(14).call(this.frame_14).wait(1));
-
 	// Capa_3
 	this.instance = new lib.an_Video({'id': '', 'src':'videos/top.mp4', 'autoplay':true, 'controls':false, 'muted':true, 'loop':true, 'poster':'', 'preload':true, 'class':'video'});
 
 	this.instance.setTransform(234.75,417.2,1.1737,2.7813,0,0,0,200,150);
-	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(14).to({_off:false},0).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	// Capa_1
 	this.instance_1 = new lib.top_00000_00000();
@@ -422,14 +432,14 @@ if (reversed == null) { reversed = false; }
 	this.instance_5.setTransform(754.1,677.65,1,1,0,0,0,287.2,178.8);
 	this.instance_5.alpha = 0.4492;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1}]}).wait(15));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1}]}).wait(1));
 
 	// Capa_2
 	this.instance_6 = new lib.Símbolo14();
 	this.instance_6.setTransform(667.5,667.5,1.1125,1.1125,0,0,0,600,600);
 	this.instance_6.alpha = 0.25;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(15));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(1));
 
 	this._renderFirstFrame();
 
@@ -440,14 +450,14 @@ lib.properties = {
 	id: '9F19E592495FAE4EA74FABDF34D3DF52',
 	width: 1050,
 	height: 1122,
-	fps: 30,
+	fps: 60,
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/web_atlas_1.png?1748635788150", id:"web_atlas_1"},
-		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1748635788338", id:"lib/jquery-3.4.1.min.js"},
-		{src:"components/sdk/anwidget.js?1748635788338", id:"sdk/anwidget.js"},
-		{src:"components/video/src/video.js?1748635788338", id:"an.Video"}
+		{src:"images/web_atlas_1.png?1748636326946", id:"web_atlas_1"},
+		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1748636327137", id:"lib/jquery-3.4.1.min.js"},
+		{src:"components/sdk/anwidget.js?1748636327137", id:"sdk/anwidget.js"},
+		{src:"components/video/src/video.js?1748636327137", id:"an.Video"}
 	],
 	preloads: []
 };
