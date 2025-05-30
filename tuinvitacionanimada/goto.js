@@ -537,10 +537,14 @@ if (reversed == null) { reversed = false; }
 
 	// Capa_2
 	this.shape = new cjs.Shape();
-	this.shape.graphics.lf(["#240059","#000000"],[0,1],0,-35.1,0,35.2).s().p("EhSBAFgIAAq/MCkDAAAIAAK/g");
-	this.shape.setTransform(525,35.175);
+	this.shape.graphics.lf(["#240059","#000000"],[0,1],0,35.2,0,-35.1).s().p("EhSBAFgIAAq/MCkDAAAIAAK/g");
+	this.shape.setTransform(525,234.825);
 
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.lf(["#240059","#000000"],[0,1],0,-35.1,0,35.2).s().p("EhSBAFgIAAq/MCkDAAAIAAK/g");
+	this.shape_1.setTransform(525,35.175);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
 
 	this._renderFirstFrame();
 
@@ -555,7 +559,7 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/goto_atlas_1.png?1748639130416", id:"goto_atlas_1"}
+		{src:"images/goto_atlas_1.png?1748640847803", id:"goto_atlas_1"}
 	],
 	preloads: []
 };
