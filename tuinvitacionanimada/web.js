@@ -1233,10 +1233,10 @@ lib.properties = {
 	width: 1050,
 	height: 1122,
 	fps: 60,
-	color: "#000000",
+	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/web_atlas_P_1.png?1748705999328", id:"web_atlas_P_1"}
+		{src:"images/web_atlas_P_1.png?1748707849837", id:"web_atlas_P_1"}
 	],
 	preloads: []
 };
