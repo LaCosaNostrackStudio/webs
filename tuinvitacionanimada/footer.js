@@ -3149,7 +3149,7 @@ if (reversed == null) { reversed = false; }
 
 	// Capa_1
 	this.instance_9 = new lib.Símbolo19();
-	this.instance_9.setTransform(1051.95,-0.4,1.2241,1,180,0,0,0,247.6);
+	this.instance_9.setTransform(1051.95,-1.4,1.2241,1,180,0,0,0,247.6);
 
 	this.instance_10 = new lib.Símbolo21();
 	this.instance_10.setTransform(864.15,783.8,1,1,0,0,0,866.2,814.8);
@@ -3166,10 +3166,10 @@ lib.properties = {
 	width: 1050,
 	height: 400,
 	fps: 60,
-	color: "#000000",
+	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/footer_atlas_P_1.png?1748705858918", id:"footer_atlas_P_1"}
+		{src:"images/footer_atlas_P_1.png?1748708441410", id:"footer_atlas_P_1"}
 	],
 	preloads: []
 };
