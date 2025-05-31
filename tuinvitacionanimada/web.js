@@ -27,35 +27,35 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_37 = function() {
+(lib.CachedBmp_5 = function() {
 	this.initialize(ss["web_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_36 = function() {
+(lib.CachedBmp_4 = function() {
 	this.initialize(ss["web_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_35 = function() {
+(lib.CachedBmp_3 = function() {
 	this.initialize(ss["web_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_34 = function() {
+(lib.CachedBmp_2 = function() {
 	this.initialize(ss["web_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_33 = function() {
+(lib.CachedBmp_1 = function() {
 	this.initialize(ss["web_atlas_1"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
@@ -97,20 +97,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	prototype.frameBounds = frameBounds;
 	return prototype;
 	}
-
-
-(lib.an_Video = function(options) {
-	this.initialize();
-	this._element = new $.an.Video(options);
-	this._el = this._element.create();
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,400,300);
-
-p._tick = _tick;
-p._handleDrawEnd = _handleDrawEnd;
-p._updateVisibility = _updateVisibility;
-p.draw = _componentDraw;
-
 
 
 (lib.Símbolo14 = function(mode,startPosition,loop,reversed) {
@@ -223,7 +209,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_37();
+	this.instance = new lib.CachedBmp_5();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -375,10 +361,10 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_36();
+	this.instance = new lib.CachedBmp_4();
 	this.instance.setTransform(439.4,0,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_35();
+	this.instance_1 = new lib.CachedBmp_3();
 	this.instance_1.setTransform(147.4,0,0.5,0.5);
 
 	this.segundos = new cjs.Text("59", "bold 96px 'Arial'", "#9A00EF");
@@ -570,7 +556,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_2
-	this.instance = new lib.CachedBmp_34();
+	this.instance = new lib.CachedBmp_2();
 	this.instance.setTransform(48,50.8,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -603,45 +589,41 @@ if (reversed == null) { reversed = false; }
 	this.instance = new lib.Símbolo8();
 	this.instance.setTransform(145.4,1086.05,0.2518,0.2518,0,0,0,410.6,131.8);
 
-	this.instance_1 = new lib.an_Video({'id': 'instance_1', 'src':'videos/top.mp4', 'autoplay':true, 'controls':false, 'muted':true, 'loop':true, 'poster':'', 'preload':true, 'class':'video'});
-
-	this.instance_1.setTransform(234.75,417.2,1.1737,2.7813,0,0,0,200,150);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	// Capa_1
-	this.instance_2 = new lib.Símbolo6_1();
-	this.instance_2.setTransform(140.55,955.6,0.8196,0.8196,0,0,0,128.2,128.3);
+	this.instance_1 = new lib.Símbolo6_1();
+	this.instance_1.setTransform(140.55,955.6,0.8196,0.8196,0,0,0,128.2,128.3);
 
-	this.instance_3 = new lib.top_00000_00000();
-	this.instance_3.setTransform(0,0,1.1125,1.1125);
+	this.instance_2 = new lib.top_00000_00000();
+	this.instance_2.setTransform(0,0,1.1125,1.1125);
 
-	this.instance_4 = new lib.Símbolo7();
-	this.instance_4.setTransform(551.55,1030.2,1,1,0,0,0,226.6,77.4);
+	this.instance_3 = new lib.Símbolo7();
+	this.instance_3.setTransform(551.55,1030.2,1,1,0,0,0,226.6,77.4);
 
-	this.instance_5 = new lib.CachedBmp_33();
-	this.instance_5.setTransform(490.15,503.5,0.5,0.5);
+	this.instance_4 = new lib.CachedBmp_1();
+	this.instance_4.setTransform(490.15,503.5,0.5,0.5);
 
-	this.instance_6 = new lib.logo_00158();
-	this.instance_6.setTransform(464,-9);
+	this.instance_5 = new lib.logo_00158();
+	this.instance_5.setTransform(464,-9);
 
-	this.instance_7 = new lib.Símbolo11();
-	this.instance_7.setTransform(754.1,677.65,1,1,0,0,0,287.2,178.8);
-	this.instance_7.alpha = 0.4492;
+	this.instance_6 = new lib.Símbolo11();
+	this.instance_6.setTransform(754.1,677.65,1,1,0,0,0,287.2,178.8);
+	this.instance_6.alpha = 0.4492;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_7},{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1}]}).wait(1));
 
 	// Capa_2
-	this.instance_8 = new lib.Símbolo14();
-	this.instance_8.setTransform(667.5,667.5,1.1125,1.1125,0,0,0,600,600);
-	this.instance_8.alpha = 0.25;
+	this.instance_7 = new lib.Símbolo14();
+	this.instance_7.setTransform(667.5,667.5,1.1125,1.1125,0,0,0,600,600);
+	this.instance_7.alpha = 0.25;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(524.4,552,810.6,783);
+p.nominalBounds = new cjs.Rectangle(525,552,810,783);
 // library properties:
 lib.properties = {
 	id: '9F19E592495FAE4EA74FABDF34D3DF52',
@@ -651,10 +633,7 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/web_atlas_1.png?1748639013196", id:"web_atlas_1"},
-		{src:"https://code.jquery.com/jquery-3.4.1.min.js?1748639014883", id:"lib/jquery-3.4.1.min.js"},
-		{src:"components/sdk/anwidget.js?1748639014883", id:"sdk/anwidget.js"},
-		{src:"components/video/src/video.js?1748639014883", id:"an.Video"}
+		{src:"images/web_atlas_1.png?1748694485655", id:"web_atlas_1"}
 	],
 	preloads: []
 };
@@ -746,56 +725,6 @@ an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers)
 		stage.tickOnUpdate = false;            
 		stage.update();            
 		stage.tickOnUpdate = true;		
-	}
-}
-function _updateVisibility(evt) {
-	var parent = this.parent;
-	var detach = this.stage == null || this._off || !parent;
-	while(parent) {
-		if(parent.visible) {
-			parent = parent.parent;
-		}
-		else{
-			detach = true;
-			break;
-		}
-	}
-	detach = detach && this._element && this._element._attached;
-	if(detach) {
-		this._element.detach();
-		this.dispatchEvent('detached');
-		stage.removeEventListener('drawstart', this._updateVisibilityCbk);
-		this._updateVisibilityCbk = false;
-	}
-}
-function _handleDrawEnd(evt) {
-	if(this._element && this._element._attached) {
-		var props = this.getConcatenatedDisplayProps(this._props), mat = props.matrix;
-		var tx1 = mat.decompose(); var sx = tx1.scaleX; var sy = tx1.scaleY;
-		var dp = window.devicePixelRatio || 1; var w = this.nominalBounds.width * sx; var h = this.nominalBounds.height * sy;
-		mat.tx/=dp;mat.ty/=dp; mat.a/=(dp*sx);mat.b/=(dp*sx);mat.c/=(dp*sy);mat.d/=(dp*sy);
-		this._element.setProperty('transform-origin', this.regX + 'px ' + this.regY + 'px');
-		var x = (mat.tx + this.regX*mat.a + this.regY*mat.c - this.regX);
-		var y = (mat.ty + this.regX*mat.b + this.regY*mat.d - this.regY);
-		var tx = 'matrix(' + mat.a + ',' + mat.b + ',' + mat.c + ',' + mat.d + ',' + x + ',' + y + ')';
-		this._element.setProperty('transform', tx);
-		this._element.setProperty('width', w);
-		this._element.setProperty('height', h);
-		this._element.update();
-	}
-}
-
-function _tick(evt) {
-	var stage = this.stage;
-	stage&&stage.on('drawend', this._handleDrawEnd, this, true);
-	if(!this._updateVisibilityCbk) {
-		this._updateVisibilityCbk = stage.on('drawstart', this._updateVisibility, this, false);
-	}
-}
-function _componentDraw(ctx) {
-	if(this._element && !this._element._attached) {
-		this._element.attach($('#dom_overlay_container'));
-		this.dispatchEvent('attached');
 	}
 }
 an.handleSoundStreamOnTick = function(event) {
