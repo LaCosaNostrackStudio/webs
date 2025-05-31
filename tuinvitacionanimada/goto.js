@@ -385,13 +385,6 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
 
-	// Capa_2
-	this.shape = new cjs.Shape();
-	this.shape.graphics.lf(["#240059","rgba(0,0,0,0)"],[0,1],0,-35.1,0,35.2).s().p("EhSRAFgIAAq/MCkkAAAIAAK/g");
-	this.shape.setTransform(525,35.175);
-
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
-
 	// Capa_3
 	this.instance_3 = new lib.Mapadebits3();
 	this.instance_3.setTransform(-5,-8);
@@ -411,7 +404,7 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/goto_atlas_P_1.png?1748699720590", id:"goto_atlas_P_1"}
+		{src:"images/goto_atlas_P_1.png?1748699949966", id:"goto_atlas_P_1"}
 	],
 	preloads: []
 };
