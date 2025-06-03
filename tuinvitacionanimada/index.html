@@ -35,7 +35,7 @@
 
     <!-- Reemplazamos src por data-src para cargarlo después -->
     <iframe data-src="web.html" height="1122"></iframe>
-    <iframe data-src="banner1.jpg" height="271"></iframe>
+    <iframe data-src="banner1.jpg" height="420"></iframe>
     <iframe data-src="catalogo/cat1.html" height="2130"></iframe>
     <iframe data-src="catalogo/cat2.html" height="2130"></iframe>
     <iframe data-src="catalogo/cat3.html" height="1510"></iframe>
@@ -48,7 +48,7 @@
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
+                if (entry.isIntersecting && entry.intersectionRatio >= 0.15) {
                     const iframe = entry.target;
                     iframe.src = iframe.dataset.src;
                     iframe.classList.add('visible');
@@ -56,7 +56,7 @@
                 }
             });
         }, {
-            threshold: 0.2 // 20% visible
+            threshold: 0.15 // 15% visible
         });
 
         iframes.forEach(iframe => observer.observe(iframe));
