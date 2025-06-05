@@ -2,67 +2,81 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    
+
     <meta property="og:title" content="Tu Invitación Animada">
     <meta property="og:description" content="">
     <meta property="og:image" content="https://lacosanostrackstudio.github.io/webs/tuinvitacionanimada/flayer.jpg">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="1200">
     <title>Tu Invitación Animada</title>
-    
+
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #FFFFFF;
+        body{
+            margin:0;
+            padding:0;
+            background:#FFFFFF;
         }
 
-        iframe {
-            width: 1050px;
-            border: none;
-            display: block;
-            margin: 0 auto;
-            opacity: 0;
-            transition: opacity 1s ease;
+        /* iframes de la página (cargados perezosamente) */
+        iframe.lazy{
+            width:1050px;
+            border:none;
+            display:block;
+            margin:0 auto;
+            opacity:0;
+            transition:opacity 1s ease;
+        }
+        iframe.lazy.visible{
+            opacity:1;
         }
 
-        iframe.visible {
-            opacity: 1;
+        /* ─────────  CHAT / CANVAS  ───────── */
+        #chatFrame{
+            position:fixed;      /* siempre visible aunque se haga scroll          */
+            bottom:0;            /* pegado al borde inferior                       */
+            right:0;             /* pegado al borde derecho                        */
+            width:512px;         /* ancho del canvas exportado por Animate         */
+            height:303px;        /* alto del canvas                                */
+            border:none;
+            z-index:9999;        /* por encima de TODO                             */
+            pointer-events:auto; /* los botones dentro del canvas siguen activos   */
+            background:transparent;
         }
     </style>
 </head>
 <body>
 
-    <!-- Reemplazamos src por data-src para cargarlo después -->
-    <iframe data-src="web.html" height="1122"></iframe>
-    <iframe data-src="banner1.jpg" height="420"></iframe>
-    <iframe data-src="catalogo/cat1.html" height="2130"></iframe>
-    <iframe data-src="catalogo/cat2.html" height="2130"></iframe>
-    <iframe data-src="catalogo/cat3.html" height="1510"></iframe>
-    <iframe data-src="goto.html" height="270"></iframe>
-    <iframe data-src="banner.jpg" height="70"></iframe>
-    <iframe data-src="footer.html" height="400"></iframe>
+    <!-- iframes que se cargan cuando aparecen en pantalla -->
+    <iframe class="lazy" data-src="web.html"                 height="1122"></iframe>
+    <iframe class="lazy" data-src="banner1.jpg"              height="420"></iframe>
+    <iframe class="lazy" data-src="catalogo/cat1.html"       height="2130"></iframe>
+    <iframe class="lazy" data-src="catalogo/cat2.html"       height="2130"></iframe>
+    <iframe class="lazy" data-src="catalogo/cat3.html"       height="1510"></iframe>
+    <iframe class="lazy" data-src="goto.html"                height="270"></iframe>
+    <iframe class="lazy" data-src="banner.jpg"               height="70"></iframe>
+    <iframe class="lazy" data-src="footer.html"              height="400"></iframe>
+
+    <!-- iframe del canvas con fondo transparente -->
+    <iframe id="chatFrame" src="chat.html"></iframe>
 
     <script>
-        const iframes = document.querySelectorAll('iframe[data-src]');
+        /* Lazy-loading de los iframes principales (no incluye el chatFrame) */
+        const lazyFrames = document.querySelectorAll('iframe.lazy[data-src]');
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && entry.intersectionRatio >= 0.15) {
+        const observer = new IntersectionObserver((entries, obs)=>{
+            entries.forEach(entry=>{
+                if(entry.isIntersecting && entry.intersectionRatio >= 0.15){
                     const iframe = entry.target;
                     iframe.src = iframe.dataset.src;
                     iframe.classList.add('visible');
-                    observer.unobserve(iframe);
+                    obs.unobserve(iframe);
                 }
             });
-        }, {
-            threshold: 0.15 // 15% visible
-        });
+        },{threshold:0.15}); // 15 % visible
 
-        iframes.forEach(iframe => observer.observe(iframe));
+        lazyFrames.forEach(f=>observer.observe(f));
     </script>
 
 </body>
 </html>
-
 
