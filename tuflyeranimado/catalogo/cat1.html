@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería 3x3 con Animación</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contenedor {
+            width: 1050px;
+            height: 2130px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            box-sizing: border-box;
+        }
+
+        .contenedor a {
+            display: block;
+        }
+
+        .contenedor img {
+            width: 313px;
+            height: 671px;
+            display: block;
+            transform: scale(0.5);
+            opacity: 0;
+            animation: zoomIn 0.6s ease-out forwards;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Retrasos progresivos corregidos */
+        .contenedor a:nth-child(1) img { animation-delay: 0.1s; }
+        .contenedor a:nth-child(2) img { animation-delay: 0.3s; }
+        .contenedor a:nth-child(3) img { animation-delay: 0.5s; }
+        .contenedor a:nth-child(4) img { animation-delay: 0.7s; }
+        .contenedor a:nth-child(5) img { animation-delay: 0.9s; }
+        .contenedor a:nth-child(6) img { animation-delay: 1.1s; }
+        .contenedor a:nth-child(7) img { animation-delay: 1.3s; }
+        .contenedor a:nth-child(8) img { animation-delay: 1.5s; }
+        .contenedor a:nth-child(9) img { animation-delay: 1.7s; }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <a href="1.mp4" target="_blank"><img src="1.jpg" alt="Imagen 1"></a>
+        <a href="2.mp4" target="_blank"><img src="2.jpg" alt="Imagen 2"></a>
+        <a href="3.mp4" target="_blank"><img src="3.jpg" alt="Imagen 3"></a>
+        <a href="4.mp4" target="_blank"><img src="4.jpg" alt="Imagen 4"></a>
+        <a href="5.mp4" target="_blank"><img src="5.jpg" alt="Imagen 5"></a>
+        <a href="6.mp4" target="_blank"><img src="6.jpg" alt="Imagen 6"></a>
+        <a href="7.mp4" target="_blank"><img src="7.jpg" alt="Imagen 7"></a>
+        <a href="8.mp4" target="_blank"><img src="8.jpg" alt="Imagen 8"></a>
+        <a href="9.mp4" target="_blank"><img src="9.jpg" alt="Imagen 9"></a>
+    </div>
+</body>
+</html>
