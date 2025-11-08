@@ -1,0 +1,19 @@
+# Habilitar el control de caché
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Configuración de caché para imágenes
+    ExpiresByType image/jpg "access plus 1 hour"
+    ExpiresByType image/jpeg "access plus 1 hour"
+    ExpiresByType image/gif "access plus 1 hour"
+    ExpiresByType image/png "access plus 1 hour"
+    ExpiresByType image/webp "access plus 1 hour"
+
+    # Configuración de caché para CSS y JavaScript
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+
+    # Configuración de caché para HTML
+    ExpiresByType text/html "access plus 10 minutes"
+</IfModule>
