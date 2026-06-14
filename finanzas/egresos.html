@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard de Egresos</title>
+  <link rel="stylesheet" href="styles.css" />
+
+<!-- Icono y configuración PWA -->
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#ffd000">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Control de egresos</p>
+      <h1>Dashboard anual de egresos</h1>
+      <p>Organizado por año, meses y semanas. Límite semanal de referencia: <strong>RD$21,000</strong>.</p>
+      <div class="hero-actions">
+        <a class="action-btn" href="registrar-egresos.html">Registrar egresos diarios</a>
+        <a class="secondary-btn" href="index.html">Ver ingresos</a>
+        <a class="secondary-btn" href="backup.html">Backup completo</a>
+        <button class="secondary-btn" id="exportExcelBtn">Exportar Excel</button>
+        <span id="updatedAt">Actualizando...</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <span>Total egresos</span>
+      <strong id="totalYear">RD$0</strong>
+      <small id="yearStatus">Calculando...</small>
+    </div>
+  </header>
+
+  <main>
+    <section class="tabs" aria-label="Pestañas principales">
+      <button class="tab active" data-tab="year">Todo el año</button>
+      <button class="tab" data-tab="months">Meses</button>
+      <button class="tab" data-tab="weeks">Semanas</button>
+      <button class="tab" data-tab="clients">Categorías</button>
+      <button class="tab" data-tab="details">Detalle</button>
+    </section>
+
+    <section id="year" class="panel active">
+      <div class="cards" id="summaryCards"></div>
+      <div class="chart-card">
+        <div class="chart-head">
+          <div>
+            <h2>Subidas y bajadas por semana</h2>
+            <p>La línea punteada marca el límite semanal de RD$21,000.</p>
+          </div>
+        </div>
+        <canvas id="weeklyChart" width="1200" height="460" aria-label="Gráfica semanal"></canvas>
+      </div>
+      <div class="table-card">
+        <h2>Vista anual por meses y semanas</h2>
+        <div id="annualBreakdown"></div>
+      </div>
+    </section>
+
+    <section id="months" class="panel">
+      <div class="filter-row">
+        <label for="monthSelect">Ver mes</label>
+        <select id="monthSelect"></select>
+      </div>
+      <div id="monthView"></div>
+    </section>
+
+    <section id="weeks" class="panel">
+      <div class="table-card">
+        <h2>Todas las semanas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Semana</th>
+              <th>Mes</th>
+              <th>Total</th>
+              <th>Diferencia vs límite</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="weeksTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="clients" class="panel">
+      <div class="table-card">
+        <h2>Ranking de categorías</h2>
+        <p>Ordenado por egresos acumulados.</p>
+        <table>
+          <thead>
+            <tr><th>#</th><th>Categoría</th><th>Registros</th><th>Total</th></tr>
+          </thead>
+          <tbody id="clientsTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="details" class="panel">
+      <div class="table-card">
+        <div class="chart-head">
+          <div>
+            <h2>Detalle completo de egresos</h2>
+            <p>Busca por categoría, detalle o fecha. Puedes editar registros desde el detalle.</p>
+          </div>
+          <input id="searchInput" class="search-input" type="search" placeholder="Buscar categoría, detalle o fecha" />
+        </div>
+        <div id="detailView"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="data-egresos-base.js"></script>
+  <script src="egresos.js"></script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("./service-worker.js");
+    });
+  }
+</script>
+</body>
+</html>
