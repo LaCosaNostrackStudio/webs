@@ -1,0 +1,13 @@
+COMO INSTALAR COMO APP EN WINDOWS 10
+
+1. Extrae esta carpeta.
+2. Haz doble clic en ABRIR_LOCAL.bat.
+3. Se abrirá la web en http://localhost:8000/index.html.
+4. En Chrome o Edge, abre el menú de los tres puntos.
+5. Elige Instalar aplicación o Apps > Instalar este sitio como una aplicación.
+6. Windows creará la app con el icono de la bolsa de dinero.
+7. Ya podrás anclarla a la barra de tareas.
+
+Importante:
+No abras index.html directo con doble clic para instalarla como PWA.
+Chrome y Edge necesitan que la web corra desde localhost o desde un dominio HTTPS.

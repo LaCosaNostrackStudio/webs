@@ -1,0 +1,1 @@
+Version preparada para unificar ingresos y egresos en un solo backup TXT/Excel. Importar/exportar debe usar una estructura con ingresos y egresos en el mismo archivo.
