@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajos y proyectos</title>
+  <link rel="stylesheet" href="styles.css" />
+
+<!-- Icono y configuración PWA -->
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#ffd000">
+</head>
+<body>
+  <header class="hero compact">
+    <div>
+      <p class="eyebrow">Control de trabajos</p>
+      <h1>Trabajos y proyectos</h1>
+      <p>Agrega trabajos pendientes, realizados o pagados. Solo cuando marques un trabajo como pagado, el monto se suma al dashboard de ingresos.</p>
+      <div class="hero-actions">
+        <a class="secondary-btn" href="index.html">Volver al dashboard</a>
+        <a class="secondary-btn" href="registrar.html">Agregar ingresos</a>
+        <a class="secondary-btn" href="egresos.html">Ver egresos</a>
+        <span id="saveStatus">Listo para registrar</span>
+      </div>
+    </div>
+    <div class="hero-card projects-summary-card">
+      <div class="project-summary-item">
+        <span>Total pendientes</span>
+        <strong id="pendingTotal">RD$0</strong>
+        <small id="pendingCount">0 pendientes</small>
+      </div>
+      <div class="project-summary-divider"></div>
+      <div class="project-summary-item">
+        <span>Total realizados</span>
+        <strong id="doneTotal">RD$0</strong>
+        <small id="doneCount">0 realizados</small>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="table-card">
+      <h2>Nuevo trabajo o proyecto</h2>
+      <form id="projectForm" class="income-form projects-form">
+        <label>Fecha
+          <input id="date" type="date" required />
+        </label>
+        <label>Cliente
+          <input id="client" type="text" list="clientSuggestions" autocomplete="off" placeholder="Ej. Francisco" required />
+          <datalist id="clientSuggestions"></datalist>
+        </label>
+        <label>Tipo de proyecto
+          <input id="projectType" type="text" list="projectSuggestions" autocomplete="off" placeholder="Ej. Flyer, video, logo, web" required />
+          <datalist id="projectSuggestions"></datalist>
+        </label>
+        <label>Precio
+          <input id="amount" type="number" min="1" step="1" placeholder="2000" required />
+        </label>
+        <label>Estado
+          <select id="status" required>
+            <option value="pendiente">Pendiente</option>
+            <option value="realizado">Realizado</option>
+            <option value="pagado">Pagado</option>
+          </select>
+        </label>
+        <button class="action-btn" type="submit">Guardar</button>
+      </form>
+    </section>
+
+    <section class="tabs" aria-label="Estados de trabajos">
+      <button class="tab active" data-tab="pendiente">Pendientes</button>
+      <button class="tab" data-tab="realizado">Realizados</button>
+      <button class="tab" data-tab="pagado">Pagados</button>
+    </section>
+
+    <section id="pendiente" class="panel active"><div class="table-card"><h2>Pendientes</h2><div id="pendingList"></div></div></section>
+    <section id="realizado" class="panel"><div class="table-card"><h2>Realizados</h2><div id="doneList"></div></div></section>
+    <section id="pagado" class="panel"><div class="table-card"><h2>Pagados</h2><div id="paidList"></div></div></section>
+  </main>
+
+  <script src="data-base.js"></script>
+  <script src="trabajos.js"></script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("./service-worker.js");
+    });
+  }
+</script>
+</body>
+</html>
