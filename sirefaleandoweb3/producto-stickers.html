@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stickers | Tienda Si-Re-FaleanDo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar" id="inicio">
+    <div class="container nav">
+      <a href="index.html#inicio" class="brand"><img src="assets/logo.png" alt="Si-Re-FaleanDo logo"></a>
+      <nav class="menu">
+        <a href="index.html#programa">Programa</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="juegos.html">Juegos</a>
+        <a href="index.html#personajes">Personajes</a>
+        <a href="escuela.html">Escuela</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="index.html#contacto">Info y cotizar</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-detail-section">
+      <div class="container product-detail-grid">
+        <div class="product-gallery">
+          <button class="image-zoom-trigger" type="button" data-large="assets/tienda/stickers.jpg" aria-label="Ampliar imagen de Stickers">
+            <img src="assets/tienda/stickers.jpg" alt="Stickers">
+            <span><i class="fa-solid fa-magnifying-glass-plus"></i> Ampliar imagen</span>
+          </button>
+        </div>
+        <div class="product-detail-card">
+          <p class="section-tag">Producto</p>
+          <h1>Stickers</h1>
+          <p class="detail-price">US$1.25</p>
+          <p class="detail-description">Stickers de personajes y figuras musicales. Una forma divertida de reforzar nombres y conceptos musicales.</p>
+          <div class="quantity-box">
+            <label for="qty">Cantidad</label>
+            <input id="qty" type="number" min="1" value="1">
+          </div>
+          <button class="btn primary add-to-cart" type="button" data-product="Stickers" data-price="1.25"><i class="fa-solid fa-cart-plus"></i> Agregar al carrito</button>
+          <a class="btn yellow" href="tienda.html"><i class="fa-solid fa-arrow-left"></i> Volver a la tienda</a>
+          <div class="cart-message" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+    <section class="related-products">
+      <div class="container">
+        <h2>También puede interesarte</h2>
+        <div class="related-grid"><a href="producto-button-pins.html"><img src="assets/tienda/button-pins-thumb.jpg" alt="Button pins"><span>Button pins<small>US$1.50</small></span></a>
+<a href="producto-gorras-negras.html"><img src="assets/tienda/gorras-negras-thumb.jpg" alt="Gorras negras"><span>Gorras negras<small>US$25</small></span></a>
+<a href="producto-gorras-rosas.html"><img src="assets/tienda/gorras-rosas-thumb.jpg" alt="Gorras rosas"><span>Gorras rosas<small>US$25</small></span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="shop-modal" id="shopModal" aria-hidden="true">
+    <button class="shop-modal-close" type="button" aria-label="Cerrar imagen">&times;</button>
+    <img src="" alt="Imagen ampliada">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
