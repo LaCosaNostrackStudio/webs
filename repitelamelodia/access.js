@@ -1,2 +1,0 @@
-async function check(){try{let t=await fetch('data.txt');let c=(await t.text()).trim();let v=document.getElementById('accessCode').value.trim();if(v===c){document.getElementById('lockOverlay').remove();}else{msg.textContent='Clave incorrecta';accessCode.value='';}}catch(e){msg.textContent='No se pudo leer data.txt';}}
-unlockBtn.onclick=check;accessCode.addEventListener('keydown',e=>{if(e.key==='Enter')check();});
