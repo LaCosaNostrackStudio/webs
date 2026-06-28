@@ -1,44 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Si-Re-Faleando, Memoria Musical</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Si-Re-Faleando, Memoria Musical</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main class="game" id="game">
-    <img class="logo" src="assets/logo.png" alt="Si-Re-FaleanDo" />
 
-    <button class="reset-btn" id="resetBtn" aria-label="Reiniciar juego">
-      <img src="assets/reset.png" alt="Reiniciar" />
-    </button>
+    <main class="game" id="game">
 
-    <div class="level-pill">
-      <img src="assets/level_panel.png" alt="" />
-      <span id="levelText">LEVEL 0</span>
+        <img class="logo" src="assets/logo.png" alt="Si-Re-Faleando">
+
+        <button class="reset-btn" id="resetBtn" aria-label="Reiniciar juego">
+            <img src="assets/reset.png" alt="Reiniciar">
+        </button>
+
+        <div class="level-pill">
+            <img src="assets/level_panel.png" alt="">
+            <span id="levelText">LEVEL 0</span>
+        </div>
+
+        <section class="record-card" aria-label="Mejor récord">
+            <img src="assets/best_record.png" alt="Best Record">
+            <strong id="bestRecord">0</strong>
+        </section>
+
+        <img class="character" src="assets/character.png" alt="Personaje">
+
+        <button class="play-btn" id="playBtn" aria-label="Iniciar juego">
+            <img src="assets/play.png" alt="Play">
+        </button>
+
+        <div class="message" id="message"></div>
+
+        <img class="feedback hidden" id="thumb" src="assets/thumb.png" alt="Correcto">
+
+        <img class="feedback hidden" id="wrong" src="assets/x.png" alt="Incorrecto">
+
+        <section class="keyboard" id="keyboard" aria-label="Teclas musicales"></section>
+
+    </main>
+
+    <!-- PANTALLA DE ACCESO -->
+
+    <div id="accessOverlay">
+
+        <div class="box">
+
+            <h2>Ingrese la clave</h2>
+
+            <input
+                id="accessInput"
+                type="password"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                maxlength="10"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                autofocus>
+
+            <button id="accessBtn">
+                Ingresar
+            </button>
+
+            <p id="accessMsg"></p>
+
+        </div>
+
     </div>
 
-    <section class="record-card" aria-label="Mejor record">
-      <img src="assets/best_record.png" alt="Best record" />
-      <strong id="bestRecord">0</strong>
-    </section>
+    <!-- CARGA DEL JUEGO -->
 
-    <img class="character" src="assets/character.png" alt="Personaje" />
-
-    <button class="play-btn" id="playBtn" aria-label="Iniciar juego">
-      <img src="assets/play.png" alt="Play" />
-    </button>
-
-    <div class="message" id="message"></div>
-    <img class="feedback hidden" id="thumb" src="assets/thumb.png" alt="Correcto" />
-    <img class="feedback hidden" id="wrong" src="assets/x.png" alt="Incorrecto" />
-
-    <section class="keyboard" id="keyboard" aria-label="Teclas musicales"></section>
-  </main>
-
-  
-<div id="accessOverlay"><div class="box"><h2>Ingrese la clave</h2><input id="accessInput" type="password" inputmode="numeric" autofocus><button id="accessBtn">Ingresar</button><p id="accessMsg"></p></div></div>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

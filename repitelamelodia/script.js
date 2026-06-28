@@ -200,14 +200,72 @@ updateLevelText();
 setLocked(true);
 
 
-window.addEventListener('load',async()=>{
-const ov=document.getElementById('accessOverlay');
-const inp=document.getElementById('accessInput');
-const btn=document.getElementById('accessBtn');
-const msg=document.getElementById('accessMsg');
-let key='';
-try{key=(await fetch('data.txt?'+Date.now())).text?await (await fetch('data.txt?'+Date.now())).text():'';}catch(e){}
-async function check(){let t=key.trim();if(!t){t=(await (await fetch('data.txt')).text()).trim();}
-if(inp.value.trim()===t){ov.remove();}else{msg.textContent='Clave incorrecta';inp.value='';}}
-btn.onclick=check;inp.addEventListener('keydown',e=>{if(e.key==='Enter')check();});
+// =====================================
+// SISTEMA DE ACCESO
+// =====================================
+
+window.addEventListener("load", async () => {
+
+    const overlay = document.getElementById("accessOverlay");
+    const input = document.getElementById("accessInput");
+    const button = document.getElementById("accessBtn");
+    const msg = document.getElementById("accessMsg");
+
+    let clave = "";
+
+    try {
+
+        const respuesta = await fetch("./data.txt", {
+            cache: "no-store"
+        });
+
+        if (!respuesta.ok) {
+            throw new Error("No se pudo abrir data.txt");
+        }
+
+        clave = (await respuesta.text()).trim();
+
+        console.log("Clave cargada:", clave);
+
+    } catch (error) {
+
+        console.error(error);
+
+        msg.textContent = "Error al leer data.txt";
+
+        return;
+    }
+
+    function validar() {
+
+        if (input.value.trim() === clave) {
+
+            overlay.style.display = "none";
+
+        } else {
+
+            msg.textContent = "Clave incorrecta";
+
+            input.value = "";
+
+            input.focus();
+
+        }
+
+    }
+
+    button.addEventListener("click", validar);
+
+    input.addEventListener("keydown", function(e){
+
+        if(e.key==="Enter"){
+
+            validar();
+
+        }
+
+    });
+
+    input.focus();
+
 });
