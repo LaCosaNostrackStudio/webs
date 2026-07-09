@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#090039">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Neon Shift</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game"></canvas>
+    <div id="hud">
+      <div class="scoreBox">
+        <span>Puntos</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="scoreBox middle">
+        <span>Vidas</span>
+        <strong id="lives">0</strong>
+      </div>
+      <div class="scoreBox right">
+        <span>Record</span>
+        <strong id="best">0</strong>
+      </div>
+    </div>
+    <div id="menu" class="panel">
+      <div class="logo">NEON<br>SHIFT</div>
+      <p>Salta de un borde al otro. Cruza anillos, recoge filas de puntos y evita obstáculos.</p>
+      <button id="startBtn">Jugar</button>
+      <small>Toque, clic o barra espaciadora</small>
+    </div>
+    <div id="gameOver" class="panel hidden">
+      <div class="logo small">GAME OVER</div>
+      <p id="finalScore">Puntos: 0</p>
+      <button id="restartBtn">Reintentar</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+  <script>
+    // AIR/Android carga este juego desde file:// usando StageWebView.
+    // Los Service Workers no funcionan en file://, por eso solo se registran
+    // cuando el juego se abre desde http:// o https://.
+    if (location.protocol !== 'file:' && 'serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+  </script>
+</body>
+</html>

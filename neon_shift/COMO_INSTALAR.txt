@@ -1,0 +1,23 @@
+NEON SHIFT
+
+Para usar localmente en Windows 10:
+1. Extrae el ZIP.
+2. Da doble clic en ABRIR_LOCAL.bat.
+3. Se abrirá http://localhost:8000/index.html.
+4. Mantén abierta la ventana negra mientras juegas.
+
+Para instalar como app:
+1. Abre el juego desde localhost o súbelo a GitHub Pages.
+2. En Chrome o Edge, toca los tres puntos.
+3. Elige Instalar aplicación.
+4. Puedes anclarla a la barra de tareas.
+
+Controles:
+Toque, clic o barra espaciadora.
+
+Mecánica:
+Cambia de borde para evitar obstáculos.
+Recoge filas de puntos.
+Cruza los anillos del centro para ganar +10.
+Cada 100 puntos ganas una vida.
+Si chocas y tienes vidas, continúas en el mismo lugar y con la misma velocidad.
