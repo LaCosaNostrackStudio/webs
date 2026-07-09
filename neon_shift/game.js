@@ -10,6 +10,33 @@
   const startBtn = document.getElementById('startBtn');
   const restartBtn = document.getElementById('restartBtn');
 
+
+
+  function toggleFullscreen(event) {
+    var element = document.body;
+
+    if (event instanceof HTMLElement) {
+      element = event;
+    }
+
+    var isFullscreen = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement || document.webkitIsFullScreen || document.mozFullScreen || false;
+
+    element.requestFullScreen = element.requestFullscreen || element.requestFullScreen || element.webkitRequestFullscreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullscreen || function () {
+      return false;
+    };
+
+    document.cancelFullScreen = document.exitFullscreen || document.cancelFullScreen || document.webkitExitFullscreen || document.webkitCancelFullScreen || document.mozCancelFullScreen || document.msExitFullscreen || function () {
+      return false;
+    };
+
+    if (!isFullscreen) {
+      try {
+        var result = element.requestFullScreen.call(element);
+        if (result && result.catch) result.catch(function () {});
+      } catch (e) {}
+    }
+  }
+
   let W = 0, H = 0, DPR = 1;
   let running = false, dead = false, t = 0, last = 0;
   let score = 0, best = Number(localStorage.getItem('neonShiftBest') || 0);
@@ -135,6 +162,9 @@
   }
 
   function start(){
+    toggleFullscreen();
+    setTimeout(resize, 250);
+    setTimeout(resize, 650);
     running = true; dead = false; t = 0; last = performance.now();
     score = 0; lives = 0; nextLife = 400; speed = 330; spawnTimer = 0; dotTimer = .35; ringTimer = 1.2; invincible = 0;
     flowPoints = 0; nextBossFlow = 1000; bossLevel = 0; boss = null; shotTimer = 0; enemyShotTimer = 0; shotsPaid = 0; superMode = 0; superSpawnRowTimer = 0; superCoinTimer = 8 + Math.random()*6;
@@ -220,7 +250,10 @@
   }
   addEventListener('pointerdown', input);
   addEventListener('keydown', e => { if(e.code==='Space' || e.code==='ArrowLeft' || e.code==='ArrowRight') input(); });
-  startBtn.onclick = start; restartBtn.onclick = start;
+  startBtn.addEventListener('pointerdown', function(e){ e.stopPropagation(); start(); });
+  restartBtn.addEventListener('pointerdown', function(e){ e.stopPropagation(); start(); });
+  startBtn.onclick = function(e){ e.stopPropagation(); };
+  restartBtn.onclick = function(e){ e.stopPropagation(); };
 
 
   function spawnBoss(){
