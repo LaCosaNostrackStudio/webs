@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprende Practicando | Tienda Si-Re-FaleanDo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar" id="inicio">
+    <div class="container nav">
+      <a href="index.html#inicio" class="brand"><img src="assets/logo.png" alt="Si-Re-FaleanDo logo"></a>
+      <nav class="menu">
+        <a href="index.html#programa">Programa</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="juegos.html">Juegos</a>
+        <a href="index.html#personajes">Personajes</a>
+        <a href="escuela.html">Escuela</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="index.html#contacto">Info y cotizar</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-detail-section">
+      <div class="container product-detail-grid">
+        <div class="product-gallery">
+          <button class="image-zoom-trigger" type="button" data-large="assets/tienda/aprende-practicando.jpg" aria-label="Ampliar imagen de Aprende Practicando">
+            <img src="assets/tienda/aprende-practicando.jpg" alt="Aprende Practicando">
+            <span><i class="fa-solid fa-magnifying-glass-plus"></i> Ampliar imagen</span>
+          </button>
+        </div>
+        <div class="product-detail-card">
+          <p class="section-tag">Producto</p>
+          <h1>Aprende Practicando</h1>
+          <p class="detail-price">US$20</p>
+          <p class="detail-description">Libro educativo para aprender música practicando con ejercicios y actividades didácticas.l de Si-Re-FaleanDo que presenta una divertida aventura para acercar a los niños al mundo de la música.</p>
+          <div class="quantity-box">
+            <label for="qty">Cantidad</label>
+            <input id="qty" type="number" min="1" value="1">
+          </div>
+          <button class="btn primary add-to-cart" type="button" data-product="Aprende Practicando" data-price="20"><i class="fa-solid fa-cart-plus"></i> Agregar al carrito</button>
+          <a class="btn yellow" href="tienda.html"><i class="fa-solid fa-arrow-left"></i> Volver a la tienda</a>
+          <div class="cart-message" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+    <section class="related-products">
+      <div class="container">
+        <h2>También puede interesarte</h2>
+        <div class="related-grid"><a href="producto-sopa-de-letras-musical.html"><img src="assets/tienda/sopa-de-letras-musical-thumb.jpg" alt="Sopa de letras musical"><span>Sopa de letras musical<small>US$20</small></span></a>
+<a href="producto-sire-la-gran-fiesta-cuento.html"><img src="assets/tienda/sire-la-gran-fiesta-cuento-thumb.jpg" alt="Sire + La gran fiesta"><span>Sire + La gran fiesta<small>US$20</small></span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="shop-modal" id="shopModal" aria-hidden="true">
+    <button class="shop-modal-close" type="button" aria-label="Cerrar imagen">&times;</button>
+    <img src="" alt="Imagen ampliada">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
