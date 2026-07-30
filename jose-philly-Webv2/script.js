@@ -8,8 +8,8 @@ const bonaoLink = document.querySelector('#whatsappBonao');
 const santiagoLink = document.querySelector('#whatsappSantiago');
 
 const phoneByBranch = {
-  Bonao: '18092020000',
-  Santiago: '18495867777'
+  Bonao: '18292020000',
+  Santiago: '18292020000'
 };
 
 function makeWhatsapp(phone, branch, service = 'uno de sus servicios') {
@@ -142,7 +142,7 @@ document.querySelectorAll('.reveal').forEach((element) => observer.observe(eleme
 
 [bonaoLink,santiagoLink].forEach(link=>{
  if(link){
-   link.href=makeWhatsapp(link.dataset.phone||'18092020000',link.dataset.branch||'');
+   link.href=makeWhatsapp(link.dataset.phone||'18292020000',link.dataset.branch||'');
  }
 });
 document.querySelectorAll('a[href*="wa.me"], .whatsapp-float').forEach(el=>{
@@ -152,6 +152,6 @@ document.querySelectorAll('a[href*="wa.me"], .whatsapp-float').forEach(el=>{
 document.querySelectorAll('.js-whatsapp').forEach(el=>{
  el.addEventListener('click',e=>{
   e.preventDefault();
-  window.open(makeWhatsapp('18092020000','Bonao'),'_blank');
+  window.open(makeWhatsapp('18292020000','Bonao'),'_blank');
  });
 });
