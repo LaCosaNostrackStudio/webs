@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mami FM | En vivo</title>
+  <meta name="description" content="Escucha Mami FM en vivo: merengue, bachata y salsa las 24 horas.">
+  <meta property="og:title" content="Mami FM | En vivo">
+  <meta property="og:description" content="Merengue, bachata y salsa. La música que te pone a bailar.">
+  <meta property="og:image" content="assets/og.png">
+  <link rel="icon" href="assets/logo-mami-fm.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <audio id="radio" src="https://streaming.lamaximafm.com:8010/stream" autoplay preload="none"></audio>
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Mami FM, inicio"><img src="assets/logo-mami-fm.png" alt="Mami FM"></a>
+      <div class="live-badge"><span></span> EN VIVO</div>
+    </header>
+    <section class="hero" id="inicio">
+      <div class="orb orb-one"></div><div class="orb orb-two"></div>
+      <div class="frequency" id="frequency" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Una emisora comandada por mujeres</p>
+        <h1>Tu música.<br><span>Tu ritmo.</span></h1>
+        <p class="genres">MERENGUE <b>•</b> BACHATA <b>•</b> SALSA <b>•</b> TÍPICO Y MÁS</p>
+        <button class="hero-play play-control" aria-label="Escuchar Mami FM"><span class="play-icon"></span><em>ESCUCHAR EN VIVO</em></button>
+      </div>
+      <div class="logo-stage" aria-hidden="true">
+        <div class="pulse-ring ring-a"></div><div class="pulse-ring ring-b"></div><div class="logo-glow"></div>
+        <img src="assets/logo-mami-fm.png" alt="">
+        <span class="sticker sticker-one">¡SÚBELE!</span><span class="sticker sticker-two">24/7</span>
+      </div>
+    </section>
+    <section class="player-shell" aria-label="Reproductor de Mami FM">
+      <div class="station-mark"><div class="cover-wrap"><img id="cover" src="assets/logo-mami-fm.png" alt="Portada de la canción actual"></div><div><span class="on-air"><i></i> AL AIRE</span><strong id="songTitle">Mami FM</strong><small id="status">Conectando con la señal…</small></div></div>
+      <div class="mini-wave" id="miniWave" aria-hidden="true"></div>
+      <div class="controls"><button class="play-control" aria-label="Reproducir"><span class="play-icon"></span></button><div class="volume-wrap"><span>VOL</span><input id="volume" type="range" min="0" max="1" step="0.05" value="0.85" aria-label="Volumen"></div></div>
+    </section>
+    <footer><span>© 2026 Mami FM</span><span class="footer-dot"></span><span>La música vive aquí</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
