@@ -45,6 +45,9 @@ h1 span { color:var(--yellow); }
 .volume-wrap { display:flex; align-items:center; gap:8px; font-size:9px; font-weight:950; } .volume-wrap input { width:90px; accent-color:var(--pink); }
 footer { position:absolute; bottom:4px; width:100%; text-align:center; font-size:9px; letter-spacing:.12em; opacity:.55; text-transform:uppercase; }
 .footer-dot { display:inline-block; width:4px; height:4px; border-radius:50%; background:var(--yellow); margin:0 9px 2px; }
+.whatsapp-float { position:fixed; z-index:30; top:16px; left:50%; width:62px; height:62px; display:grid; place-items:center; border-radius:50%; color:white; background:#25d366; box-shadow:0 15px 38px rgba(0,0,0,.34),0 0 0 7px rgba(37,211,102,.13); transition:transform .2s ease,box-shadow .2s ease; animation:introWhatsapp .7s cubic-bezier(.16,1,.3,1) 1.4s both; }
+.whatsapp-float:hover { transform:translate(-50%,-5px) scale(1.05); box-shadow:0 20px 44px rgba(0,0,0,.4),0 0 0 9px rgba(37,211,102,.17); }
+.whatsapp-float svg { width:33px; height:33px; fill:currentColor; }
 @keyframes float { 50% { transform:translateY(-13px) rotate(.5deg); } } @keyframes pulse { 0% { transform:scale(.88); opacity:.55; } 100% { transform:scale(1.12); opacity:0; } }
 @keyframes equalize { to { transform:scaleY(.25); } } @keyframes miniEqualize { from { height:8px; } to { height:34px; } } @keyframes blink { 50% { opacity:.35; } }
 @keyframes introHeader { from { opacity:0; transform:translateY(-32px); } to { opacity:1; transform:translateY(0); } }
@@ -54,6 +57,7 @@ footer { position:absolute; bottom:4px; width:100%; text-align:center; font-size
 @keyframes introStickerTwo { from { opacity:0; transform:translate(-38px,30px) rotate(-12deg) scale(.5); } to { opacity:1; transform:translate(0,0) rotate(8deg) scale(1); } }
 @keyframes introFrequency { from { opacity:0; transform:scaleX(.35); } to { opacity:.12; transform:scaleX(1); } }
 @keyframes introPlayer { from { opacity:0; transform:translate(-50%,70px) scale(.94); } to { opacity:1; transform:translate(-50%,0) scale(1); } }
+@keyframes introWhatsapp { from { opacity:0; transform:translate(-50%,-35px) scale(.55); } to { opacity:1; transform:translate(-50%,0) scale(1); } }
 @media (max-width:800px) {
   .topbar { height:80px; padding:8px 20px; } .brand img { width:92px; height:60px; }
   .hero { min-height:calc(100svh - 80px); grid-template-columns:1fr; text-align:center; padding:3vh 22px 160px; gap:0; }
@@ -63,7 +67,7 @@ footer { position:absolute; bottom:4px; width:100%; text-align:center; font-size
   .sticker-one { top:12%; right:2%; font-size:11px; } .sticker-two { bottom:18%; left:5%; font-size:11px; }
   .player-shell { bottom:14px; min-height:78px; padding:9px 11px; border-radius:19px; grid-template-columns:1fr auto; gap:8px; }
   .cover-wrap { width:55px; height:55px; flex-basis:55px; border-radius:12px; } .station-mark strong { max-width:160px; font-size:13px; } .station-mark small { max-width:160px; font-size:10px; }
-  .mini-wave,.volume-wrap { display:none; } .controls button { width:50px; height:50px; } footer { display:none; }
+  .mini-wave,.volume-wrap { display:none; } .controls button { width:50px; height:50px; } .whatsapp-float { width:52px; height:52px; top:14px; } .whatsapp-float svg { width:28px; height:28px; } footer { display:none; }
 }
 @media (max-height:720px) and (min-width:801px) { .hero { padding-top:1vh; } .logo-stage { min-height:400px; } .player-shell { bottom:14px; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important; animation-delay:0ms!important; animation-iteration-count:1!important; } }

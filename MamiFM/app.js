@@ -6,6 +6,7 @@ const cover = document.querySelector('#cover');
 const miniWave = document.querySelector('#miniWave');
 const volume = document.querySelector('#volume');
 const STREAM_URL = 'https://streaming.lamaximafm.com:8010/stream';
+let stoppedByUser = false;
 
 document.querySelector('#frequency').innerHTML = Array.from({length: 42}, (_, i) => `<i style="animation-delay:${(i % 9) * -.11}s"></i>`).join('');
 miniWave.innerHTML = '<i></i>'.repeat(12);
@@ -20,19 +21,31 @@ function updatePlayer(playing) {
     if (label) label.textContent = playing ? 'SONANDO AHORA' : 'ESCUCHAR EN VIVO';
   });
   miniWave.classList.toggle('active', playing);
-  statusText.textContent = playing ? 'La señal que te pone a bailar' : 'Transmisión pausada';
+  statusText.textContent = playing
+    ? 'La señal que te pone a bailar'
+    : (stoppedByUser ? 'Transmisión detenida' : 'Toca cualquier parte para escuchar');
 }
 
-async function startAudio() {
+async function startAudio(force = false) {
+  if (stoppedByUser && !force) return false;
   if (!radio.getAttribute('src')) {
     radio.setAttribute('src', STREAM_URL);
     radio.load();
   }
-  try { await radio.play(); updatePlayer(true); }
-  catch (_) { updatePlayer(false); }
+  try {
+    await radio.play();
+    stoppedByUser = false;
+    updatePlayer(true);
+    removeUnlockListeners();
+    return true;
+  } catch (_) {
+    updatePlayer(false);
+    return false;
+  }
 }
 
 function stopStreaming() {
+  stoppedByUser = true;
   radio.pause();
   radio.removeAttribute('src');
   radio.load();
@@ -42,15 +55,28 @@ function stopStreaming() {
 
 controls.forEach(button => button.addEventListener('click', async event => {
   event.stopPropagation();
-  if (radio.paused || !radio.getAttribute('src')) await startAudio(); else stopStreaming();
+  if (radio.paused || !radio.getAttribute('src')) await startAudio(true); else stopStreaming();
 }));
 volume.addEventListener('input', () => { radio.volume = Number(volume.value); });
 radio.addEventListener('playing', () => updatePlayer(true));
 radio.addEventListener('pause', () => updatePlayer(false));
 radio.addEventListener('canplay', () => { if (radio.paused) statusText.textContent = 'Toca cualquier parte para escuchar'; });
 
-document.addEventListener('pointerdown', startAudio, {once:true});
-document.addEventListener('keydown', startAudio, {once:true});
+function unlockAudio() {
+  if (!stoppedByUser && radio.paused) void startAudio();
+}
+
+function removeUnlockListeners() {
+  document.removeEventListener('touchstart', unlockAudio, true);
+  document.removeEventListener('pointerdown', unlockAudio, true);
+  document.removeEventListener('click', unlockAudio, true);
+  document.removeEventListener('keydown', unlockAudio, true);
+}
+
+document.addEventListener('touchstart', unlockAudio, {capture:true, passive:true});
+document.addEventListener('pointerdown', unlockAudio, {capture:true, passive:true});
+document.addEventListener('click', unlockAudio, true);
+document.addEventListener('keydown', unlockAudio, true);
 startAudio();
 
 const INFO_URL = 'https://streaming.lamaximafm.com/AudioPlayer/mami-fm/playerInfo';
