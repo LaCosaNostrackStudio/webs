@@ -1,0 +1,8 @@
+# Escribe un enlace por imagen. Deja vacío después de = para que no abra nada.
+# Las líneas que empiezan con # son comentarios.
+1=
+2=
+3=
+4=
+5=
+# Al añadir 6.png, puedes añadir también: 6=https://tusitio.com

@@ -1,0 +1,25 @@
+BANNER DINÁMICO 728 × 90 — 5 SEGUNDOS POR IMAGEN
+
+Sube los ARCHIVOS DEL ZIP directamente al directorio de tu banner en
+GitHub Pages. index.html, links.txt, 1.png, 2.png, etc. deben estar juntos.
+No subas una carpeta adicional llamada Banner_Dinamico_728x90.
+
+Enlaces: abre links.txt y escribe una dirección al lado del número:
+1=
+2=https://www.youtube.com
+3=
+
+Un enlace vacío deja la imagen sin clic. Los enlaces se abren en otra pestaña.
+Las imágenes deben estar numeradas sin saltos: 1.png, 2.png, 3.png...
+Al agregar imágenes, recarga la página para que se detecten automáticamente.
+
+Después de publicarlo, comprueba que estas dos direcciones carguen:
+https://TU-DOMINIO/RUTA/DEL-BANNER/
+https://TU-DOMINIO/RUTA/DEL-BANNER/links.txt
+
+Si lo insertas mediante iframe en otro sitio, el iframe debe permitir abrir
+pestañas nuevas. Si el sitio aplica sandbox, añade allow-popups y
+allow-popups-to-escape-sandbox a sus permisos.
+
+Abrir index.html como archivo local puede impedir que el navegador lea
+links.txt. Prueba desde GitHub Pages o un servidor local.

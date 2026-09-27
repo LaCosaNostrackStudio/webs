@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banner 728 × 90</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; width: 728px; height: 90px; }
+    #banner { width: 728px; height: 90px; overflow: hidden; background: #eee; }
+    #banner a, #banner img { display: block; width: 100%; height: 100%; }
+    #banner img { object-fit: cover; border: 0; }
+    #banner a:not([href]) { cursor: default; }
+    #banner .error { font: 13px Arial, sans-serif; color: #333; padding: 35px 12px; }
+  </style>
+</head>
+<body>
+  <div id="banner" aria-label="Banner publicitario"></div>
+  <script>
+    (() => {
+      const INTERVALO_MS = 5000;
+      const contenedor = document.getElementById('banner');
+      const imagenes = [];
+      const enlaces = new Map();
+      let actual = 0;
+      let temporizador;
+
+      // Formato de links.txt: 1=https://ejemplo.com
+      async function cargarEnlaces() {
+        try {
+          const respuesta = await fetch('links.txt', { cache: 'no-store' });
+          if (!respuesta.ok) return;
+          const texto = await respuesta.text();
+          for (const lineaOriginal of texto.split(/\r?\n/)) {
+            const linea = lineaOriginal.trim();
+            if (!linea || linea.startsWith('#')) continue;
+            const separador = linea.indexOf('=');
+            if (separador < 1) continue;
+            const numero = Number(linea.slice(0, separador).trim());
+            const destino = linea.slice(separador + 1).trim();
+            if (!Number.isInteger(numero) || numero < 1 || !destino) continue;
+            try {
+              const url = new URL(destino);
+              if (url.protocol === 'https:' || url.protocol === 'http:') {
+                enlaces.set(numero, url.href);
+              }
+            } catch (_) { /* Se ignora el enlace no válido. */ }
+          }
+        } catch (_) { /* Sin archivo de enlaces, las imágenes no son clicables. */ }
+      }
+
+      function mostrar(indice) {
+        actual = indice;
+        const numero = indice + 1;
+        const enlace = document.createElement('a');
+        const destino = enlaces.get(numero);
+        if (destino) {
+          enlace.href = destino;
+          enlace.target = '_blank';
+          enlace.rel = 'noopener noreferrer';
+          enlace.setAttribute('aria-label', `Abrir anuncio ${numero} en una nueva pestaña`);
+        } else {
+          enlace.setAttribute('aria-label', `Anuncio ${numero}`);
+        }
+        const imagen = document.createElement('img');
+        imagen.src = imagenes[indice].src;
+        imagen.alt = `Anuncio ${numero}`;
+        enlace.appendChild(imagen);
+        contenedor.replaceChildren(enlace);
+      }
+
+      // Los archivos deben ser consecutivos: 1.png, 2.png, 3.png...
+      // Un archivo que falte indica el final de la secuencia.
+      function buscarImagen(numero) {
+        const imagen = new Image();
+        imagen.onload = () => {
+          imagenes.push(imagen);
+          if (imagenes.length === 1) {
+            mostrar(0);
+            temporizador = window.setInterval(() => {
+              if (imagenes.length > 1) mostrar((actual + 1) % imagenes.length);
+            }, INTERVALO_MS);
+          }
+          buscarImagen(numero + 1);
+        };
+        imagen.onerror = () => {
+          if (!imagenes.length) {
+            contenedor.innerHTML = '<div class="error">Coloca 1.png junto a index.html.</div>';
+          }
+        };
+        imagen.src = `${numero}.png`;
+      }
+
+      cargarEnlaces().finally(() => buscarImagen(1));
+    })();
+  </script>
+</body>
+</html>

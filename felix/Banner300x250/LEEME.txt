@@ -1,0 +1,23 @@
+BANNER DINÁMICO 300 × 250 — 5 SEGUNDOS POR IMAGEN
+
+Sube los ARCHIVOS del ZIP directamente al directorio de tu banner 300x250.
+index.html, links.txt, 1.png, 2.png, etc. deben estar juntos en la misma carpeta.
+
+Orden inicial:
+1.png = D’Rubia Fashions
+2.png = Infinity Club
+3.png = Mi Terraza Burger
+4.png = Placencio Comunicaciones
+5.png = Pura Vibra Líquida
+
+En links.txt, 2=https://www.youtube.com está configurado como ejemplo.
+Reemplázalo por el enlace correcto o deja 2= para desactivar el clic.
+Cada imagen permanece 5 segundos. Los enlaces abren en otra pestaña.
+Agrega 6.png, 7.png, etc. sin saltos numéricos; recarga la página para detectarlas.
+Puedes agregar 6=https://ejemplo.com a links.txt o dejarlo sin enlace.
+
+Para comprobar la publicación, abre directamente la URL del banner y su
+links.txt en el navegador. Si incrustas la página en un iframe con sandbox,
+éste debe permitir popups para que los enlaces se abran en una pestaña nueva.
+La lectura de links.txt puede fallar al abrir index.html como archivo file://;
+pruébalo desde GitHub Pages u otro servidor web.
