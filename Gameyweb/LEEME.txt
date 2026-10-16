@@ -1,0 +1,13 @@
+GAMEY — LANDING PAGE
+
+Para ver la web: extrae el ZIP y abre index.html en un navegador moderno.
+Para publicarla: sube index.html, styles.css, script.js y la carpeta assets al directorio público de tu hosting (por ejemplo public_html).
+No necesita instalación, base de datos ni compilación.
+
+Incluye: cubetas PNG con transparencia, animaciones de entrada y flotación, filtros de productos, visualizador ilustrativo de colores, catálogo PDF, enlaces de llamada y WhatsApp.
+Contacto: 849-585-2203.
+
+Los colores del visualizador son orientativos, no códigos comerciales de Gamey.
+Los enlaces de WhatsApp necesitan conexión a Internet. El contenido y los demás recursos son locales.
+Las animaciones se desactivan si el dispositivo tiene activada la preferencia de movimiento reducido.
+Verificación realizada: sintaxis JavaScript, archivos enlazados, transparencia de las cubetas y estructura del ZIP. No se realizó una prueba visual en navegador en este entorno.
