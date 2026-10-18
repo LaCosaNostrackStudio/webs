@@ -8,6 +8,10 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   try { best = Math.max(0, Number(localStorage.getItem('rodolfo.best.v1')) || 0); muted = localStorage.getItem('rodolfo.muted.v1') === '1'; } catch (_) {}
   const audio = {};
+  const MUSIC_VOLUME = .3;
+  const music = new Audio('assets/audio/rodolfo-el-reno.mp3');
+  music.preload = 'auto'; music.loop = true; music.volume = MUSIC_VOLUME;
+  let musicContext = null, musicSource = null, musicGain = null, needsMusicGesture = false;
   const audioNames = ['salto', 'regalo', 'lanzamiento', 'choque', 'play', 'boton', 'game-over'];
   for (const name of audioNames) {
     audio[name] = Array.from({ length: name === 'regalo' ? 4 : 2 }, () => {
@@ -28,17 +32,55 @@
       try { const p = a.play(); if (p) p.then(() => { a.pause(); a.currentTime = 0; a.volume = volume; }).catch(() => { a.volume = volume; }); } catch (_) { a.volume = volume; }
     }
   }
+  function musicIsActive() { return !muted && (phase === 'menu' || phase === 'playing'); }
+  function updateMusicPrompt() {
+    $('musicPrompt').classList.toggle('hidden', !(phase === 'menu' && needsMusicGesture && !muted));
+  }
+  function prepareMusicMixer() {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    // A gain node also controls volume on mobile browsers that ignore media.volume.
+    // Local file mode keeps HTML audio so opaque file origins cannot silence the source.
+    if (!musicContext && AudioContext && window.location.protocol !== 'file:') {
+      try {
+        const context = new AudioContext();
+        const gain = context.createGain(); gain.gain.value = MUSIC_VOLUME;
+        const source = context.createMediaElementSource(music);
+        source.connect(gain); gain.connect(context.destination);
+        musicContext = context; musicSource = source; musicGain = gain; music.volume = 1;
+      } catch (_) { music.volume = MUSIC_VOLUME; }
+    }
+    if (musicContext && musicContext.state === 'suspended') {
+      const p = musicContext.resume(); if (p && p.catch) p.catch(() => {});
+    }
+  }
+  function playMusic() {
+    if (!musicIsActive()) { music.pause(); updateMusicPrompt(); return; }
+    try {
+      const p = music.play();
+      if (p && p.then) p.then(() => {
+        if (!musicIsActive()) music.pause();
+        else { needsMusicGesture = false; updateMusicPrompt(); }
+      }).catch(error => {
+        if (musicIsActive() && error.name === 'NotAllowedError') { needsMusicGesture = true; updateMusicPrompt(); }
+      });
+    } catch (error) {
+      if (error.name === 'NotAllowedError') { needsMusicGesture = true; updateMusicPrompt(); }
+    }
+  }
+  function resetMusic() { music.pause(); try { music.currentTime = 0; } catch (_) {} }
+  function activateAudio() { unlockAudio(); prepareMusicMixer(); playMusic(); }
   function toggleSound() {
-    muted = !muted; if (!muted) unlockAudio();
+    muted = !muted; if (!muted) { unlockAudio(); prepareMusicMixer(); }
     for (const pool of Object.values(audio)) for (const a of pool) if (muted) a.pause();
     updateSoundButton(); try { localStorage.setItem('rodolfo.muted.v1', muted ? '1' : '0'); } catch (_) {}
-    if (!muted) sound('boton');
+    playMusic(); if (!muted) sound('boton');
   }
   function updateSoundButton() {
     $('sound').classList.toggle('muted', muted); $('sound').setAttribute('aria-label', muted ? 'Activar sonido' : 'Desactivar sonido');
     $('sound').setAttribute('aria-pressed', String(!muted));
   }
   function setPhase(next) {
+    const previous = phase;
     phase = next;
     $('startScreen').classList.toggle('hidden', next !== 'menu');
     $('pauseScreen').classList.toggle('hidden', next !== 'paused');
@@ -50,10 +92,12 @@
     if (next === 'menu') $('play').focus({ preventScroll: true });
     if (next === 'paused') $('resume').focus({ preventScroll: true });
     if (next === 'over') $('replay').focus({ preventScroll: true });
+    if (next === 'menu' || (next === 'playing' && previous === 'over')) resetMusic();
+    playMusic(); updateMusicPrompt();
   }
   function start() {
     if (phase === 'loading') return;
-    unlockAudio(); resizeViewport(); world = new C.World(Date.now(), { width: viewWidth }); setPhase('playing'); syncHud(); sound('play');
+    unlockAudio(); prepareMusicMixer(); resizeViewport(); world = new C.World(Date.now(), { width: viewWidth }); setPhase('playing'); syncHud(); sound('play');
     $('announcement').textContent = 'Partida iniciada. Tres vidas. Salta los caramelos y recoge los regalos.';
     canvas.focus({ preventScroll: true }); last = performance.now();
   }
@@ -89,6 +133,9 @@
   $('pause').addEventListener('click', pause); $('resume').addEventListener('click', resume);
   $('home').addEventListener('click', home); $('overHome').addEventListener('click', home);
   $('sound').addEventListener('click', toggleSound); $('fullscreen').addEventListener('click', fullscreen); $('rotateFull').addEventListener('click', fullscreen);
+  $('musicPrompt').addEventListener('click', activateAudio);
+  document.addEventListener('pointerdown', activateAudio, { capture: true, passive: true });
+  document.addEventListener('keydown', e => { if (!e.repeat && !e.ctrlKey && !e.metaKey && !e.altKey) activateAudio(); }, { capture: true });
   canvas.addEventListener('pointerdown', e => { if (e.button !== undefined && e.button !== 0) return; e.preventDefault(); jump(); });
   $('jumpButton').addEventListener('pointerdown', e => { e.preventDefault(); e.stopPropagation(); jump(); });
   window.addEventListener('keydown', e => {

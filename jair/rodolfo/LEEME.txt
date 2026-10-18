@@ -1,5 +1,5 @@
 RODOLFO EL RENO — PLANETA JAIR
-Minijuego HTML5. Version 1.2 (pantalla adaptable y metadatos para compartir).
+Minijuego HTML5. Version 1.3 (cancion al 30 % y dificultad sin tope).
 
 COMO ABRIR
 1. Extrae TODO el ZIP en una carpeta.
@@ -7,6 +7,12 @@ COMO ABRIR
 No necesita internet ni instalacion de paquetes. Mantener juntos index.html,
 css/, js/ y assets/. Para compartir por internet, sube esa carpeta completa
 a tu alojamiento web. No abras index.html directamente dentro del ZIP.
+
+ACTUALIZACION 1.3 — MUSICA Y PROGRESION
+Reemplaza index.html, css/game.css, js/core.js y js/game.js, y agrega
+assets/audio/rodolfo-el-reno.mp3. Tambien puedes subir todo el contenido
+del proyecto conservando sus rutas. El index referencia la version 1.3
+de los scripts y el CSS.
 
 ACTUALIZACION 1.2 — PANTALLA MOVIL
 El escenario ocupa el ancho disponible en horizontal y en pantalla completa.
@@ -47,13 +53,22 @@ Los regalos rebotan y quedan bajos, medios o altos. Recoge los bajos al correr;
 salta para alcanzar los altos. Cada regalo suma 10 puntos.
 Salta los bastones de caramelo. Tienes 3 vidas. Tras un golpe hay un breve
 periodo de proteccion. La velocidad aumenta progresivamente.
+La velocidad crece durante toda la partida, sin un maximo programado.
+Santa lanza regalos cada vez mas seguido; su animacion tambien se acelera.
 El record se guarda en este navegador cuando permite almacenamiento local.
 
 RECURSOS
 Incluye los graficos creados para este proyecto, el logo proporcionado de
 Planeta Jair, la tipografia Super Waffles y los siete efectos de sonido.
-El audio se habilita al pulsar PLAY. Puedes silenciarlo desde el icono de sonido.
-No incluye la cancion ni un enlace al videoclip: aun no se proporcionaron.
+La cancion Rodolfo el Reno esta incluida en assets/audio/rodolfo-el-reno.mp3.
+Su volumen es del 30 % y se repite al terminar. Suena en el inicio y durante
+la partida. Pulsar PLAY desde el inicio mantiene la posicion de la cancion.
+Pausa detiene la cancion; continuar la reanuda desde el mismo punto. Al perder
+se detiene. Volver al inicio la reinicia; volver a jugar tras perder tambien.
+Puedes silenciar musica y efectos desde el icono de sonido. Si el navegador
+bloquea el inicio automatico, un primer toque activa el audio; en el inicio
+aparece un boton para escuchar la cancion.
+No se ha proporcionado un enlace al videoclip.
 
 EDICION
 js/core.js: fisica y reglas del juego.

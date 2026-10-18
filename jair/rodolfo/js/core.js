@@ -13,7 +13,7 @@
       this.time = 0; this.distance = 0; this.speed = 315; this.score = 0; this.collected = 0; this.lives = 3;
       this.playing = true; this.events = []; this.gifts = []; this.obstacles = []; this.particles = [];
       this.player = { foot: GROUND, vy: 0, grounded: true, invincible: 0, buffer: 0, hit: 0 };
-      this.nextThrow = .8; this.nextObstacle = 3.9; this.cast = -1; this.shake = 0;
+      this.nextThrow = .8; this.nextObstacle = 3.9; this.cast = -1; this.throwRate = 1; this.shake = 0;
     }
     random() { let n = this.seed; n ^= n << 13; n ^= n >>> 17; n ^= n << 5; this.seed = n >>> 0; return this.seed / 4294967296; }
     range(a, b) { return a + this.random() * (b - a); }
@@ -38,7 +38,16 @@
     takeEvents() { const e = this.events; this.events = []; return e; }
     step(dt) {
       if (!this.playing) return;
-      dt = clamp(dt, 0, .05); this.time += dt; this.speed = Math.min(505, 315 + this.time * 1.5);
+      const duration = clamp(dt, 0, .05);
+      if (duration === 0) return;
+      // Smaller physics steps keep fast objects from crossing a collision box unnoticed.
+      const rate = 1 + (this.time + duration) / 90;
+      const speed = 315 + (this.time + duration) * 1.5;
+      const steps = Math.max(1, Math.ceil(Math.max(duration * 60, (speed + 105) * duration / 18, rate * duration / .1)));
+      for (let i = 0; i < steps && this.playing; i++) this.advance(duration / steps);
+    }
+    advance(dt) {
+      this.time += dt; this.speed = 315 + this.time * 1.5; this.throwRate = 1 + this.time / 90;
       this.distance += this.speed * dt; this.shake = Math.max(0, this.shake - dt);
       const p = this.player;
       p.invincible = Math.max(0, p.invincible - dt); p.hit = Math.max(0, p.hit - dt); p.buffer = Math.max(0, p.buffer - dt);
@@ -49,11 +58,11 @@
       }
       if (this.autoSpawn) {
         this.nextThrow -= dt; this.nextObstacle -= dt;
-        if (this.nextThrow <= 0 && this.cast < 0) { this.cast = 0; this.nextThrow = this.range(1.35, 1.9); }
+        if (this.nextThrow <= 0 && this.cast < 0) { this.cast = 0; this.nextThrow = this.range(1.35, 1.9) / this.throwRate; }
         if (this.nextObstacle <= 0) { this.addObstacle(); this.nextObstacle = this.range(2.85, 4.15) - Math.min(.55, this.time / 240); }
       }
       if (this.cast >= 0) {
-        const last = this.cast; this.cast += dt;
+        const last = this.cast; this.cast += dt * this.throwRate;
         if (last < .26 && this.cast >= .26) { this.addGift(); this.events.push('lanzamiento'); }
         if (this.cast >= .55) this.cast = -1;
       }
