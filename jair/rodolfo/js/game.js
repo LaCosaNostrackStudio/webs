@@ -3,6 +3,7 @@
   const C = window.RodolfoCore, $ = id => document.getElementById(id);
   const canvas = $('canvas'), ctx = canvas.getContext('2d', { alpha: false });
   const images = {}, meta = window.RODOLFO_ASSETS;
+  let viewWidth = C.W;
   let world = null, phase = 'loading', last = 0, visualTime = 0, menuDistance = 0, best = 0, muted = false, soundReady = false;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   try { best = Math.max(0, Number(localStorage.getItem('rodolfo.best.v1')) || 0); muted = localStorage.getItem('rodolfo.muted.v1') === '1'; } catch (_) {}
@@ -52,7 +53,7 @@
   }
   function start() {
     if (phase === 'loading') return;
-    unlockAudio(); world = new C.World(); setPhase('playing'); syncHud(); sound('play');
+    unlockAudio(); resizeViewport(); world = new C.World(Date.now(), { width: viewWidth }); setPhase('playing'); syncHud(); sound('play');
     $('announcement').textContent = 'Partida iniciada. Tres vidas. Salta los caramelos y recoge los regalos.';
     canvas.focus({ preventScroll: true }); last = performance.now();
   }
@@ -104,9 +105,26 @@
   window.addEventListener('blur', pause);
   window.addEventListener('orientationchange', () => { if (window.matchMedia('(orientation: portrait)').matches) pause(); });
 
+  function resizeViewport() {
+    const rect = $('game').getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+    // Keep the vertical world and a uniform sprite scale; extend the scene horizontally.
+    viewWidth = Math.max(800, Math.round(C.H * rect.width / rect.height));
+    if (canvas.width !== viewWidth) canvas.width = viewWidth;
+    if (canvas.height !== C.H) canvas.height = C.H;
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    if (world) world.resize(viewWidth);
+  }
+  window.addEventListener('resize', resizeViewport);
+  document.addEventListener('fullscreenchange', resizeViewport);
+  document.addEventListener('webkitfullscreenchange', resizeViewport);
+  if (window.visualViewport) window.visualViewport.addEventListener('resize', resizeViewport);
+  if (typeof ResizeObserver !== 'undefined') new ResizeObserver(resizeViewport).observe($('game'));
+
   function drawTile(image, distance, width, y, height) {
     const first = Math.floor(distance / width), offset = distance - first * width;
-    for (let j = -1; j <= Math.ceil(C.W / width) + 1; j++) {
+    for (let j = -1; j <= Math.ceil(viewWidth / width) + 1; j++) {
       const x = j * width - offset, flip = ((first + j) % 2 + 2) % 2;
       ctx.save(); if (flip) { ctx.translate(x + width, y); ctx.scale(-1, 1); ctx.drawImage(image, 0, 0, width + .5, height); }
       else ctx.drawImage(image, x, y, width + .5, height); ctx.restore();
@@ -126,11 +144,11 @@
     if (world && world.shake > 0 && !reducedMotion) ctx.translate(Math.sin(visualTime * 100) * 3, Math.cos(visualTime * 81) * 2);
     const bgW = C.H * images.background.width / images.background.height;
     drawTile(images.background, d * .25, bgW, 0, C.H);
-    const shade = ctx.createLinearGradient(0, 0, 0, C.H); shade.addColorStop(0, '#18144112'); shade.addColorStop(1, '#39225b00'); ctx.fillStyle = shade; ctx.fillRect(0, 0, C.W, C.H);
+    const shade = ctx.createLinearGradient(0, 0, 0, C.H); shade.addColorStop(0, '#18144112'); shade.addColorStop(1, '#39225b00'); ctx.fillStyle = shade; ctx.fillRect(0, 0, viewWidth, C.H);
     drawTile(images.platform, d, 980, C.GROUND - 2, C.H - C.GROUND + 3);
     // Low-contrast distant snow, kept behind all playable objects.
     if (!reducedMotion) for (let i = 0; i < 24; i++) {
-      const x = ((i * 197.2 - visualTime * (7 + i % 3) - d * .03) % C.W + C.W) % C.W;
+      const x = ((i * 197.2 - visualTime * (7 + i % 3) - d * .03) % viewWidth + viewWidth) % viewWidth;
       const y = ((i * 83.7 + visualTime * (9 + i % 5)) % 555);
       ctx.globalAlpha = .2 + (i % 3) * .08; ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(x, y, 1.2 + i % 2, 0, Math.PI * 2); ctx.fill();
     }
@@ -144,7 +162,7 @@
       }
       for (const o of world.obstacles) ctx.drawImage(images.candy, o.x, C.GROUND - o.h, o.w, o.h);
     }
-    const santaSize = 202, santaX = 1050, santaY = C.GROUND - 465 / 512 * santaSize;
+    const santaSize = 202, santaX = viewWidth - 230, santaY = C.GROUND - 465 / 512 * santaSize;
     if (world && world.cast >= 0) sprite(images.throw, Math.min(3, Math.floor(world.cast / .14)), 2, santaSize, santaX, santaY);
     else sprite(images.santa, Math.floor(t * 11) % 8, 4, santaSize, santaX, santaY);
     const foot = world ? world.player.foot : C.GROUND;
@@ -175,11 +193,11 @@
         im.onerror = () => reject(new Error('No se pudo cargar ' + meta[name].src)); im.src = meta[name].src;
       })));
       if (document.fonts && document.fonts.ready) await document.fonts.ready;
-      $('loading').classList.add('hidden'); updateSoundButton(); setPhase('menu'); requestAnimationFrame(frame);
+      resizeViewport(); $('loading').classList.add('hidden'); updateSoundButton(); setPhase('menu'); requestAnimationFrame(frame);
     } catch (error) {
       $('loadDetail').textContent = error.message + '. Extrae el ZIP completo y abre index.html.'; $('progress').style.display = 'none';
     }
   }
-  window.RodolfoGame = { start, pause, resume, home, getSnapshot: () => ({ phase, score: world ? world.score : 0, lives: world ? world.lives : 3, best, elapsed: world ? world.time : 0 }) };
+  window.RodolfoGame = { start, pause, resume, home, getSnapshot: () => ({ phase, score: world ? world.score : 0, lives: world ? world.lives : 3, best, elapsed: world ? world.time : 0, viewport: { width: viewWidth, height: C.H } }) };
   load();
 })();

@@ -9,6 +9,7 @@
   class World {
     constructor(seed = Date.now(), options = {}) {
       this.seed = seed >>> 0 || 1; this.autoSpawn = options.autoSpawn !== false;
+      this.resize(options.width || W);
       this.time = 0; this.distance = 0; this.speed = 315; this.score = 0; this.collected = 0; this.lives = 3;
       this.playing = true; this.events = []; this.gifts = []; this.obstacles = []; this.particles = [];
       this.player = { foot: GROUND, vy: 0, grounded: true, invincible: 0, buffer: 0, hit: 0 };
@@ -16,18 +17,19 @@
     }
     random() { let n = this.seed; n ^= n << 13; n ^= n >>> 17; n ^= n << 5; this.seed = n >>> 0; return this.seed / 4294967296; }
     range(a, b) { return a + this.random() * (b - a); }
+    resize(width) { this.width = Math.max(800, Math.round(width)); }
     jump() { if (this.playing) this.player.buffer = .15; }
     playerRect() { return { x: PLAYER_X + 91, y: this.player.foot - 61, w: 105, h: 56 }; }
     pickupRect() { return { x: PLAYER_X + 45, y: this.player.foot - 184, w: 205, h: 180 }; }
     addGift(kind) {
       kind = kind === undefined ? Math.floor(this.random() * 3) : kind;
       const target = GROUND - [33, 220, 310][kind];
-      const gift = { x: 1105, y: GROUND - 126, vy: -170, extra: 105, state: 'fall', target, kind, age: 0, size: 48 };
+      const gift = { x: this.width - 175, y: GROUND - 126, vy: -170, extra: 105, state: 'fall', target, kind, age: 0, size: 48 };
       this.gifts.push(gift); return gift;
     }
     addObstacle() {
       const h = [72, 88, 102][Math.floor(this.random() * 3)];
-      const obstacle = { x: W + 55, h, w: Math.round(h * .36) };
+      const obstacle = { x: this.width + 55, h, w: Math.round(h * .36) };
       this.obstacles.push(obstacle); return obstacle;
     }
     burst(x, y, color, count = 10) {

@@ -1,5 +1,5 @@
 RODOLFO EL RENO — PLANETA JAIR
-Minijuego HTML5. Version 1.1 (metadatos para compartir).
+Minijuego HTML5. Version 1.2 (pantalla adaptable y metadatos para compartir).
 
 COMO ABRIR
 1. Extrae TODO el ZIP en una carpeta.
@@ -7,6 +7,16 @@ COMO ABRIR
 No necesita internet ni instalacion de paquetes. Mantener juntos index.html,
 css/, js/ y assets/. Para compartir por internet, sube esa carpeta completa
 a tu alojamiento web. No abras index.html directamente dentro del ZIP.
+
+ACTUALIZACION 1.2 — PANTALLA MOVIL
+El escenario ocupa el ancho disponible en horizontal y en pantalla completa.
+En moviles mas anchos que 16:9 se dibuja mas paisaje y plataforma, conservando
+las proporciones de los personajes. Santa y los puntos de aparicion se ajustan
+al nuevo borde derecho. Cambiar de tamano conserva puntos y vidas.
+Para actualizar desde la version anterior, reemplaza estos cuatro archivos:
+index.html, css/game.css, js/core.js y js/game.js.
+El index incluye una version en esas referencias para solicitar los archivos
+actualizados al alojamiento.
 
 PUBLICACION Y VISTA PREVIA AL COMPARTIR
 Direccion configurada:
