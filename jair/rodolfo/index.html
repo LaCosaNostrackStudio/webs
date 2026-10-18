@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#34256a">
+  <title>¡Juega Rodolfo el Reno! | Planeta Jair</title>
+  <meta name="description" content="¡Juega gratis con Rodolfo el Reno! Salta los caramelos, recoge los regalos de Santa y supera tu récord. El minijuego del nuevo videoclip de Planeta Jair.">
+  <meta name="author" content="Planeta Jair">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://lacosanostrackstudio.github.io/webs/jair/rodolfo/index.html">
+
+  <!-- Vista previa al compartir: WhatsApp, Facebook y otras plataformas Open Graph. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_DO">
+  <meta property="og:site_name" content="Planeta Jair">
+  <meta property="og:title" content="¡Juega Rodolfo el Reno! | Planeta Jair">
+  <meta property="og:description" content="¡Atrapa los regalos de Santa! Salta los caramelos y supera tu récord en el juego de Rodolfo el Reno, de Planeta Jair. ¡Juega ahora!">
+  <meta property="og:url" content="https://lacosanostrackstudio.github.io/webs/jair/rodolfo/index.html">
+  <meta property="og:image" content="https://lacosanostrackstudio.github.io/webs/jair/rodolfo/assets/images/rodolfo-juega-ahora.jpg">
+  <meta property="og:image:secure_url" content="https://lacosanostrackstudio.github.io/webs/jair/rodolfo/assets/images/rodolfo-juega-ahora.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Rodolfo el Reno y el joven de Planeta Jair en un paisaje navideño, junto al título del juego y el botón ¡Juega ahora!">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="¡Juega Rodolfo el Reno! | Planeta Jair">
+  <meta name="twitter:description" content="Salta, recoge los regalos de Santa y supera tu récord. ¡Juega al minijuego de Planeta Jair!">
+  <meta name="twitter:image" content="https://lacosanostrackstudio.github.io/webs/jair/rodolfo/assets/images/rodolfo-juega-ahora.jpg">
+  <meta name="twitter:image:alt" content="Rodolfo el Reno: ¡Juega ahora! El minijuego de Planeta Jair.">
+  <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+<main id="game" class="game" aria-label="Rodolfo el Reno, minijuego de Planeta Jair">
+  <canvas id="canvas" width="1280" height="720" aria-label="Escenario del juego. Toca para saltar." tabindex="0"></canvas>
+  <div id="loading" class="loading"><div class="snowflake">✦</div><p>PREPARANDO LA NAVIDAD…</p><progress id="progress" max="100" value="0"></progress><span id="loadDetail">Cargando recursos</span></div>
+  <header id="hud" class="hud hidden">
+    <div class="scores"><div class="score-box"><span>PUNTOS</span><strong id="score">0</strong></div><div class="score-box secondary"><span>REGALOS</span><strong id="gifts">0</strong></div><div class="score-box secondary"><span>RÉCORD</span><strong id="best">0</strong></div></div>
+    <div id="lives" class="lives" aria-label="3 vidas"><span>♥</span><span>♥</span><span>♥</span></div>
+  </header>
+  <nav class="utilities" aria-label="Controles">
+    <button id="sound" class="icon-button" aria-label="Desactivar sonido" title="Sonido (M)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="sound-wave" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-mute" d="m15 9 6 6m0-6-6 6"/></svg></button>
+    <button id="pause" class="icon-button hidden" aria-label="Pausar" title="Pausa (P)"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
+    <button id="fullscreen" class="icon-button" aria-label="Pantalla completa" title="Pantalla completa (F)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg></button>
+  </nav>
+  <section id="startScreen" class="overlay start-screen hidden" aria-label="Inicio">
+    <img class="artist-logo" src="assets/images/artist.webp" alt="Planeta Jair">
+    <div class="start-content"><p class="eyebrow">EL MINIJUEGO DE PLANETA JAIR</p><img class="title-art" src="assets/images/title.webp" alt="Rodolfo el Reno"><p class="tagline">¡Atrapa los regalos de Santa!</p><button id="play" class="play-button" aria-label="Jugar"><img src="assets/images/play.webp" alt="PLAY"></button><div class="instructions"><span>TOCA O PULSA <kbd>ESPACIO</kbd> PARA SALTAR</span><small>Regalos: +10 puntos · Salta los caramelos · 3 vidas</small></div></div>
+    <p class="brand-caption">RODOLFO EL RENO · PLANETA JAIR</p>
+  </section>
+  <section id="pauseScreen" class="overlay pause-screen hidden" aria-label="Juego en pausa"><div class="panel"><span class="panel-spark">✦</span><h1>PAUSA</h1><p>Santa te espera.</p><button id="resume" class="text-button">CONTINUAR</button><button id="home" class="ghost-button">VOLVER AL INICIO</button></div></section>
+  <section id="overScreen" class="overlay over-screen hidden" aria-label="Fin de partida"><div class="over-content"><img class="over-art" src="assets/images/gameover.webp" alt="GAME OVER"><p id="overMessage" class="over-message">¡Vamos por más regalos!</p><div class="results"><div><span>PUNTOS</span><strong id="finalScore">0</strong></div><div><span>REGALOS</span><strong id="finalGifts">0</strong></div><div><span>RÉCORD</span><strong id="finalBest">0</strong></div></div><button id="replay" class="play-button" aria-label="Volver a jugar"><img src="assets/images/play.webp" alt="PLAY"></button><span class="retry-label">VOLVER A JUGAR</span><button id="overHome" class="ghost-button small">INICIO</button></div><img class="artist-logo" src="assets/images/artist.webp" alt="Planeta Jair"></section>
+  <div id="runningHelp" class="running-help hidden">TOCA PARA SALTAR <span>· ESPACIO / ↑</span></div>
+  <button id="jumpButton" class="jump-button hidden" aria-label="Saltar"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m7 18 9-10 9 10M16 9v17"/></svg><span>SALTAR</span></button>
+  <div id="announcement" class="sr-only" aria-live="polite"></div>
+</main>
+<aside class="rotate"><span>↻</span><h2>¡GIRA TU PANTALLA!</h2><p>La aventura se juega en horizontal.</p><button id="rotateFull" class="text-button">PANTALLA COMPLETA</button></aside>
+<script src="js/assets.js"></script><script src="js/core.js"></script><script src="js/game.js"></script>
+</body></html>

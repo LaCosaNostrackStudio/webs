@@ -1,0 +1,19 @@
+VALIDACION — VERSION 1.0
+
+Comprobaciones realizadas:
+- Todos los recursos locales, hojas de sprites, fuente y siete audios presentes.
+- JavaScript sin errores de sintaxis.
+- Salto, aterrizaje y bloqueo del doble salto.
+- Regalos bajos recogibles sin saltar y altos alcanzables saltando.
+- Rebote y altura final de los tres tipos de regalo.
+- Perdida de tres vidas, proteccion tras un golpe y fin de partida.
+- Superacion de los obstaculos con salto.
+- Simulaciones de 100 segundos a 30, 60 y 120 fps, con saltos temporizados.
+- Inicio, teclado, control tactil, pausa, continuar, sonido, inicio y reinicio
+  comprobados con un entorno DOM simulado.
+- Recursos reales dibujados y revisados con Canvas nativo.
+
+Limite de verificacion:
+No se dispuso de navegador interactivo en este entorno. La maquetacion CSS,
+la politica de audio y la pantalla completa deben comprobarse tambien en el
+navegador o dispositivo de destino. No se ejecutaron pruebas en un telefono.

@@ -1,0 +1,56 @@
+RODOLFO EL RENO — PLANETA JAIR
+Minijuego HTML5. Version 1.1 (metadatos para compartir).
+
+COMO ABRIR
+1. Extrae TODO el ZIP en una carpeta.
+2. Abre index.html con un navegador moderno.
+No necesita internet ni instalacion de paquetes. Mantener juntos index.html,
+css/, js/ y assets/. Para compartir por internet, sube esa carpeta completa
+a tu alojamiento web. No abras index.html directamente dentro del ZIP.
+
+PUBLICACION Y VISTA PREVIA AL COMPARTIR
+Direccion configurada:
+https://lacosanostrackstudio.github.io/webs/jair/rodolfo/index.html
+
+Sube el CONTENIDO de rodolfo-el-reno/ a webs/jair/rodolfo/ en tu repositorio.
+El archivo index.html debe quedar directamente en esa carpeta; no crees una
+subcarpeta adicional llamada rodolfo-el-reno dentro de rodolfo.
+
+Se agregaron metadatos Open Graph y Twitter Card en el HTML inicial.
+La imagen de vista previa es assets/images/rodolfo-juega-ahora.jpg (1200 x 630).
+Para aplicar esta actualizacion a la primera version, basta con reemplazar
+index.html y agregar ese JPG conservando exactamente su ruta.
+Es necesario publicar ambos archivos para que la imagen se pueda descargar
+desde la URL absoluta configurada. Si cambias la direccion del juego, cambia
+tambien canonical, og:url y las direcciones de imagen de los metadatos.
+
+CONTROLES
+Tocar el escenario o el boton SALTAR: saltar.
+Teclado: Espacio, flecha arriba o W para saltar.
+P o Escape: pausar/continuar. M: sonido. F: pantalla completa.
+En celulares, jugar con el dispositivo en horizontal. La pantalla completa
+depende de lo que permita el navegador.
+
+COMO JUGAR
+Rodolfo avanza automaticamente. Santa corre delante y lanza regalos hacia atras.
+Los regalos rebotan y quedan bajos, medios o altos. Recoge los bajos al correr;
+salta para alcanzar los altos. Cada regalo suma 10 puntos.
+Salta los bastones de caramelo. Tienes 3 vidas. Tras un golpe hay un breve
+periodo de proteccion. La velocidad aumenta progresivamente.
+El record se guarda en este navegador cuando permite almacenamiento local.
+
+RECURSOS
+Incluye los graficos creados para este proyecto, el logo proporcionado de
+Planeta Jair, la tipografia Super Waffles y los siete efectos de sonido.
+El audio se habilita al pulsar PLAY. Puedes silenciarlo desde el icono de sonido.
+No incluye la cancion ni un enlace al videoclip: aun no se proporcionaron.
+
+EDICION
+js/core.js: fisica y reglas del juego.
+js/game.js: dibujo, pantallas, controles y audio.
+css/game.css: interfaz.
+js/assets.js y assets/: recursos locales.
+La tipografia y el logo son archivos proporcionados por el usuario.
+
+Esta version contiene sprites generados con IA; pueden existir pequenas
+variaciones de apariencia entre poses.
